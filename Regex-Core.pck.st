@@ -3598,7 +3598,7 @@ enumerateTo: aSet ignoringCase: aBoolean
 
 	first asInteger to: last asInteger do:
 		[:charCode | | character |
-		character := charCode asCharacter.
+		character := Character value: charCode.
 		aBoolean
 		ifTrue: 
 			[aSet 

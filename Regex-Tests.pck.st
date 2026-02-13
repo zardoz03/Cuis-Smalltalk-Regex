@@ -168,10 +168,12 @@ testHenry011
 !RxMatcherTest methodsFor: 'testing-henry' stamp: 'lr 1/15/2010 19:46'!
 testHenry012
 	"Need to get creative to include the null character..."
+	| s |
+	s := String with: (Character value: 0).
 	self runRegex: #('a.*c'	
 		'axyzc' true (1 'axyzc')
 		'axy zc' true (1 'axy zc') "testing that a dot matches a space"
-		), (Array with: 'axy', (String with: 0 asCharacter), 'zc'), #(false nil "testing that a dot does not match a null"
+		), (Array with: 'axy', s, 'zc'), #(false nil "testing that a dot does not match a null"
 		'axyzd' false nil)! !
 
 !RxMatcherTest methodsFor: 'testing-henry' stamp: 'lr 1/15/2010 19:46'!
