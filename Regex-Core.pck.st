@@ -650,17 +650,24 @@ determineTestMethod
 
 	| testers |
 	(conditions includes: #any) ifTrue: [^nil].
-	testers := OrderedCollection new: 5.
+	testers := OrderedCollection new initializeOfSize: 5; yourself.
 	#(#prefixTester #nonPrefixTester #conditionTester #methodPredicateTester #nonMethodPredicateTester #predicateTester #nonPredicateTester)
-		do: 
-			[:selector | 
+		do:
+			[:selector |
 			| tester |
 			tester := self perform: selector.
 			tester notNil ifTrue: [testers add: tester]].
 	testers isEmpty ifTrue: [^nil].
 	testers size = 1 ifTrue: [^testers first].
 	testers := testers asArray.
-	^[:char :matcher | testers contains: [:t | t value: char value: matcher]]! !
+	^[:char :matcher |
+	  testers contains: [:t |
+			t notNil ifTrue: [
+				t value: char value: matcher
+			] ifFalse: [ false ]
+		]
+	  ]!
+!
 
 !RxMatchOptimizer methodsFor: 'private' stamp: 'vb 4/11/09 21:56'!
 nonPredicateTester
@@ -727,22 +734,22 @@ prefixTester
 				ifFalse: [[:char :matcher | p includes: char]]]! !
 
 !RxMatchOptimizer methodsFor: 'initialize-release' stamp: 'vb 4/11/09 21:56'!
-initialize: aRegex ignoreCase: aBoolean 
+initialize: aRegex ignoreCase: aBoolean
 	"Set `testMethod' variable to a can-match predicate block:
 	two-argument block which accepts a lookahead character
-	and a matcher (presumably built from aRegex) and answers 
+	and a matcher (presumably built from aRegex) and answers
 	a boolean indicating whether a match could start at the given
 	lookahead. "
 
 	ignoreCase := aBoolean.
-	prefixes := Set new: 10.
-	nonPrefixes := Set new: 10.
-	conditions := Set new: 3.
-	methodPredicates := Set new: 3.
-	nonMethodPredicates := Set new: 3.
-	predicates := Set new: 3.
-	nonPredicates := Set new: 3.
-	aRegex dispatchTo: self.	"If the whole expression is nullable, 
+	prefixes := Set newWithRoomForMoreThan: 10.
+	nonPrefixes := Set newWithRoomForMoreThan: 10.
+	conditions := Set newWithRoomForMoreThan: 3.
+	methodPredicates := Set newWithRoomForMoreThan: 3.
+	nonMethodPredicates := Set newWithRoomForMoreThan: 3.
+	predicates := Set newWithRoomForMoreThan: 3.
+	nonPredicates := Set newWithRoomForMoreThan: 3.
+	aRegex dispatchTo: self.	"If the whole expression is nullable,
 		end-of-line is an implicit can-match condition!!"
 	aRegex isNullable ifTrue: [conditions add: #atEndOfLine].
 	testBlock := self determineTestMethod! !
