@@ -1,301 +1,301 @@
-'From Cuis 5.0 [latest update: #4689] on 5 August 2021 at 11:57:26 am'!
+'From Cuis7.6 [latest update: #7777] on 3 May 2026 at 6:23:41 pm'!
 'Description '!
-!provides: 'Regex' 1 5!
+!provides: 'Regex' 1 6!
 !requires: 'TerseGuide' 1 141 nil!
 !requires: 'Regex-Tests' 1 1 nil!
-SystemOrganization addCategory: 'Regex-Core'!
-SystemOrganization addCategory: 'Regex-Core-Exceptions'!
-SystemOrganization addCategory: 'Regex-Tests-Core'!
+SystemOrganization addCategory: #'Regex-Core'!
+SystemOrganization addCategory: #'Regex-Core-Exceptions'!
+SystemOrganization addCategory: #'Regex-Tests-Core'!
 
 
-!classDefinition: #RegexError category: 'Regex-Core-Exceptions'!
+!classDefinition: #RegexError category: #'Regex-Core-Exceptions'!
 Error subclass: #RegexError
 	instanceVariableNames: ''
 	classVariableNames: ''
 	poolDictionaries: ''
 	category: 'Regex-Core-Exceptions'!
-!classDefinition: 'RegexError class' category: 'Regex-Core-Exceptions'!
+!classDefinition: 'RegexError class' category: #'Regex-Core-Exceptions'!
 RegexError class
 	instanceVariableNames: ''!
 
-!classDefinition: #RegexCompilationError category: 'Regex-Core-Exceptions'!
+!classDefinition: #RegexCompilationError category: #'Regex-Core-Exceptions'!
 RegexError subclass: #RegexCompilationError
 	instanceVariableNames: ''
 	classVariableNames: ''
 	poolDictionaries: ''
 	category: 'Regex-Core-Exceptions'!
-!classDefinition: 'RegexCompilationError class' category: 'Regex-Core-Exceptions'!
+!classDefinition: 'RegexCompilationError class' category: #'Regex-Core-Exceptions'!
 RegexCompilationError class
 	instanceVariableNames: ''!
 
-!classDefinition: #RegexMatchingError category: 'Regex-Core-Exceptions'!
+!classDefinition: #RegexMatchingError category: #'Regex-Core-Exceptions'!
 RegexError subclass: #RegexMatchingError
 	instanceVariableNames: ''
 	classVariableNames: ''
 	poolDictionaries: ''
 	category: 'Regex-Core-Exceptions'!
-!classDefinition: 'RegexMatchingError class' category: 'Regex-Core-Exceptions'!
+!classDefinition: 'RegexMatchingError class' category: #'Regex-Core-Exceptions'!
 RegexMatchingError class
 	instanceVariableNames: ''!
 
-!classDefinition: #RegexSyntaxError category: 'Regex-Core-Exceptions'!
+!classDefinition: #RegexSyntaxError category: #'Regex-Core-Exceptions'!
 RegexError subclass: #RegexSyntaxError
 	instanceVariableNames: ''
 	classVariableNames: ''
 	poolDictionaries: ''
 	category: 'Regex-Core-Exceptions'!
-!classDefinition: 'RegexSyntaxError class' category: 'Regex-Core-Exceptions'!
+!classDefinition: 'RegexSyntaxError class' category: #'Regex-Core-Exceptions'!
 RegexSyntaxError class
 	instanceVariableNames: ''!
 
-!classDefinition: #RxMatcherTest category: 'Regex-Tests-Core'!
-TestCase subclass: #RxMatcherTest
-	instanceVariableNames: ''
-	classVariableNames: ''
-	poolDictionaries: ''
-	category: 'Regex-Tests-Core'!
-!classDefinition: 'RxMatcherTest class' category: 'Regex-Tests-Core'!
-RxMatcherTest class
-	instanceVariableNames: ''!
-
-!classDefinition: #RxParserTest category: 'Regex-Tests-Core'!
-TestCase subclass: #RxParserTest
-	instanceVariableNames: ''
-	classVariableNames: ''
-	poolDictionaries: ''
-	category: 'Regex-Tests-Core'!
-!classDefinition: 'RxParserTest class' category: 'Regex-Tests-Core'!
-RxParserTest class
-	instanceVariableNames: ''!
-
-!classDefinition: #RxCharSetParser category: 'Regex-Core'!
+!classDefinition: #RxCharSetParser category: #'Regex-Core'!
 Object subclass: #RxCharSetParser
 	instanceVariableNames: 'source lookahead elements'
 	classVariableNames: ''
 	poolDictionaries: ''
 	category: 'Regex-Core'!
-!classDefinition: 'RxCharSetParser class' category: 'Regex-Core'!
+!classDefinition: 'RxCharSetParser class' category: #'Regex-Core'!
 RxCharSetParser class
 	instanceVariableNames: ''!
 
-!classDefinition: #RxMatchOptimizer category: 'Regex-Core'!
+!classDefinition: #RxMatchOptimizer category: #'Regex-Core'!
 Object subclass: #RxMatchOptimizer
 	instanceVariableNames: 'ignoreCase prefixes nonPrefixes conditions testBlock methodPredicates nonMethodPredicates predicates nonPredicates'
 	classVariableNames: ''
 	poolDictionaries: ''
 	category: 'Regex-Core'!
-!classDefinition: 'RxMatchOptimizer class' category: 'Regex-Core'!
+!classDefinition: 'RxMatchOptimizer class' category: #'Regex-Core'!
 RxMatchOptimizer class
 	instanceVariableNames: ''!
 
-!classDefinition: #RxMatcher category: 'Regex-Core'!
+!classDefinition: #RxMatcher category: #'Regex-Core'!
 Object subclass: #RxMatcher
 	instanceVariableNames: 'matcher ignoreCase startOptimizer stream markerPositions markerCount lastResult'
 	classVariableNames: 'Cr Lf'
 	poolDictionaries: ''
 	category: 'Regex-Core'!
-!classDefinition: 'RxMatcher class' category: 'Regex-Core'!
+!classDefinition: 'RxMatcher class' category: #'Regex-Core'!
 RxMatcher class
 	instanceVariableNames: ''!
 
-!classDefinition: #RxParser category: 'Regex-Core'!
+!classDefinition: #RxParser category: #'Regex-Core'!
 Object subclass: #RxParser
 	instanceVariableNames: 'input lookahead'
 	classVariableNames: 'BackslashConstants BackslashSpecials'
 	poolDictionaries: ''
 	category: 'Regex-Core'!
-!classDefinition: 'RxParser class' category: 'Regex-Core'!
+!classDefinition: 'RxParser class' category: #'Regex-Core'!
 RxParser class
 	instanceVariableNames: ''!
 
-!classDefinition: #RxmLink category: 'Regex-Core'!
+!classDefinition: #RxmLink category: #'Regex-Core'!
 Object subclass: #RxmLink
 	instanceVariableNames: 'next'
 	classVariableNames: ''
 	poolDictionaries: ''
 	category: 'Regex-Core'!
-!classDefinition: 'RxmLink class' category: 'Regex-Core'!
+!classDefinition: 'RxmLink class' category: #'Regex-Core'!
 RxmLink class
 	instanceVariableNames: ''!
 
-!classDefinition: #RxmBranch category: 'Regex-Core'!
+!classDefinition: #RxmBranch category: #'Regex-Core'!
 RxmLink subclass: #RxmBranch
 	instanceVariableNames: 'loopback alternative'
 	classVariableNames: ''
 	poolDictionaries: ''
 	category: 'Regex-Core'!
-!classDefinition: 'RxmBranch class' category: 'Regex-Core'!
+!classDefinition: 'RxmBranch class' category: #'Regex-Core'!
 RxmBranch class
 	instanceVariableNames: ''!
 
-!classDefinition: #RxmMarker category: 'Regex-Core'!
+!classDefinition: #RxmMarker category: #'Regex-Core'!
 RxmLink subclass: #RxmMarker
 	instanceVariableNames: 'index'
 	classVariableNames: ''
 	poolDictionaries: ''
 	category: 'Regex-Core'!
-!classDefinition: 'RxmMarker class' category: 'Regex-Core'!
+!classDefinition: 'RxmMarker class' category: #'Regex-Core'!
 RxmMarker class
 	instanceVariableNames: ''!
 
-!classDefinition: #RxmPredicate category: 'Regex-Core'!
+!classDefinition: #RxmPredicate category: #'Regex-Core'!
 RxmLink subclass: #RxmPredicate
 	instanceVariableNames: 'predicate'
 	classVariableNames: ''
 	poolDictionaries: ''
 	category: 'Regex-Core'!
-!classDefinition: 'RxmPredicate class' category: 'Regex-Core'!
+!classDefinition: 'RxmPredicate class' category: #'Regex-Core'!
 RxmPredicate class
 	instanceVariableNames: ''!
 
-!classDefinition: #RxmSpecial category: 'Regex-Core'!
+!classDefinition: #RxmSpecial category: #'Regex-Core'!
 RxmLink subclass: #RxmSpecial
 	instanceVariableNames: 'matchSelector'
 	classVariableNames: ''
 	poolDictionaries: ''
 	category: 'Regex-Core'!
-!classDefinition: 'RxmSpecial class' category: 'Regex-Core'!
+!classDefinition: 'RxmSpecial class' category: #'Regex-Core'!
 RxmSpecial class
 	instanceVariableNames: ''!
 
-!classDefinition: #RxmSubstring category: 'Regex-Core'!
+!classDefinition: #RxmSubstring category: #'Regex-Core'!
 RxmLink subclass: #RxmSubstring
 	instanceVariableNames: 'sample compare'
 	classVariableNames: ''
 	poolDictionaries: ''
 	category: 'Regex-Core'!
-!classDefinition: 'RxmSubstring class' category: 'Regex-Core'!
+!classDefinition: 'RxmSubstring class' category: #'Regex-Core'!
 RxmSubstring class
 	instanceVariableNames: ''!
 
-!classDefinition: #RxmTerminator category: 'Regex-Core'!
+!classDefinition: #RxmTerminator category: #'Regex-Core'!
 Object subclass: #RxmTerminator
 	instanceVariableNames: ''
 	classVariableNames: ''
 	poolDictionaries: ''
 	category: 'Regex-Core'!
-!classDefinition: 'RxmTerminator class' category: 'Regex-Core'!
+!classDefinition: 'RxmTerminator class' category: #'Regex-Core'!
 RxmTerminator class
 	instanceVariableNames: ''!
 
-!classDefinition: #RxsNode category: 'Regex-Core'!
+!classDefinition: #RxsNode category: #'Regex-Core'!
 Object subclass: #RxsNode
 	instanceVariableNames: ''
 	classVariableNames: ''
 	poolDictionaries: ''
 	category: 'Regex-Core'!
-!classDefinition: 'RxsNode class' category: 'Regex-Core'!
+!classDefinition: 'RxsNode class' category: #'Regex-Core'!
 RxsNode class
 	instanceVariableNames: ''!
 
-!classDefinition: #RxsBranch category: 'Regex-Core'!
+!classDefinition: #RxsBranch category: #'Regex-Core'!
 RxsNode subclass: #RxsBranch
 	instanceVariableNames: 'piece branch'
 	classVariableNames: ''
 	poolDictionaries: ''
 	category: 'Regex-Core'!
-!classDefinition: 'RxsBranch class' category: 'Regex-Core'!
+!classDefinition: 'RxsBranch class' category: #'Regex-Core'!
 RxsBranch class
 	instanceVariableNames: ''!
 
-!classDefinition: #RxsCharSet category: 'Regex-Core'!
+!classDefinition: #RxsCharSet category: #'Regex-Core'!
 RxsNode subclass: #RxsCharSet
 	instanceVariableNames: 'negated elements'
 	classVariableNames: ''
 	poolDictionaries: ''
 	category: 'Regex-Core'!
-!classDefinition: 'RxsCharSet class' category: 'Regex-Core'!
+!classDefinition: 'RxsCharSet class' category: #'Regex-Core'!
 RxsCharSet class
 	instanceVariableNames: ''!
 
-!classDefinition: #RxsCharacter category: 'Regex-Core'!
+!classDefinition: #RxsCharacter category: #'Regex-Core'!
 RxsNode subclass: #RxsCharacter
 	instanceVariableNames: 'character'
 	classVariableNames: ''
 	poolDictionaries: ''
 	category: 'Regex-Core'!
-!classDefinition: 'RxsCharacter class' category: 'Regex-Core'!
+!classDefinition: 'RxsCharacter class' category: #'Regex-Core'!
 RxsCharacter class
 	instanceVariableNames: ''!
 
-!classDefinition: #RxsContextCondition category: 'Regex-Core'!
+!classDefinition: #RxsContextCondition category: #'Regex-Core'!
 RxsNode subclass: #RxsContextCondition
 	instanceVariableNames: 'kind'
 	classVariableNames: ''
 	poolDictionaries: ''
 	category: 'Regex-Core'!
-!classDefinition: 'RxsContextCondition class' category: 'Regex-Core'!
+!classDefinition: 'RxsContextCondition class' category: #'Regex-Core'!
 RxsContextCondition class
 	instanceVariableNames: ''!
 
-!classDefinition: #RxsEpsilon category: 'Regex-Core'!
+!classDefinition: #RxsEpsilon category: #'Regex-Core'!
 RxsNode subclass: #RxsEpsilon
 	instanceVariableNames: ''
 	classVariableNames: ''
 	poolDictionaries: ''
 	category: 'Regex-Core'!
-!classDefinition: 'RxsEpsilon class' category: 'Regex-Core'!
+!classDefinition: 'RxsEpsilon class' category: #'Regex-Core'!
 RxsEpsilon class
 	instanceVariableNames: ''!
 
-!classDefinition: #RxsMessagePredicate category: 'Regex-Core'!
+!classDefinition: #RxsMessagePredicate category: #'Regex-Core'!
 RxsNode subclass: #RxsMessagePredicate
 	instanceVariableNames: 'selector negated'
 	classVariableNames: ''
 	poolDictionaries: ''
 	category: 'Regex-Core'!
-!classDefinition: 'RxsMessagePredicate class' category: 'Regex-Core'!
+!classDefinition: 'RxsMessagePredicate class' category: #'Regex-Core'!
 RxsMessagePredicate class
 	instanceVariableNames: ''!
 
-!classDefinition: #RxsPiece category: 'Regex-Core'!
+!classDefinition: #RxsPiece category: #'Regex-Core'!
 RxsNode subclass: #RxsPiece
 	instanceVariableNames: 'atom min max'
 	classVariableNames: ''
 	poolDictionaries: ''
 	category: 'Regex-Core'!
-!classDefinition: 'RxsPiece class' category: 'Regex-Core'!
+!classDefinition: 'RxsPiece class' category: #'Regex-Core'!
 RxsPiece class
 	instanceVariableNames: ''!
 
-!classDefinition: #RxsPredicate category: 'Regex-Core'!
+!classDefinition: #RxsPredicate category: #'Regex-Core'!
 RxsNode subclass: #RxsPredicate
 	instanceVariableNames: 'predicate negation'
 	classVariableNames: 'EscapedLetterSelectors NamedClassSelectors'
 	poolDictionaries: ''
 	category: 'Regex-Core'!
-!classDefinition: 'RxsPredicate class' category: 'Regex-Core'!
+!classDefinition: 'RxsPredicate class' category: #'Regex-Core'!
 RxsPredicate class
 	instanceVariableNames: ''!
 
-!classDefinition: #RxsRange category: 'Regex-Core'!
+!classDefinition: #RxsRange category: #'Regex-Core'!
 RxsNode subclass: #RxsRange
 	instanceVariableNames: 'first last'
 	classVariableNames: ''
 	poolDictionaries: ''
 	category: 'Regex-Core'!
-!classDefinition: 'RxsRange class' category: 'Regex-Core'!
+!classDefinition: 'RxsRange class' category: #'Regex-Core'!
 RxsRange class
 	instanceVariableNames: ''!
 
-!classDefinition: #RxsRegex category: 'Regex-Core'!
+!classDefinition: #RxsRegex category: #'Regex-Core'!
 RxsNode subclass: #RxsRegex
 	instanceVariableNames: 'branch regex'
 	classVariableNames: ''
 	poolDictionaries: ''
 	category: 'Regex-Core'!
-!classDefinition: 'RxsRegex class' category: 'Regex-Core'!
+!classDefinition: 'RxsRegex class' category: #'Regex-Core'!
 RxsRegex class
 	instanceVariableNames: ''!
 
-!classDefinition: #RxTerseGuide category: 'Regex-Tests-Core'!
+!classDefinition: #RxTerseGuide category: #'Regex-Tests-Core'!
 TerseGuideTopic subclass: #RxTerseGuide
 	instanceVariableNames: ''
 	classVariableNames: ''
 	poolDictionaries: ''
 	category: 'Regex-Tests-Core'!
-!classDefinition: 'RxTerseGuide class' category: 'Regex-Tests-Core'!
+!classDefinition: 'RxTerseGuide class' category: #'Regex-Tests-Core'!
 RxTerseGuide class
+	instanceVariableNames: ''!
+
+!classDefinition: #RxMatcherTest category: #'Regex-Tests-Core'!
+TestCase subclass: #RxMatcherTest
+	instanceVariableNames: ''
+	classVariableNames: ''
+	poolDictionaries: ''
+	category: 'Regex-Tests-Core'!
+!classDefinition: 'RxMatcherTest class' category: #'Regex-Tests-Core'!
+RxMatcherTest class
+	instanceVariableNames: ''!
+
+!classDefinition: #RxParserTest category: #'Regex-Tests-Core'!
+TestCase subclass: #RxParserTest
+	instanceVariableNames: ''
+	classVariableNames: ''
+	poolDictionaries: ''
+	category: 'Regex-Tests-Core'!
+!classDefinition: 'RxParserTest class' category: #'Regex-Tests-Core'!
+RxParserTest class
 	instanceVariableNames: ''!
 
 
@@ -310,12 +310,6 @@ This class represents matching errors in regular expressions.!
 
 !RegexSyntaxError commentStamp: 'Tbn 11/12/2010 22:38' prior: 0!
 This class represents syntax errors in regular expressions.!
-
-!RxMatcherTest commentStamp: 'Tbn 11/12/2010 22:31' prior: 0!
-This class provides tests for the regular expression matcher.!
-
-!RxParserTest commentStamp: 'Tbn 11/12/2010 22:31' prior: 0!
-This class provides tests for the regular expression parser.!
 
 !RxCharSetParser commentStamp: 'Tbn 11/12/2010 23:13' prior: 0!
 -- Regular Expression Matcher v 1.1 (C) 1996, 1999 Vassili Bykov
@@ -524,1365 +518,25 @@ Instance variables:
 	branch		<RxsBranch>
 	regex		<RxsRegex | RxsEpsilon>!
 
-!RxMatcherTest methodsFor: 'accessing' stamp: 'lr 1/15/2010 19:39'!
-parserClass
-	^ RxParser! !
+!RxMatcherTest commentStamp: 'Tbn 11/12/2010 22:31' prior: 0!
+This class provides tests for the regular expression matcher.!
 
-!RxMatcherTest methodsFor: 'accessing' stamp: 'gsa 12/22/2012 12:25'!
-matcherClass
-	^ RxMatcher! !
+!RxParserTest commentStamp: 'Tbn 11/12/2010 22:31' prior: 0!
+This class provides tests for the regular expression parser.!
 
-!RxMatcherTest methodsFor: 'utilties' stamp: 'TestRunner 1/15/2010 19:38'!
-compileRegex: aString
-	"Compile the regex and answer the matcher, or answer nil if compilation fails."
-
-	| syntaxTree |
-	syntaxTree := self parserClass safelyParse: aString.
-	^ syntaxTree isNil ifFalse: [ self matcherClass for: syntaxTree ]! !
-
-!RxMatcherTest methodsFor: 'utilties' stamp: 'gsa 12/22/2012 12:26'!
-runMatcher: aMatcher with: aString expect: aBoolean withSubexpressions: anArray
-	| copy got |
-	copy := aMatcher
-		copy: aString
-		translatingMatchesUsing: [ :each | each ].
-	self 
-		assert: copy = aString
-		description: 'Copying: expected ' , aString printString , ', but got ' , copy printString.
-	got := aMatcher search: aString.
-	self
-		assert: got = aBoolean 
-		description: 'Searching: expected ' , aBoolean printString , ', but got ' , got printString.
-	(anArray isNil or: [ aMatcher supportsSubexpressions not ])
-		ifTrue: [ ^ self ].
-	1 to: anArray size by: 2 do: [ :index |
-		| sub subExpect subGot |
-		sub := anArray at: index.
-		subExpect := anArray at: index + 1.
-		subGot := aMatcher subexpression: sub.
-		self
-			assert: subExpect = subGot
-			description: 'Subexpression ' , sub printString , ': expected ' , subExpect printString , ', but got ' , subGot printString ]! !
-
-!RxMatcherTest methodsFor: 'utilties' stamp: 'lr 1/15/2010 19:31'!
-runRegex: anArray
-	"Run a clause anArray against a set of tests. Each clause is an array with a regex source string followed by sequence of 3-tuples. Each three-element group is one test to try against the regex, and includes: 1) test string; 2) expected result; 3) expected subexpression as an array of (index, substring), or nil."
-
-	| source matcher |
-	source := anArray first.
-	matcher := self compileRegex: source.
-	matcher isNil
-		ifTrue: [
-			(anArray at: 2) isNil
-				ifFalse: [ self signalFailure: 'Compilation failed, should have succeeded: ' , source printString ] ]
-		ifFalse: [
-			(anArray at: 2) isNil
-				ifTrue: [ self signalFailure: 'Compilation succeeded, should have failed: ' , source printString ]
-				ifFalse: [
-					2 to: anArray size by: 3 do: [ :index | 
-						self 
-							runMatcher: matcher
-							with: (anArray at: index)
-							expect: (anArray at: index + 1)
-							withSubexpressions: (anArray at: index + 2) ] ] ]! !
-
-!RxMatcherTest methodsFor: 'testing-henry' stamp: 'lr 1/15/2010 19:46'!
-henryReadme
-	self error: 'The tests in this category are based on the ones in Henry Spencer''s regexp.c package.'! !
-
-!RxMatcherTest methodsFor: 'testing-henry' stamp: 'lr 1/15/2010 19:46'!
-testHenry001
-	self runRegex: #('abc'
-		'abc' true (1 'abc')
-		'xbc' false nil
-		'axc' false nil
-		'abx' false nil
-		'xabcy' true (1 'abc')
-		'ababc' true (1 'abc'))! !
-
-!RxMatcherTest methodsFor: 'testing-henry' stamp: 'lr 1/15/2010 19:46'!
-testHenry002
-	self runRegex: #('ab*c'
-		'abc' true (1 'abc'))! !
-
-!RxMatcherTest methodsFor: 'testing-henry' stamp: 'lr 1/15/2010 19:46'!
-testHenry003
-	self runRegex: #('ab*bc'
-		'abc' true (1 'abc')
-		'abbc' true (1 'abbc')
-		'abbbbc' true (1 'abbbbc'))! !
-
-!RxMatcherTest methodsFor: 'testing-henry' stamp: 'lr 1/15/2010 19:46'!
-testHenry004
-	self runRegex: #('ab+bc'	
-		'abbc' true (1 'abbc')
-		'abc' false nil
-		'abq' false nil
-		'abbbbc' true (1 'abbbbc'))! !
-
-!RxMatcherTest methodsFor: 'testing-henry' stamp: 'lr 1/15/2010 19:46'!
-testHenry005
-	self runRegex: #('ab?bc'
-		'abbc' true (1 'abbc')
-		'abc' true (1 'abc')
-		'abbbbc' false nil
-		'abc' true (1 'abc'))! !
-
-!RxMatcherTest methodsFor: 'testing-henry' stamp: 'lr 1/15/2010 19:46'!
-testHenry006
-	self runRegex: #('^abc$'
-		'abc' true (1 'abc')
-		'abcc' false nil
-		'aabc' false nil)! !
-
-!RxMatcherTest methodsFor: 'testing-henry' stamp: 'lr 1/15/2010 19:46'!
-testHenry007
-	self runRegex: #('^abc'
-		'abcc' true (1 'abc'))! !
-
-!RxMatcherTest methodsFor: 'testing-henry' stamp: 'lr 1/15/2010 19:46'!
-testHenry008
-	self runRegex: #('abc$'
-		'aabc' true (1 'abc'))! !
-
-!RxMatcherTest methodsFor: 'testing-henry' stamp: 'lr 1/15/2010 19:46'!
-testHenry009
-	self runRegex: #('^'
-		'abc' true nil)! !
-
-!RxMatcherTest methodsFor: 'testing-henry' stamp: 'lr 1/15/2010 19:46'!
-testHenry010
-	self runRegex: #('$'
-		'abc' true nil)! !
-
-!RxMatcherTest methodsFor: 'testing-henry' stamp: 'lr 1/15/2010 19:46'!
-testHenry011
-	self runRegex: #('a.c'
-		'abc' true (1 'abc')
-		'axc' true (1 'axc'))! !
-
-!RxMatcherTest methodsFor: 'testing-henry' stamp: 'lr 1/15/2010 19:46'!
-testHenry012
-	"Need to get creative to include the null character..."
-	self runRegex: #('a.*c'	
-		'axyzc' true (1 'axyzc')
-		'axy zc' true (1 'axy zc') "testing that a dot matches a space"
-		), (Array with: 'axy', (String with: 0 asCharacter), 'zc'), #(false nil "testing that a dot does not match a null"
-		'axyzd' false nil)! !
-
-!RxMatcherTest methodsFor: 'testing-henry' stamp: 'lr 1/15/2010 19:46'!
-testHenry013
-	self runRegex: #('.a.*'
-		'1234abc' true (1 '4abc')
-		'abcd' false nil)! !
-
-!RxMatcherTest methodsFor: 'testing-henry' stamp: 'lr 1/15/2010 19:46'!
-testHenry014
-	self runRegex: #('a\w+c'
-		' abbbbc ' true (1 'abbbbc')
-		'abb bc' false nil)! !
-
-!RxMatcherTest methodsFor: 'testing-henry' stamp: 'lr 1/15/2010 19:46'!
-testHenry015
-	self runRegex: #('\w+'
-		'  	foobar	quux' true (1 'foobar')
-		' 	~!!@#$%^&*()-+=\|/?.>,<' false nil)! !
-
-!RxMatcherTest methodsFor: 'testing-henry' stamp: 'lr 1/15/2010 19:46'!
-testHenry016
-	self runRegex: #('a\W+c'
-		'a   c' true (1 'a   c')
-		'a bc' false nil)! !
-
-!RxMatcherTest methodsFor: 'testing-henry' stamp: 'lr 1/15/2010 19:46'!
-testHenry017
-	self runRegex: #('\W+'
-		'foo!!@#$bar' true (1 '!!@#$')
-		'foobar' false nil)! !
-
-!RxMatcherTest methodsFor: 'testing-henry' stamp: 'lr 1/15/2010 19:46'!
-testHenry018
-	self runRegex: #('a\s*c'
-		'a   c' true (1 'a   c')
-		'a bc' false nil)! !
-
-!RxMatcherTest methodsFor: 'testing-henry' stamp: 'lr 1/15/2010 19:46'!
-testHenry019
-	self runRegex: #('\s+'
-		'abc3457 sd' true (1 ' ')
-		'1234$^*^&asdfb' false nil)! !
-
-!RxMatcherTest methodsFor: 'testing-henry' stamp: 'lr 1/15/2010 19:46'!
-testHenry020
-	self runRegex: #('a\S*c'
-		'aqwertyc' true (1 'aqwertyc')
-		'ab c' false nil)! !
-
-!RxMatcherTest methodsFor: 'testing-henry' stamp: 'lr 1/15/2010 19:46'!
-testHenry021
-	self runRegex: #('\S+'
-		'     	asdf		' true (1 'asdf')
-		' 	
-			' false nil)! !
-
-!RxMatcherTest methodsFor: 'testing-henry' stamp: 'lr 1/15/2010 19:46'!
-testHenry022
-	self runRegex: #('a\d+c'
-		'a0123456789c' true (1 'a0123456789c')
-		'a12b34c' false nil)! !
-
-!RxMatcherTest methodsFor: 'testing-henry' stamp: 'lr 1/15/2010 19:46'!
-testHenry023
-	self runRegex: #('\d+'
-		'foo@#$%123ASD #$$%^&' true (1 '123')
-		'foo!!@#$asdfl;' false nil)! !
-
-!RxMatcherTest methodsFor: 'testing-henry' stamp: 'lr 1/15/2010 19:46'!
-testHenry024
-	self runRegex: #('a\D+c'
-		'aqwertyc' true (1 'aqwertyc')
-		'aqw6ertc' false nil)! !
-
-!RxMatcherTest methodsFor: 'testing-henry' stamp: 'lr 1/15/2010 19:46'!
-testHenry025
-	self runRegex: #('\D+'
-		'1234 abc 456' true (1 ' abc ')
-		'1234567890' false nil)! !
-
-!RxMatcherTest methodsFor: 'testing-henry' stamp: 'lr 1/15/2010 19:46'!
-testHenry026
-	self runRegex: #('(f|o)+\b'
-		'foo' true (1 'foo')
-		' foo ' true (1 'foo'))! !
-
-!RxMatcherTest methodsFor: 'testing-henry' stamp: 'lr 1/15/2010 19:46'!
-testHenry027
-	self runRegex: #('\ba\w+' "a word beginning with an A"
-		'land ancient' true (1 'ancient')
-		'antique vase' true (1 'antique')
-		'goofy foobar' false nil)! !
-
-!RxMatcherTest methodsFor: 'testing-henry' stamp: 'lr 1/15/2010 19:46'!
-testHenry028
-	self runRegex: #('(f|o)+\B'
-		'quuxfoobar' true (1 'foo')
-		'quuxfoo ' true (1 'fo'))! !
-
-!RxMatcherTest methodsFor: 'testing-henry' stamp: 'lr 1/15/2010 19:46'!
-testHenry029
-	self runRegex: #('\Ba\w+' "a word with an A in the middle, match at A and further"
-		'land ancient' true (1 'and')
-		'antique vase' true (1 'ase')
-		'smalltalk shall overcome' true (1 'alltalk')
-		'foonix is better' false nil)! !
-
-!RxMatcherTest methodsFor: 'testing-henry' stamp: 'lr 1/15/2010 19:46'!
-testHenry030
-	self runRegex: #('fooa\>.*'
-		'fooa ' true nil
-		'fooa123' false nil
-		'fooa bar' true nil
-		'fooa' true nil
-		'fooargh' false nil)! !
-
-!RxMatcherTest methodsFor: 'testing-henry' stamp: 'lr 1/15/2010 19:46'!
-testHenry031
-	self runRegex: #('\>.+abc'
-		' abcde fg' false nil
-		'foo abcde' true (1 ' abc')
-		'abcde' false nil)! !
-
-!RxMatcherTest methodsFor: 'testing-henry' stamp: 'lr 1/15/2010 19:46'!
-testHenry032
-	self runRegex: #('\<foo.*'
-		'foo' true nil
-		'foobar' true nil
-		'qfoobarq foonix' true (1 'foonix')
-		' foo' true nil
-		' 12foo' false nil
-		'barfoo' false nil)! !
-
-!RxMatcherTest methodsFor: 'testing-henry' stamp: 'lr 1/15/2010 19:46'!
-testHenry033
-	self runRegex: #('.+\<foo'
-		'foo' false nil
-		'ab foo' true (1 'ab foo')
-		'abfoo' false nil)! !
-
-!RxMatcherTest methodsFor: 'testing-henry' stamp: 'lr 1/15/2010 19:46'!
-testHenry034
-	self runRegex: #('a[bc]d'
-		'abc' false nil
-		'abd' true (1 'abd'))! !
-
-!RxMatcherTest methodsFor: 'testing-henry' stamp: 'lr 1/15/2010 19:46'!
-testHenry035
-	self runRegex: #('a[b-d]e'
-		'abd' false nil
-		'ace' true (1 'ace'))! !
-
-!RxMatcherTest methodsFor: 'testing-henry' stamp: 'lr 1/15/2010 19:46'!
-testHenry036
-	self runRegex: #('a[b-d]'
-		'aac' true (1 'ac'))! !
-
-!RxMatcherTest methodsFor: 'testing-henry' stamp: 'lr 1/15/2010 19:46'!
-testHenry037
-	self runRegex: #('a[-b]'
-		'a-' true (1 'a-'))! !
-
-!RxMatcherTest methodsFor: 'testing-henry' stamp: 'lr 1/15/2010 19:46'!
-testHenry038
-	self runRegex: #('a[b-]'
-		'a-' true (1 'a-'))! !
-
-!RxMatcherTest methodsFor: 'testing-henry' stamp: 'lr 1/15/2010 19:46'!
-testHenry039
-	self runRegex: #('a[a-b-c]' nil)! !
-
-!RxMatcherTest methodsFor: 'testing-henry' stamp: 'lr 1/15/2010 19:46'!
-testHenry040
-	self runRegex: #('[k]'
-		'ab' false nil)! !
-
-!RxMatcherTest methodsFor: 'testing-henry' stamp: 'lr 1/15/2010 19:46'!
-testHenry041
-	self runRegex: #('a[b-a]' nil)! !
-
-!RxMatcherTest methodsFor: 'testing-henry' stamp: 'lr 1/15/2010 19:46'!
-testHenry042
-	self runRegex: #('a[]b' nil)! !
-
-!RxMatcherTest methodsFor: 'testing-henry' stamp: 'lr 1/15/2010 19:46'!
-testHenry043
-	self runRegex: #('a[' nil)! !
-
-!RxMatcherTest methodsFor: 'testing-henry' stamp: 'lr 1/15/2010 19:46'!
-testHenry044
-	self runRegex: #('a]' 
-		'a]' true (1 'a]'))! !
-
-!RxMatcherTest methodsFor: 'testing-henry' stamp: 'lr 1/15/2010 19:46'!
-testHenry045
-	self runRegex: #('a[]]b'
-		'a]b' true (1 'a]b'))! !
-
-!RxMatcherTest methodsFor: 'testing-henry' stamp: 'lr 1/15/2010 19:46'!
-testHenry046
-	self runRegex: #('a[^bc]d'
-		'aed' true (1 'aed')
-		'abd' false nil)! !
-
-!RxMatcherTest methodsFor: 'testing-henry' stamp: 'lr 1/15/2010 19:46'!
-testHenry047
-	self runRegex: #('a[^-b]c'
-		'adc' true (1 'adc')
-		'a-c' false nil)! !
-
-!RxMatcherTest methodsFor: 'testing-henry' stamp: 'lr 1/15/2010 19:46'!
-testHenry048
-	self runRegex: #('a[^]b]c'
-		'a]c' false nil
-		'adc' true (1 'adc'))! !
-
-!RxMatcherTest methodsFor: 'testing-henry' stamp: 'lr 1/15/2010 19:46'!
-testHenry049
-	self runRegex: #('[\de]+'
-		'01234' true (1 '01234')
-		'0123e456' true (1 '0123e456')
-		'0123e45g78' true (1 '0123e45'))! !
-
-!RxMatcherTest methodsFor: 'testing-henry' stamp: 'lr 1/15/2010 19:46'!
-testHenry050
-	self runRegex: #('[e\d]+' "reversal of the above, should be the same"
-		'01234' true (1 '01234')
-		'0123e456' true (1 '0123e456')
-		'0123e45g78' true (1 '0123e45'))! !
-
-!RxMatcherTest methodsFor: 'testing-henry' stamp: 'lr 1/15/2010 19:46'!
-testHenry051
-	self runRegex: #('[\D]+'
-		'123abc45def78' true (1 'abc'))! !
-
-!RxMatcherTest methodsFor: 'testing-henry' stamp: 'lr 1/15/2010 19:46'!
-testHenry052
-	self runRegex: #('[[:digit:]e]+'
-		'01234' true (1 '01234')
-		'0123e456' true (1 '0123e456')
-		'0123e45g78' true (1 '0123e45'))! !
-
-!RxMatcherTest methodsFor: 'testing-henry' stamp: 'lr 1/15/2010 19:46'!
-testHenry053
-	self runRegex: #('[\s]+'
-		'2  spaces' true (1 '  '))! !
-
-!RxMatcherTest methodsFor: 'testing-henry' stamp: 'lr 1/15/2010 19:46'!
-testHenry054
-	self runRegex: #('[\S]+'
-		'  word12!!@#$  ' true (1 'word12!!@#$'))! !
-
-!RxMatcherTest methodsFor: 'testing-henry' stamp: 'lr 1/15/2010 19:46'!
-testHenry055
-	self runRegex: #('[\w]+'
-		' 	foo123bar	45' true (1 'foo123bar'))! !
-
-!RxMatcherTest methodsFor: 'testing-henry' stamp: 'lr 1/15/2010 19:46'!
-testHenry056
-	self runRegex: #('[\W]+'
-		'fii234!!@#$34f' true (1 '!!@#$'))! !
-
-!RxMatcherTest methodsFor: 'testing-henry' stamp: 'lr 1/15/2010 19:46'!
-testHenry057
-	self runRegex: #('[^[:alnum:]]+'
-		'fii234!!@#$34f' true (1 '!!@#$'))! !
-
-!RxMatcherTest methodsFor: 'testing-henry' stamp: 'lr 1/15/2010 19:46'!
-testHenry058
-	self runRegex: #('[%&[:alnum:]]+'
-		'foo%3' true (1 'foo%3')
-		'foo34&rt4$57a' true (1 'foo34&rt4')
-		'!!@#$' false nil)! !
-
-!RxMatcherTest methodsFor: 'testing-henry' stamp: 'lr 1/15/2010 19:46'!
-testHenry059
-	self runRegex: #('[[:alpha:]]+'
-		' 123foo3 ' true (1 'foo')
-		'123foo' true (1 'foo')
-		'foo1b' true (1 'foo'))! !
-
-!RxMatcherTest methodsFor: 'testing-henry' stamp: 'lr 1/15/2010 19:46'!
-testHenry060
-	self runRegex: #('[[:cntrl:]]+'
-		' a 1234asdf' false nil)! !
-
-!RxMatcherTest methodsFor: 'testing-henry' stamp: 'lr 1/15/2010 19:46'!
-testHenry061
-	self runRegex: #('[[:lower:]]+'
-		'UPPERlower1234' true (1 'lower')
-		'lowerUPPER' true (1 'lower'))! !
-
-!RxMatcherTest methodsFor: 'testing-henry' stamp: 'lr 1/15/2010 19:46'!
-testHenry062
-	self runRegex: #('[[:upper:]]+'
-		'UPPERlower1234' true (1 'UPPER')
-		'lowerUPPER ' true (1 'UPPER'))! !
-
-!RxMatcherTest methodsFor: 'testing-henry' stamp: 'lr 1/15/2010 19:46'!
-testHenry063
-	self runRegex: #('[[:space:]]+'
-		'2  spaces' true (1 '  '))! !
-
-!RxMatcherTest methodsFor: 'testing-henry' stamp: 'lr 1/15/2010 19:46'!
-testHenry064
-	self runRegex: #('[^[:space:]]+'
-		'  word12!!@#$  ' true (1 'word12!!@#$'))! !
-
-!RxMatcherTest methodsFor: 'testing-henry' stamp: 'lr 1/15/2010 19:46'!
-testHenry065
-	self runRegex: #('[[:graph:]]+'
-		'abc' true (1 'abc'))! !
-
-!RxMatcherTest methodsFor: 'testing-henry' stamp: 'lr 1/15/2010 19:46'!
-testHenry066
-	self runRegex: #('[[:print:]]+'
-		'abc' true (1 'abc'))! !
-
-!RxMatcherTest methodsFor: 'testing-henry' stamp: 'lr 1/15/2010 19:46'!
-testHenry067
-	self runRegex: #('[^[:punct:]]+'
-		'!!hello,world!!' true (1 'hello'))! !
-
-!RxMatcherTest methodsFor: 'testing-henry' stamp: 'lr 1/15/2010 19:46'!
-testHenry068
-	self runRegex: #('[[:xdigit:]]+'
-		'  x10FCD  ' true (1 '10FCD')
-		' hgfedcba0123456789ABCDEFGH '
-			true (1 'fedcba0123456789ABCDEF'))! !
-
-!RxMatcherTest methodsFor: 'testing-henry' stamp: 'lr 1/15/2010 19:46'!
-testHenry069
-	self runRegex: #('ab|cd'
-		'abc' true (1 'ab')
-		'abcd' true (1 'ab'))! !
-
-!RxMatcherTest methodsFor: 'testing-henry' stamp: 'lr 1/15/2010 19:46'!
-testHenry070
-	self runRegex: #('()ef'
-		'def' true (1 'ef' 2 ''))! !
-
-!RxMatcherTest methodsFor: 'testing-henry' stamp: 'lr 1/15/2010 19:46'!
-testHenry071
-	self runRegex: #('()*' nil)! !
-
-!RxMatcherTest methodsFor: 'testing-henry' stamp: 'lr 1/15/2010 19:46'!
-testHenry072
-	self runRegex: #('*a' nil)! !
-
-!RxMatcherTest methodsFor: 'testing-henry' stamp: 'lr 1/15/2010 19:46'!
-testHenry073
-	self runRegex: #('^*' nil)! !
-
-!RxMatcherTest methodsFor: 'testing-henry' stamp: 'lr 1/15/2010 19:46'!
-testHenry074
-	self runRegex: #('$*' nil)! !
-
-!RxMatcherTest methodsFor: 'testing-henry' stamp: 'lr 1/15/2010 19:46'!
-testHenry075
-	self runRegex: #('(*)b' nil)! !
-
-!RxMatcherTest methodsFor: 'testing-henry' stamp: 'lr 1/15/2010 19:46'!
-testHenry076
-	self runRegex: #('$b'	'b' false nil)! !
-
-!RxMatcherTest methodsFor: 'testing-henry' stamp: 'lr 1/15/2010 19:46'!
-testHenry077
-	self runRegex: #('a\' nil)! !
-
-!RxMatcherTest methodsFor: 'testing-henry' stamp: 'lr 1/15/2010 19:46'!
-testHenry078
-	self runRegex: #('a\(b'
-		'a(b' true (1 'a(b'))! !
-
-!RxMatcherTest methodsFor: 'testing-henry' stamp: 'lr 1/15/2010 19:46'!
-testHenry079
-	self runRegex: #('a\(*b'
-		'ab' true (1 'ab')
-		'a((b' true (1 'a((b'))! !
-
-!RxMatcherTest methodsFor: 'testing-henry' stamp: 'lr 1/15/2010 19:46'!
-testHenry080
-	self runRegex: #('a\\b'
-		'a\b' true (1 'a\b'))! !
-
-!RxMatcherTest methodsFor: 'testing-henry' stamp: 'lr 1/15/2010 19:46'!
-testHenry081
-	self runRegex: #('abc)' nil)! !
-
-!RxMatcherTest methodsFor: 'testing-henry' stamp: 'lr 1/15/2010 19:46'!
-testHenry082
-	self runRegex: #('(abc' nil)! !
-
-!RxMatcherTest methodsFor: 'testing-henry' stamp: 'lr 1/15/2010 19:46'!
-testHenry083
-	self runRegex: #('((a))'
-		'abc' true (1 'a' 2 'a' 3 'a'))! !
-
-!RxMatcherTest methodsFor: 'testing-henry' stamp: 'lr 1/15/2010 19:46'!
-testHenry084
-	self runRegex: #('(a)b(c)'
-		'abc' true (1 'abc' 2 'a' 3 'c'))! !
-
-!RxMatcherTest methodsFor: 'testing-henry' stamp: 'lr 1/15/2010 19:46'!
-testHenry085
-	self runRegex: #('a+b+c'
-		'aabbabc' true (1 'abc'))! !
-
-!RxMatcherTest methodsFor: 'testing-henry' stamp: 'lr 1/15/2010 19:46'!
-testHenry086
-	self runRegex: #('a**' nil)! !
-
-!RxMatcherTest methodsFor: 'testing-henry' stamp: 'lr 1/15/2010 19:46'!
-testHenry087
-	self runRegex: #('a*?' nil)! !
-
-!RxMatcherTest methodsFor: 'testing-henry' stamp: 'lr 1/15/2010 19:46'!
-testHenry088
-	self runRegex: #('(a*)*' nil)! !
-
-!RxMatcherTest methodsFor: 'testing-henry' stamp: 'lr 1/15/2010 19:46'!
-testHenry089
-	self runRegex: #('(a*)+' nil)! !
-
-!RxMatcherTest methodsFor: 'testing-henry' stamp: 'lr 1/15/2010 19:46'!
-testHenry090
-	self runRegex: #('(a|)*' nil)! !
-
-!RxMatcherTest methodsFor: 'testing-henry' stamp: 'lr 1/15/2010 19:46'!
-testHenry091
-	self runRegex: #('(a*|b)*' nil)! !
-
-!RxMatcherTest methodsFor: 'testing-henry' stamp: 'lr 1/15/2010 19:46'!
-testHenry092
-	self runRegex: #('(a+|b)*'
-		'ab' true (1 'ab' 2 'b'))! !
-
-!RxMatcherTest methodsFor: 'testing-henry' stamp: 'lr 1/15/2010 19:46'!
-testHenry093
-	self runRegex: #('(a+|b)+'
-		'ab' true (1 'ab' 2 'b'))! !
-
-!RxMatcherTest methodsFor: 'testing-henry' stamp: 'lr 1/15/2010 19:46'!
-testHenry094
-	self runRegex: #('(a+|b)?'
-		'ab' true (1 'a' 2 'a'))! !
-
-!RxMatcherTest methodsFor: 'testing-henry' stamp: 'lr 1/15/2010 19:46'!
-testHenry095
-	self runRegex: #('[^ab]*'
-		'cde' true (1 'cde'))! !
-
-!RxMatcherTest methodsFor: 'testing-henry' stamp: 'lr 1/15/2010 19:46'!
-testHenry096
-	self runRegex: #('(^)*' nil)! !
-
-!RxMatcherTest methodsFor: 'testing-henry' stamp: 'lr 1/15/2010 19:46'!
-testHenry097
-	self runRegex: #('(ab|)*' nil)! !
-
-!RxMatcherTest methodsFor: 'testing-henry' stamp: 'lr 1/15/2010 19:46'!
-testHenry098
-	self runRegex: #(')(' nil)! !
-
-!RxMatcherTest methodsFor: 'testing-henry' stamp: 'lr 1/15/2010 19:46'!
-testHenry099
-	self runRegex: #('' 'abc' true (1 ''))! !
-
-!RxMatcherTest methodsFor: 'testing-henry' stamp: 'lr 1/15/2010 19:46'!
-testHenry100
-	self runRegex: #('abc' '' false nil)! !
-
-!RxMatcherTest methodsFor: 'testing-henry' stamp: 'lr 1/15/2010 19:46'!
-testHenry101
-	self runRegex: #('a*'
-		'' true '')! !
-
-!RxMatcherTest methodsFor: 'testing-henry' stamp: 'lr 1/15/2010 19:46'!
-testHenry102
-	self runRegex: #('abcd'
-		'abcd' true (1 'abcd'))! !
-
-!RxMatcherTest methodsFor: 'testing-henry' stamp: 'lr 1/15/2010 19:46'!
-testHenry103
-	self runRegex: #('a(bc)d'
-		'abcd' true (1 'abcd' 2 'bc'))! !
-
-!RxMatcherTest methodsFor: 'testing-henry' stamp: 'lr 1/15/2010 19:46'!
-testHenry104
-	self runRegex: #('([abc])*d'
-		'abbbcd' true (1 'abbbcd' 2 'c'))! !
-
-!RxMatcherTest methodsFor: 'testing-henry' stamp: 'lr 1/15/2010 19:46'!
-testHenry105
-	self runRegex: #('([abc])*bcd'
-		'abcd' true (1 'abcd' 2 'a'))! !
-
-!RxMatcherTest methodsFor: 'testing-henry' stamp: 'lr 1/15/2010 19:46'!
-testHenry106
-	self runRegex: #('a|b|c|d|e' 'e' true (1 'e'))! !
-
-!RxMatcherTest methodsFor: 'testing-henry' stamp: 'lr 1/15/2010 19:46'!
-testHenry107
-	self runRegex: #('(a|b|c|d|e)f'
-		'ef' true (1 'ef' 2 'e'))
-	"	((a*|b))*	-	c	-	-"! !
-
-!RxMatcherTest methodsFor: 'testing-henry' stamp: 'lr 1/15/2010 19:46'!
-testHenry108
-	self runRegex: #('abcd*efg' 
-		'abcdefg' true (1 'abcdefg'))! !
-
-!RxMatcherTest methodsFor: 'testing-henry' stamp: 'lr 1/15/2010 19:46'!
-testHenry109
-	self runRegex: #('ab*' 
-		'xabyabbbz' true (1 'ab')
-		'xayabbbz' true (1 'a'))! !
-
-!RxMatcherTest methodsFor: 'testing-henry' stamp: 'lr 1/15/2010 19:46'!
-testHenry110
-	self runRegex: #('(ab|cd)e' 'abcde' true (1 'cde' 2 'cd'))! !
-
-!RxMatcherTest methodsFor: 'testing-henry' stamp: 'lr 1/15/2010 19:46'!
-testHenry111
-	self runRegex: #('[abhgefdc]ij' 'hij' true (1 'hij'))! !
-
-!RxMatcherTest methodsFor: 'testing-henry' stamp: 'lr 1/15/2010 19:46'!
-testHenry112
-	self runRegex: #('^(ab|cd)e' 'abcde' false nil)
-	! !
-
-!RxMatcherTest methodsFor: 'testing-henry' stamp: 'lr 1/15/2010 19:46'!
-testHenry113
-	self runRegex: #('(abc|)def' 'abcdef' true nil)
-	! !
-
-!RxMatcherTest methodsFor: 'testing-henry' stamp: 'lr 1/15/2010 19:46'!
-testHenry114
-	self runRegex: #('(a|b)c*d' 'abcd' true (1 'bcd' 2 'b'))
-	! !
-
-!RxMatcherTest methodsFor: 'testing-henry' stamp: 'lr 1/15/2010 19:46'!
-testHenry115
-	self runRegex: #('(ab|ab*)bc' 'abc' true (1 'abc' 2 'a'))
-	! !
-
-!RxMatcherTest methodsFor: 'testing-henry' stamp: 'lr 1/15/2010 19:46'!
-testHenry116
-	self runRegex: #('a([bc]*)c*' 'abc' true (1 'abc' 2 'bc'))
-	! !
-
-!RxMatcherTest methodsFor: 'testing-henry' stamp: 'lr 1/15/2010 19:46'!
-testHenry117
-	self runRegex: #('a([bc]*)(c*d)' 'abcd' true (1 'abcd' 2 'bc' 3 'd'))
-	! !
-
-!RxMatcherTest methodsFor: 'testing-henry' stamp: 'lr 1/15/2010 19:46'!
-testHenry118
-	self runRegex: #('a([bc]+)(c*d)' 'abcd' true (1 'abcd' 2 'bc' 3 'd'))
-	! !
-
-!RxMatcherTest methodsFor: 'testing-henry' stamp: 'lr 1/15/2010 19:46'!
-testHenry119
-	self runRegex: #('a([bc]*)(c+d)' 'abcd' true (1 'abcd' 2 'b' 3 'cd'))
-	! !
-
-!RxMatcherTest methodsFor: 'testing-henry' stamp: 'lr 1/15/2010 19:46'!
-testHenry120
-	self runRegex: #('a[bcd]*dcdcde' 'adcdcde' true (1 'adcdcde'))
-	! !
-
-!RxMatcherTest methodsFor: 'testing-henry' stamp: 'lr 1/15/2010 19:46'!
-testHenry121
-	self runRegex: #('a[bcd]+dcdcde' 'adcdcde' false nil)
-	! !
-
-!RxMatcherTest methodsFor: 'testing-henry' stamp: 'lr 1/15/2010 19:46'!
-testHenry122
-	self runRegex: #('(ab|a)b*c' 'abc' true (1 'abc'))
-	! !
-
-!RxMatcherTest methodsFor: 'testing-henry' stamp: 'lr 1/15/2010 19:46'!
-testHenry123
-	self runRegex: #('((a)(b)c)(d)' 'abcd' true (1 'abcd' 3 'a' 4 'b' 5 'd'))
-	! !
-
-!RxMatcherTest methodsFor: 'testing-henry' stamp: 'lr 1/15/2010 19:46'!
-testHenry124
-	self runRegex: #('[ -~]*' 'abc' true (1 'abc'))
-	! !
-
-!RxMatcherTest methodsFor: 'testing-henry' stamp: 'lr 1/15/2010 19:46'!
-testHenry125
-	self runRegex: #('[ -~ -~]*' 'abc' true (1 'abc'))
-	! !
-
-!RxMatcherTest methodsFor: 'testing-henry' stamp: 'lr 1/15/2010 19:46'!
-testHenry126
-	self runRegex: #('[ -~ -~ -~]*' 'abc' true (1 'abc'))
-	! !
-
-!RxMatcherTest methodsFor: 'testing-henry' stamp: 'lr 1/15/2010 19:46'!
-testHenry127
-	self runRegex: #('[ -~ -~ -~ -~]*' 'abc' true (1 'abc'))
-	! !
-
-!RxMatcherTest methodsFor: 'testing-henry' stamp: 'lr 1/15/2010 19:46'!
-testHenry128
-	self runRegex: #('[ -~ -~ -~ -~ -~]*' 'abc' true (1 'abc'))
-	! !
-
-!RxMatcherTest methodsFor: 'testing-henry' stamp: 'lr 1/15/2010 19:46'!
-testHenry129
-	self runRegex: #('[ -~ -~ -~ -~ -~ -~]*' 'abc' true (1 'abc'))
-	! !
-
-!RxMatcherTest methodsFor: 'testing-henry' stamp: 'lr 1/15/2010 19:46'!
-testHenry130
-	self runRegex: #('[ -~ -~ -~ -~ -~ -~ -~]*' 'abc' true (1 'abc'))
-	! !
-
-!RxMatcherTest methodsFor: 'testing-henry' stamp: 'lr 1/15/2010 19:46'!
-testHenry131
-	self runRegex: #('[a-zA-Z_][a-zA-Z0-9_]*' 'alpha' true (1 'alpha'))
-	! !
-
-!RxMatcherTest methodsFor: 'testing-henry' stamp: 'lr 1/15/2010 19:46'!
-testHenry132
-	self runRegex: #('^a(bc+|b[eh])g|.h$' 'abh' true (1 'bh' 2 nil))
-	! !
-
-!RxMatcherTest methodsFor: 'testing-henry' stamp: 'lr 1/15/2010 19:46'!
-testHenry133
-	self runRegex: #('(bc+d$|ef*g.|h?i(j|k))' 
-		'effgz' true (1 'effgz' 2 'effgz' 3 nil)
-		'ij' true (1 'ij' 2 'ij' 3 'j')
-		'effg' false nil
-		'bcdd' false nil
-		'reffgz' true (1 'effgz' 2 'effgz' 3 nil))! !
-
-!RxMatcherTest methodsFor: 'testing-henry' stamp: 'lr 1/15/2010 19:46'!
-testHenry134
-	self runRegex: #('(((((((((a)))))))))' 'a' true (1 'a'))! !
-
-!RxMatcherTest methodsFor: 'testing-henry' stamp: 'lr 1/15/2010 19:46'!
-testHenry135
-	self runRegex: #('multiple words of text' 
-		'uh-uh' false nil
-		'multiple words of text, yeah' true (1 'multiple words of text'))! !
-
-!RxMatcherTest methodsFor: 'testing-henry' stamp: 'lr 1/15/2010 19:46'!
-testHenry136
-	self runRegex: #('(.*)c(.*)' 'abcde' true (1 'abcde' 2 'ab' 3 'de'))! !
-
-!RxMatcherTest methodsFor: 'testing-henry' stamp: 'lr 1/15/2010 19:46'!
-testHenry137
-	self runRegex: #('\((.*), (.*)\)' '(a, b)' true (2 'a' 3 'b'))! !
-
-!RxMatcherTest methodsFor: 'testing-protocol' stamp: 'lr 1/15/2010 20:28'!
-testCaseInsensitive
-	| matcher |
-	matcher := self matcherClass forString: 'the quick brown fox' ignoreCase: true.
-	self assert: (matcher search: 'the quick brown fox').
-	self assert: (matcher search: 'The quick brown FOX').
-	self assert: (matcher search: 'What do you know about the quick brown fox?').
-	self assert: (matcher search: 'What do you know about THE QUICK BROWN FOX?')! !
-
-!RxMatcherTest methodsFor: 'testing-protocol' stamp: 'lr 1/15/2010 20:28'!
-testCaseSensitive
-	| matcher |
-	matcher := self matcherClass forString: 'the quick brown fox' ignoreCase: false.
-	self assert: (matcher search: 'the quick brown fox').
-	self deny: (matcher search: 'The quick brown FOX').
-	self assert: (matcher search: 'What do you know about the quick brown fox?').
-	self deny: (matcher search: 'What do you know about THE QUICK BROWN FOX?')! !
-
-!RxMatcherTest methodsFor: 'testing-protocol' stamp: 'lr 1/15/2010 20:38'!
-testCopyReplacingMatches
-	"See that the match context is preserved while copying stuff between matches:"
-	
-	| matcher |
-	matcher := self matcherClass forString: '\<\d\D+'.
-	self assert: (matcher copy: '9aaa1bbb 8ccc' replacingMatchesWith: 'foo')
-		= 'foo1bbb foo'! !
-
-!RxMatcherTest methodsFor: 'testing-protocol' stamp: 'hfm 4/2/2010 13:52'!
-testCopyTranslatingMatches
-	| matcher |
-	matcher := self matcherClass forString: '\w+'.
-	self assert: (matcher copy: 'now is  the   time    ' translatingMatchesUsing: [ :each | each reversed ])
-		= 'won si  eht   emit    '! !
-
-!RxMatcherTest methodsFor: 'testing-protocol' stamp: 'lr 1/15/2010 20:45'!
-testMatches
-	| matcher |
-	matcher := self matcherClass forString: '\w+'.
-	self assert: (matcher matches: 'now').
-	self deny: (matcher matches: 'now is')! !
-
-!RxMatcherTest methodsFor: 'testing-protocol' stamp: 'lr 1/15/2010 20:38'!
-testMatchesIn
-	| matcher |
-	matcher := self matcherClass forString: '\w+'.
-	self assert: (matcher matchesIn: 'now is the time') asArray 
-		= #('now' 'is' 'the' 'time')! !
-
-!RxMatcherTest methodsFor: 'testing-protocol' stamp: 'hfm 4/2/2010 13:52'!
-testMatchesInCollect
-	| matcher |
-	matcher := self matcherClass forString: '\w+'.
-	self assert: (matcher
-		matchesIn: 'now is the time'
-		collect: [ :each | each reversed ]) asArray
-			= #('won' 'si' 'eht' 'emit')! !
-
-!RxMatcherTest methodsFor: 'testing-protocol' stamp: 'lr 1/15/2010 20:44'!
-testMatchesInDo
-	| matcher expected |
-	matcher := self matcherClass forString: '\w+'.
-	expected := #('now' 'is' 'the' 'time') asOrderedCollection.
-	matcher 
-		matchesIn: 'now is the time'
-		do: [ :each | self assert: each = expected removeFirst ].
-	self assert: expected isEmpty! !
-
-!RxMatcherTest methodsFor: 'testing-protocol' stamp: 'lr 1/15/2010 20:39'!
-testMatchesOnStream
-	| matcher |
-	matcher := self matcherClass forString: '\w+'.
-	self assert: (matcher matchesOnStream: 'now is the time' readStream) asArray 
-		= #('now' 'is' 'the' 'time')! !
-
-!RxMatcherTest methodsFor: 'testing-protocol' stamp: 'hfm 4/2/2010 13:52'!
-testMatchesOnStreamCollect
-	| matcher |
-	matcher := self matcherClass forString: '\w+'.
-	self assert: (matcher 
-		matchesOnStream: 'now is the time' readStream 
-		collect: [ :each | each reversed ]) asArray
-			= #('won' 'si' 'eht' 'emit')! !
-
-!RxMatcherTest methodsFor: 'testing-protocol' stamp: 'lr 1/15/2010 20:44'!
-testMatchesOnStreamDo
-	| matcher expected |
-	matcher := self matcherClass forString: '\w+'.
-	expected := #('now' 'is' 'the' 'time') asOrderedCollection.
-	matcher 
-		matchesOnStream: 'now is the time' readStream
-		do: [ :each | self assert: each = expected removeFirst ].
-	self assert: expected isEmpty! !
-
-!RxMatcherTest methodsFor: 'testing-protocol' stamp: 'lr 1/15/2010 20:45'!
-testMatchesStream
-	| matcher |
-	matcher := self matcherClass forString: '\w+'.
-	self assert: (matcher matchesStream: 'now' readStream).
-	self deny: (matcher matchesStream: 'now is' readStream)! !
-
-!RxMatcherTest methodsFor: 'testing-protocol' stamp: 'TestRunner 1/15/2010 20:51'!
-testMatchingRangesIn
-	| matcher expected |
-	matcher := self matcherClass forString: '\w+'.
-	expected := #(1 3 5 6 8 10 12 15) asOrderedCollection.
-	(matcher matchingRangesIn: 'now is the time') do: [ :range |
-		self assert: range first = expected removeFirst.
-		self assert: range last = expected removeFirst ].
-	self assert: expected isEmpty! !
-
-!RxMatcherTest methodsFor: 'testing-protocol' stamp: 'lr 1/15/2010 20:55'!
-testSubexpressionCount
-	| matcher |
-	#(('a' 1) ('a(b)' 2) ('a(b(c))' 3) ('(a)(b)' 3) ('(a(b))*' 3)) do: [ :pair |
-		matcher := self matcherClass forString: pair first.
-		matcher supportsSubexpressions 
-			ifTrue: [ self assert: matcher subexpressionCount = pair last ] ]! !
-
-!RxMatcherTest methodsFor: 'testing-empty' stamp: 'gsa 12/20/2012 20:02'!
-testEmptyStringAtBeginningOfLine
-	| matcher |
-	matcher := self matcherClass forString: '^'.
-	self
-		assert: (matcher copy: 'foo1 bar1' , String crString , 'foo2 bar2' replacingMatchesWith: '*')
-			= ('*foo1 bar1' , String crString , '*foo2 bar2')
-		description: 'An empty string at the beginning of a line'! !
-
-!RxMatcherTest methodsFor: 'testing-empty' stamp: 'gsa 12/22/2012 12:34'!
-testEmptyStringAtBeginningOfWord
-	| matcher |
-	matcher := self matcherClass forString: '\<'.
-	self
-		assert: (matcher copy: 'foo bar' replacingMatchesWith: '*')
-			= '*foo *bar'
-		description: 'An empty string at the beginning of a word'! !
-
-!RxMatcherTest methodsFor: 'testing-empty' stamp: 'gsa 12/20/2012 20:02'!
-testEmptyStringAtEndOfLine
-	| matcher |
-	matcher := self matcherClass forString: '$'.
-	self
-		assert: (matcher copy: 'foo1 bar1' , String crString , 'foo2 bar2' replacingMatchesWith: '*')
-			= ('foo1 bar1*', String crString , 'foo2 bar2*')
-		description: 'An empty string at the end of a line'! !
-
-!RxMatcherTest methodsFor: 'testing-empty' stamp: 'gsa 12/22/2012 12:34'!
-testEmptyStringAtEndOfWord
-	| matcher |
-	matcher := self matcherClass forString: '\>'.
-	self
-		assert: (matcher copy: 'foo bar' replacingMatchesWith: '*')
-			= 'foo* bar*'
-		description: 'An empty string at the end of a word'! !
-
-!RxMatcherTest methodsFor: 'testing-empty' stamp: 'gsa 12/22/2012 12:34'!
-testEmptyStringAtWordBoundary
-	| matcher |
-	matcher := self matcherClass forString: '\b'.
-	self
-		assert: (matcher copy: 'foo bar' replacingMatchesWith: '*')
-			= '*foo* *bar*'
-		description: 'An empty string at a word boundary'! !
-
-!RxMatcherTest methodsFor: 'testing-empty' stamp: 'gsa 12/22/2012 12:35'!
-testEmptyStringNotAtWordBoundary
-	| matcher |
-	matcher := self matcherClass forString: '\B'.
-	self
-		assert: (matcher copy: 'foo bar' replacingMatchesWith: '*')
-			= 'f*o*o b*a*r'
-		description: 'An empty string not at a word boundary'! !
-
-!RxMatcherTest methodsFor: 'testing' stamp: 'lr 1/15/2010 19:47'!
-testRegex001
-	self runRegex: #('^.*$' 
-		'' true (1 '')
-		'a' true (1 'a')
-		'abc' true (1 'abc'))! !
-
-!RxMatcherTest methodsFor: 'testing' stamp: 'lr 1/15/2010 19:47'!
-testRegex002
-	self runRegex: #('a\w+c'
-		' abb_bbc ' true (1 'abb_bbc')
-		'abb-bc' false nil)! !
-
-!RxMatcherTest methodsFor: 'testing' stamp: 'lr 1/15/2010 19:47'!
-testRegex003
-	self runRegex: #('a\W+c'
-		' abb_bbc ' false nil
-		'abb-bc' false nil
-		'a.,:;-&!!"#%/()={[]}+?\~*''c' true (1 'a.,:;-&!!"#%/()={[]}+?\~*''c'))! !
-
-!RxMatcherTest methodsFor: 'testing' stamp: 'lr 4/23/2010 09:01'!
-testRegex004
-	self runRegex: #(':isVowel:'
-		'aei' true nil
-		'xyz' false nil)! !
-
-!RxMatcherTest methodsFor: 'testing-extensions' stamp: 'gsa 12/22/2012 12:26'!
-testStringAllRangesOfRegexMatches
-	| result |
-	result := 'aabbcc' allRangesOfRegexMatches: 'b+'.
-	self assert: result size = 1.
-	self assert: result first first = 3.
-	self assert: result first last = 4
-	! !
-
-!RxMatcherTest methodsFor: 'testing-extensions' stamp: 'lr 4/23/2010 08:50'!
-testStringAllRegexMatches
-	| result |
-	result := 'aabbcc' allRegexMatches: 'b+'.
-	self assert: result size = 1.
-	self assert: result first = 'bb'! !
-
-!RxMatcherTest methodsFor: 'testing-extensions' stamp: 'lr 4/23/2010 08:51'!
-testStringAsRegex
-	self assert: 'b+' asRegex class = RxParser preferredMatcherClass! !
-
-!RxMatcherTest methodsFor: 'testing-extensions' stamp: 'lr 4/23/2010 08:52'!
-testStringAsRegexIgnoringCase
-	self assert: 'b+' asRegexIgnoringCase class = RxParser preferredMatcherClass! !
-
-!RxMatcherTest methodsFor: 'testing-extensions' stamp: 'lr 4/23/2010 08:53'!
-testStringCopyWithRegexMatchesReplacedWith
-	self assert: ('aabbcc' copyWithRegex: 'b+' matchesReplacedWith: 'X') = 'aaXcc'! !
-
-!RxMatcherTest methodsFor: 'testing-extensions' stamp: 'lr 4/23/2010 08:53'!
-testStringCopyWithRegexMatchesTranslatedUsing
-	self assert: ('aabbcc' 
-		copyWithRegex: 'b+' 
-		matchesTranslatedUsing: [ :each | 
-			self assert: each = 'bb'.
-			'X' ]) = 'aaXcc'! !
-
-!RxMatcherTest methodsFor: 'testing-extensions' stamp: 'lr 4/23/2010 08:55'!
-testStringMatchesRegex
-	self deny: ('aabbcc' matchesRegex: 'a+').
-	self deny: ('aabbcc' matchesRegex: 'b+c+').
-	self assert: ('aabbcc' matchesRegex: 'a+b+c+')! !
-
-!RxMatcherTest methodsFor: 'testing-extensions' stamp: 'lr 4/23/2010 08:55'!
-testStringMatchesRegexIgnoringCase
-	self deny: ('AABBCC' matchesRegexIgnoringCase: 'a+').
-	self deny: ('AABBCC' matchesRegexIgnoringCase: 'b+c+').
-	self assert: ('AABBCC' matchesRegexIgnoringCase: 'a+b+c+')! !
-
-!RxMatcherTest methodsFor: 'testing-extensions' stamp: 'lr 4/23/2010 08:56'!
-testStringPrefixMatchesRegex
-	self assert: ('aabbcc' prefixMatchesRegex: 'a+').
-	self deny: ('aabbcc' prefixMatchesRegex: 'b+')! !
-
-!RxMatcherTest methodsFor: 'testing-extensions' stamp: 'lr 4/23/2010 08:56'!
-testStringPrefixMatchesRegexIgnoringCase
-	self assert: ('AABBCC' prefixMatchesRegexIgnoringCase: 'a+').
-	self deny: ('AABBCC' prefixMatchesRegexIgnoringCase: 'b+')! !
-
-!RxMatcherTest methodsFor: 'testing-extensions' stamp: 'lr 4/23/2010 08:57'!
-testStringRegexMatchesCollect
-	| result |
-	result := 'aabbcc' regex: 'b+' matchesCollect: [ :each | each asUppercase ].
-	self assert: result size = 1.
-	self assert: result first = 'BB'! !
-
-!RxMatcherTest methodsFor: 'testing-extensions' stamp: 'lr 4/23/2010 08:58'!
-testStringRegexMatchesDo
-	| result |
-	result := OrderedCollection new.
-	'aabbcc' regex: 'b+' matchesDo: [ :each | result add: each ].
-	self assert: result size = 1.
-	self assert: result first = 'bb'! !
-
-!RxMatcherTest class methodsFor: 'accessing' stamp: 'lr 1/15/2010 19:48'!
-packageNamesUnderTest
-	^ #('VB-Regex')! !
-
-!RxParserTest methodsFor: 'tests' stamp: 'sd 9/5/2006 00:11'!
-DoesNotWorktestBackQuotesEscape
-	"self debug: #testBackQuotesEscape"
-	
-	"Regular expressions can also include the following backquote escapes
-to refer to popular classes of characters:
-	\w	any word constituent character (same as [a-zA-Z0-9:=])
-	\W	any character but a word constituent
-	\d	a digit (same as [0-9])
-	\D	anything but a digit
-	\s 	a whitespace character
-	\S	anything but a whitespace character
-These escapes are also allowed in character classes: '[\w+-]' means
-'any character that is either a word constituent, or a plus, or a
-minus'."
-	
-	self assert: ('one word' matchesRegex: '\w').	
-		
-	self assert: ('one' matchesRegex: '\w').		  	
-	! !
-
-!RxParserTest methodsFor: 'tests' stamp: 'StephaneDucasse 12/11/2010 15:00'!
-test
-	"self debug: #test"
-	
-
-	self assert: ('\<t\w+' asRegexIgnoringCase
-		copy: 'now is the Time'
-		translatingMatchesUsing: [:match | match asUppercase]) = 'now is THE TIME'.
-
-	"the regular expression matches words beginning with either an uppercase or a lowercase T"! !
-
-!RxParserTest methodsFor: 'tests' stamp: 'sd 9/4/2006 16:24'!
-testCadrMatching
-	"self debug: #testCadrMatching"
-
-	"A bit more complex example is the following expression, matching the
-name of any of the Lisp-style `car', `cdr', `caar', `cadr',
-... functions:"
-
-	self assert: ( 'car' matchesRegex: 'c(a|d)+r').
-	self assert: ( 'cdr' matchesRegex: 'c(a|d)+r').
-	self assert: ( 'caar' matchesRegex: 'c(a|d)+r').
-	self assert: ( 'cadr' matchesRegex: 'c(a|d)+r').
-	self assert: ( 'caddar' matchesRegex: 'c(a|d)+r').! !
-
-!RxParserTest methodsFor: 'tests' stamp: 'sd 9/4/2006 16:49'!
-testCharacterSet
-	"self debug: #testCharacterSet"
-	
-	"So far, we have used only characters as the 'smallest' components of
-regular expressions. There are other, more `interesting', components.
-A character set is a string of characters enclosed in square
-brackets. It matches any single character if it appears between the
-brackets. For example, `[01]' matches either `0' or `1':"
-
-	self assert: ('0' matchesRegex: '[01]').	 	
-	self deny: ('3' matchesRegex: '[01]'). 	 
-	self deny: ('11' matchesRegex: '[01]').	"-- false: a set matches only one character"
-	self deny: ('01' matchesRegex: '[01]').
-! !
-
-!RxParserTest methodsFor: 'tests' stamp: 'sd 9/4/2006 17:39'!
-testCharacterSetBinaryNumber
-	"self debug: #testCharacterSetBinaryNumber"
-	
-	"Using plus operator, we can build the following binary number
-recognizer:"
-	self assert: ('10010100' matchesRegex: '[01]+').	 	
-	self deny: ('10001210' matchesRegex: '[01]+')	 ! !
-
-!RxParserTest methodsFor: 'tests' stamp: 'sd 9/5/2006 00:01'!
-testCharacterSetInversion
-	"self debug: #testCharacterSetInversion"
-	
-	"If the first character after the opening bracket is `^', the set is
-inverted: it matches any single character *not* appearing between the
-brackets:"
-	
-	self deny: ('0' matchesRegex: '[^01]').		  	
-	"0 appears in 01 so there is no match"
-	
-	self assert: ('3' matchesRegex: '[^01]').
-	"3 is not in 01 so it matches"
-	
-	
-	self deny: ('30' matchesRegex: '[^01]').		
-	self deny: ('33333333333333333333333330' matchesRegex: '[^01]').	
-	"there is one zero so it does not match"! !
-
-!RxParserTest methodsFor: 'tests' stamp: 'sd 9/4/2006 23:20'!
-testCharacterSetRange
-	"self debug: #testCharacterSetRange"
-	
-	"For convenience, a set may include ranges: pairs of characters
-separated with `-'. This is equivalent to listing all characters
-between them: `[0-9]' is the same as `[0123456789]'. "	
-
-	self assert: ('0' matchesRegex: '[0-9]').	
-	self assert: ('9' matchesRegex: '[0-9]').	
-	self deny: ('a' matchesRegex: '[0-9]').
-	self deny: ('01' matchesRegex: '[0-9]').	
-	self assert: ('01442128629839374565' matchesRegex: '[0-9]+').	
-	! !
-
-!RxParserTest methodsFor: 'tests' stamp: 'marcus.denker 10/22/2008 10:47'!
-testMatchesInwW
-	"self debug: #testMatchesInwW"
-	
-	"1. Backslash escapes similar to those in Perl are allowed in patterns:
-	\w	any word constituent character (equivalent to [a-zA-Z0-9:=])
-	\W	any character but a word constituent (equivalent to [^a-xA-Z0-9:=]"
-
-	self assert: ('\w+' asRegex matchesIn: 'now is the time') asArray = #('now' 'is' 'the' 'time').
-	self assert: ('\W+' asRegex matchesIn: 'now is the time') asArray = #(' ' ' ' ' ').
-	
-	"why do we get that"
-	self assert: ('\w' asRegex matchesIn: 'now') asArray = #('n' 'o' 'w').! !
-
-!RxParserTest methodsFor: 'tests' stamp: 'sd 9/4/2006 16:38'!
-testOrOperator
-	"self debug: #testOrOperator"
-	
-	"The last operator is `|' meaning `or'. It is placed between two
-regular expressions, and the resulting expression matches if one of
-the expressions matches. It has the lowest possible precedence (lower
-than sequencing). For example, `ab*|ba*' means `a followed by any
-number of b's, or b followed by any number of a's':"
-
-	self assert: ('abb' matchesRegex: 'ab*|ba*').  	
-	self assert: ('baa' matchesRegex: 'ab*|ba*').	 	
-	self deny: ('baab' matchesRegex: 'ab*|ba*').
-	
-
-	"It is possible to write an expression matching an empty string, for
-example: `a|'.  However, it is an error to apply `*', `+', or `?' to
-such expression: `(a|)*' is an invalid expression."
-
-	self should: ['(a|)*' asRegex] raise: Error.
-! !
-
-!RxParserTest methodsFor: 'tests' stamp: 'sd 9/4/2006 16:17'!
-testQuotingOperators
-	"self debug: #testQuotingOperators"
-	
-	"As we have seen, characters `*', `+', `?', `(', and `)' have special
-meaning in regular expressions. If one of them is to be used
-literally, it should be quoted: preceded with a backslash. (Thus,
-backslash is also special character, and needs to be quoted for a
-literal match--as well as any other special character described
-further)."
-
-	self deny: ('ab*' matchesRegex: 'ab*'). "	-- false: star in the right string is special"
-	self assert: ('ab*' matchesRegex: 'ab\*').	 		
-	self assert: ('a\c' matchesRegex: 'a\\c').		 	! !
-
-!RxParserTest methodsFor: 'tests' stamp: 'sd 9/3/2006 19:50'!
-testSimpleMatchesRegex
-	"self debug: #testSimpleMatchesRegex"
-	
-	"The simplest regular expression is a single character.  It matches
-exactly that character. A sequence of characters matches a string with
-exactly the same sequence of characters:"
-
-	self assert: ('a' matchesRegex: 'a').
-	self assert: ('foobar' matchesRegex: 'foobar')	.
-	self deny: ('blorple' matchesRegex: 'foobar')! !
-
-!RxParserTest methodsFor: 'tests' stamp: 'sd 9/3/2006 21:41'!
-testSimpleMatchesRegexWithStar
-	"self debug: #testSimpleMatchesRegexWithStar"
-	
-	"The above paragraph in testSimpleMatchesRegex introduced a primitive regular expression (a
-character), and an operator (sequencing). Operators are applied to
-regular expressions to produce more complex regular expressions.
-Sequencing (placing expressions one after another) as an operator is,
-in a certain sense, `invisible'--yet it is arguably the most common.
-A more `visible' operator is Kleene closure, more often simply
-referred to as `a star'.  A regular expression followed by an asterisk
-matches any number (including 0) of matches of the original
-expression. For example:"
-
-	self assert: ('ab' matchesRegex: 'a*b').		 		
-	self assert: ('aaaaab' matchesRegex: 'a*b').	
-	self assert: ('b' matchesRegex: 'a*b').	 	
-	self deny: ('aac' matchesRegex: 'a*b').	 		! !
-
-!RxParserTest methodsFor: 'tests' stamp: 'sd 9/4/2006 23:38'!
-testSpecialCharacterInSetRange
-	"self debug: #testSpecialCharacterInSetRange"
-	
-	"Special characters within a set are `^', `-', and `]' that closes the
-set. Below are the examples of how to literally use them in a set:
-	[01^]		-- put the caret anywhere except the beginning
-	[01-]		-- put the dash as the last character
-	[]01]		-- put the closing bracket as the first character 
-	[^]01]			(thus, empty and universal sets cannot be specified)"
-
-	self assert: ('0' matchesRegex: '[01^]').
-	self assert: ('1' matchesRegex: '[01^]').
-	self assert: ('^' matchesRegex: '[01^]').
-	
-	self deny: ('0' matchesRegex: '[^01]').
-	self deny: ('1' matchesRegex: '[^01]').
-	
-	"[^abc] means that everything except abc is matche"
-	self assert: ('^' matchesRegex: '[^01]').
-	! !
-
-!RxParserTest methodsFor: 'tests' stamp: 'sd 9/4/2006 16:26'!
-testStarPlusQuestionMark
-	"self debug: #testStarPlusQuestionMark"
-	
-	"Two other operators similar to `*' are `+' and `?'. `+' (positive
-closure, or simply `plus') matches one or more occurrences of the
-original expression. `?' (`optional') matches zero or one, but never
-more, occurrences."
-
-	self assert: ('ac' matchesRegex: 'ab*c').  		
-	self deny: ('ac' matchesRegex: 'ab+c'). 		"-- false: need at least one b"
-	self assert: ('abbc' matchesRegex: 'ab+c').	
-	self assert: ('abbbbbbc' matchesRegex: 'ab+c').	
-	self deny: ('abbc' matchesRegex: 'ab?c')	 	"-- false: too many b's"! !
-
-!RxParserTest methodsFor: 'tests' stamp: 'sd 9/3/2006 22:57'!
-testStarPrecedence
-	"self debug: #testStarPrecedence"
-	
-	"A star's precedence is higher than that of sequencing. A star applies
-to the shortest possible subexpression that precedes it. For example,
-'ab*' means `a followed by zero or more occurrences of b', not `zero
-or more occurrences of ab':"
-
-	self assert: ('abbb' matchesRegex: 'ab*'). 
-	self deny: ('abab' matchesRegex: 'ab*').	 	
-		
-	"To actually make a regex matching `zero or more occurrences of ab',
-`ab' is enclosed in parentheses:"
-	self assert: ('abab' matchesRegex: '(ab)*'). 
-	self deny: ('abcab' matchesRegex: '(ab)*')! !
-
-!RxParserTest methodsFor: 'tests' stamp: 'StephaneDucasse 12/11/2010 15:00'!
-testTranslatingMatchesUsing
-	"self debug: #testTranslatingMatchesUsing"
-	
-
-	self assert: ('\<t\w+' asRegexIgnoringCase
-		copy: 'now is the Time'
-		translatingMatchesUsing: [:match | match asUppercase]) = 'now is THE TIME'.
-
-	"the regular expression matches words beginning with either an uppercase or a lowercase T"! !
-
-!RxParserTest methodsFor: 'tests' stamp: 'sd 9/4/2006 23:29'!
-toDotestSpecialCharacterInSetRange
-	"self debug: #testSpecialCharacterInSetRange"
-	
-	"Special characters within a set are `^', `-', and `]' that closes the
-set. Below are the examples of how to literally use them in a set:
-	[01^]		-- put the caret anywhere except the beginning
-	[01-]		-- put the dash as the last character
-	[]01]		-- put the closing bracket as the first character 
-	[^]01]			(thus, empty and universal sets cannot be specified)"
-
-	self assert: ('0' matchesRegex: '[01^]').
-	
-	self assert: ('0' matchesRegex: '[0-9]').	
-	! !
-
-!RxCharSetParser methodsFor: 'parsing' stamp: 'vb 4/11/09 21:56'!
+!RxCharSetParser methodsFor: 'parsing' stamp: 'vb 11/Apr/2009 21:56:00'!
 addChar: aChar
 
 	elements add: (RxsCharacter with: aChar)! !
 
-!RxCharSetParser methodsFor: 'parsing' stamp: 'vb 4/11/09 21:56'!
+!RxCharSetParser methodsFor: 'parsing' stamp: 'vb 11/Apr/2009 21:56:00'!
 addRangeFrom: firstChar to: lastChar
 
 	firstChar asInteger > lastChar asInteger ifTrue:
 		[RxParser signalSyntaxException: ' bad character range'].
 	elements add: (RxsRange from: firstChar to: lastChar)! !
 
-!RxCharSetParser methodsFor: 'parsing' stamp: 'vb 4/11/09 21:56'!
+!RxCharSetParser methodsFor: 'parsing' stamp: 'vb 11/Apr/2009 21:56:00'!
 match: aCharacter
 
 	aCharacter = lookahead
@@ -1891,7 +545,7 @@ match: aCharacter
 		ifTrue: [lookahead := nil]
 		ifFalse: [lookahead := source next]! !
 
-!RxCharSetParser methodsFor: 'parsing' stamp: 'vb 4/11/09 21:56'!
+!RxCharSetParser methodsFor: 'parsing' stamp: 'vb 11/Apr/2009 21:56:00'!
 parseCharOrRange
 
 	| firstChar |
@@ -1906,7 +560,7 @@ parseCharOrRange
 				^self match: lookahead]].
 	self addChar: firstChar! !
 
-!RxCharSetParser methodsFor: 'parsing' stamp: 'vb 4/11/09 21:56'!
+!RxCharSetParser methodsFor: 'parsing' stamp: 'vb 11/Apr/2009 21:56:00'!
 parseEscapeChar
 
 	self match: $\.
@@ -1915,7 +569,7 @@ parseEscapeChar
 		ifFalse: [elements add: (RxsPredicate forEscapedLetter: lookahead)].
 	self match: lookahead! !
 
-!RxCharSetParser methodsFor: 'parsing' stamp: 'vb 4/11/09 21:56'!
+!RxCharSetParser methodsFor: 'parsing' stamp: 'vb 11/Apr/2009 21:56:00'!
 parseNamedSet
 
 	| name |
@@ -1925,7 +579,7 @@ parseNamedSet
 	self match: $].
 	elements add: (RxsPredicate forNamedClass: name)! !
 
-!RxCharSetParser methodsFor: 'parsing' stamp: 'vb 4/11/09 21:56'!
+!RxCharSetParser methodsFor: 'parsing' stamp: 'vb 11/Apr/2009 21:56:00'!
 parseStep
 
 	lookahead = $[ ifTrue:
@@ -1938,14 +592,14 @@ parseStep
 		[RxParser signalSyntaxException: 'invalid range'].
 	self parseCharOrRange! !
 
-!RxCharSetParser methodsFor: 'initialize-release' stamp: 'vb 4/11/09 21:56'!
+!RxCharSetParser methodsFor: 'initialize-release' stamp: 'vb 11/Apr/2009 21:56:00'!
 initialize: aStream
 
 	source := aStream.
 	lookahead := aStream next.
 	elements := OrderedCollection new! !
 
-!RxCharSetParser methodsFor: 'accessing' stamp: 'vb 4/11/09 21:56'!
+!RxCharSetParser methodsFor: 'accessing' stamp: 'vb 11/Apr/2009 21:56:00'!
 parse
 
 	lookahead = $- ifTrue:
@@ -1954,12 +608,12 @@ parse
 	[lookahead isNil] whileFalse: [self parseStep].
 	^elements! !
 
-!RxCharSetParser class methodsFor: 'instance creation' stamp: 'vb 4/11/09 21:56'!
+!RxCharSetParser class methodsFor: 'instance creation' stamp: 'vb 11/Apr/2009 21:56:00'!
 on: aStream
 
 	^self new initialize: aStream! !
 
-!RxMatchOptimizer methodsFor: 'accessing' stamp: 'vb 4/11/09 21:56'!
+!RxMatchOptimizer methodsFor: 'accessing' stamp: 'vb 11/Apr/2009 21:56:00'!
 canStartMatch: aCharacter in: aMatcher 
 	"Answer whether a match could commence at the given lookahead
 	character, or in the current state of <aMatcher>. True answered
@@ -1969,7 +623,7 @@ canStartMatch: aCharacter in: aMatcher
 	aCharacter isNil ifTrue: [^true].
 	^testBlock == nil or: [testBlock value: aCharacter value: aMatcher]! !
 
-!RxMatchOptimizer methodsFor: 'accessing' stamp: 'vb 4/11/09 21:56'!
+!RxMatchOptimizer methodsFor: 'accessing' stamp: 'vb 11/Apr/2009 21:56:00'!
 conditionTester
 	"#any condition is filtered at the higher level;
 	it cannot appear among the conditions here."
@@ -1993,7 +647,7 @@ conditionTester
 			[:conditionSelector |
 			matcher perform: conditionSelector]]! !
 
-!RxMatchOptimizer methodsFor: 'accessing' stamp: 'vb 4/11/09 21:56'!
+!RxMatchOptimizer methodsFor: 'accessing' stamp: 'vb 11/Apr/2009 21:56:00'!
 methodPredicateTester
 	| p selector |
 	methodPredicates isEmpty ifTrue: [^nil].
@@ -2010,7 +664,7 @@ methodPredicateTester
 			RxParser doHandlingMessageNotUnderstood:
 				[p contains: [:sel | char perform: sel]]]]! !
 
-!RxMatchOptimizer methodsFor: 'accessing' stamp: 'vb 4/11/09 21:56'!
+!RxMatchOptimizer methodsFor: 'accessing' stamp: 'vb 11/Apr/2009 21:56:00'!
 nonMethodPredicateTester
 	| p selector |
 	nonMethodPredicates isEmpty ifTrue: [^nil].
@@ -2026,7 +680,7 @@ nonMethodPredicateTester
 			RxParser doHandlingMessageNotUnderstood:
 				[p contains: [:sel | (char perform: sel) not]]]]! !
 
-!RxMatchOptimizer methodsFor: 'private' stamp: 'vb 4/11/09 21:56'!
+!RxMatchOptimizer methodsFor: 'private' stamp: 'vb 11/Apr/2009 21:56:00'!
 determineTestMethod
 	"Answer a block closure that will work as a can-match predicate.
 	Answer nil if no viable optimization is possible (too many chars would
@@ -2046,7 +700,7 @@ determineTestMethod
 	testers := testers asArray.
 	^[:char :matcher | testers contains: [:t | t value: char value: matcher]]! !
 
-!RxMatchOptimizer methodsFor: 'private' stamp: 'vb 4/11/09 21:56'!
+!RxMatchOptimizer methodsFor: 'private' stamp: 'vb 11/Apr/2009 21:56:00'!
 nonPredicateTester
 
 	| p pred |
@@ -2059,7 +713,7 @@ nonPredicateTester
 		ifFalse: 
 			[[:char :m | p contains: [:some | (some value: char) not]]]! !
 
-!RxMatchOptimizer methodsFor: 'private' stamp: 'vb 4/11/09 21:56'!
+!RxMatchOptimizer methodsFor: 'private' stamp: 'vb 11/Apr/2009 21:56:00'!
 nonPrefixTester
 
 	| np nonPrefixChar |
@@ -2071,7 +725,7 @@ nonPrefixTester
 			[:char :matcher | char ~= nonPrefixChar]]
 		ifFalse: [[:char : matcher | (np includes: char) not]]! !
 
-!RxMatchOptimizer methodsFor: 'private' stamp: 'vb 4/11/09 21:56'!
+!RxMatchOptimizer methodsFor: 'private' stamp: 'vb 11/Apr/2009 21:56:00'!
 optimizeSet: aSet
 	"If a set is small, convert it to array to speed up lookup
 	(Array has no hashing overhead, beats Set on small number
@@ -2079,7 +733,7 @@ optimizeSet: aSet
 
 	^aSet size < 10 ifTrue: [aSet asArray] ifFalse: [aSet]! !
 
-!RxMatchOptimizer methodsFor: 'private' stamp: 'vb 4/11/09 21:56'!
+!RxMatchOptimizer methodsFor: 'private' stamp: 'vb 11/Apr/2009 21:56:00'!
 predicateTester
 
 	| p pred |
@@ -2092,7 +746,7 @@ predicateTester
 		ifFalse: 
 			[[:char :m | p contains: [:some | some value: char]]]! !
 
-!RxMatchOptimizer methodsFor: 'private' stamp: 'vb 4/11/09 21:56'!
+!RxMatchOptimizer methodsFor: 'private' stamp: 'vb 11/Apr/2009 21:56:00'!
 prefixTester
 
 	| p prefixChar |
@@ -2110,7 +764,7 @@ prefixTester
 				ifTrue: [[:char :matcher | p includes: char asUppercase]]
 				ifFalse: [[:char :matcher | p includes: char]]]! !
 
-!RxMatchOptimizer methodsFor: 'initialize-release' stamp: 'vb 4/11/09 21:56'!
+!RxMatchOptimizer methodsFor: 'initialize-release' stamp: 'zrdz 3/May/2026 18:22:51'!
 initialize: aRegex ignoreCase: aBoolean 
 	"Set `testMethod' variable to a can-match predicate block:
 	two-argument block which accepts a lookahead character
@@ -2119,37 +773,37 @@ initialize: aRegex ignoreCase: aBoolean
 	lookahead. "
 
 	ignoreCase := aBoolean.
-	prefixes := Set new: 10.
-	nonPrefixes := Set new: 10.
-	conditions := Set new: 3.
-	methodPredicates := Set new: 3.
-	nonMethodPredicates := Set new: 3.
-	predicates := Set new: 3.
-	nonPredicates := Set new: 3.
+	prefixes := Set newWithRoomForMoreThan: 10.
+	nonPrefixes := Set newWithRoomForMoreThan: 10.
+	conditions := Set newWithRoomForMoreThan: 3.
+	methodPredicates := Set newWithRoomForMoreThan: 3.
+	nonMethodPredicates := Set newWithRoomForMoreThan: 3.
+	predicates := Set newWithRoomForMoreThan: 3.
+	nonPredicates := Set newWithRoomForMoreThan: 3.
 	aRegex dispatchTo: self.	"If the whole expression is nullable, 
 		end-of-line is an implicit can-match condition!!"
 	aRegex isNullable ifTrue: [conditions add: #atEndOfLine].
 	testBlock := self determineTestMethod! !
 
-!RxMatchOptimizer methodsFor: 'double dispatch' stamp: 'vb 4/11/09 21:56'!
+!RxMatchOptimizer methodsFor: 'double dispatch' stamp: 'vb 11/Apr/2009 21:56:00'!
 syntaxAny
 	"Any special char is among the prefixes."
 
 	conditions add: #any! !
 
-!RxMatchOptimizer methodsFor: 'double dispatch' stamp: 'vb 4/11/09 21:56'!
+!RxMatchOptimizer methodsFor: 'double dispatch' stamp: 'vb 11/Apr/2009 21:56:00'!
 syntaxBeginningOfLine
 	"Beginning of line is among the prefixes."
 
 	conditions add: #atBeginningOfLine! !
 
-!RxMatchOptimizer methodsFor: 'double dispatch' stamp: 'vb 4/11/09 21:56'!
+!RxMatchOptimizer methodsFor: 'double dispatch' stamp: 'vb 11/Apr/2009 21:56:00'!
 syntaxBeginningOfWord
 	"Beginning of line is among the prefixes."
 
 	conditions add: #atBeginningOfWord! !
 
-!RxMatchOptimizer methodsFor: 'double dispatch' stamp: 'vb 4/11/09 21:56'!
+!RxMatchOptimizer methodsFor: 'double dispatch' stamp: 'vb 11/Apr/2009 21:56:00'!
 syntaxBranch: branchNode
 	"If the head piece of the branch is transparent (allows 0 matches),
 	we must recurse down the branch. Otherwise, just the head atom
@@ -2159,7 +813,7 @@ syntaxBranch: branchNode
 		ifTrue: [branchNode branch dispatchTo: self].
 	branchNode piece dispatchTo: self! !
 
-!RxMatchOptimizer methodsFor: 'double dispatch' stamp: 'vb 4/11/09 21:56'!
+!RxMatchOptimizer methodsFor: 'double dispatch' stamp: 'vb 11/Apr/2009 21:56:00'!
 syntaxCharSet: charSetNode 
 	"All these (or none of these) characters is the prefix."
 
@@ -2171,50 +825,50 @@ syntaxCharSet: charSetNode
 				ifTrue: [nonPredicates addAll: charSetNode predicates]
 				ifFalse: [predicates addAll: charSetNode predicates]]! !
 
-!RxMatchOptimizer methodsFor: 'double dispatch' stamp: 'vb 4/11/09 21:56'!
+!RxMatchOptimizer methodsFor: 'double dispatch' stamp: 'vb 11/Apr/2009 21:56:00'!
 syntaxCharacter: charNode
 	"This character is the prefix, of one of them."
 
 	prefixes add: charNode character! !
 
-!RxMatchOptimizer methodsFor: 'double dispatch' stamp: 'vb 4/11/09 21:56'!
+!RxMatchOptimizer methodsFor: 'double dispatch' stamp: 'vb 11/Apr/2009 21:56:00'!
 syntaxEndOfLine
 	"Beginning of line is among the prefixes."
 
 	conditions add: #atEndOfLine! !
 
-!RxMatchOptimizer methodsFor: 'double dispatch' stamp: 'vb 4/11/09 21:56'!
+!RxMatchOptimizer methodsFor: 'double dispatch' stamp: 'vb 11/Apr/2009 21:56:00'!
 syntaxEndOfWord
 
 	conditions add: #atEndOfWord! !
 
-!RxMatchOptimizer methodsFor: 'double dispatch' stamp: 'vb 4/11/09 21:56'!
+!RxMatchOptimizer methodsFor: 'double dispatch' stamp: 'vb 11/Apr/2009 21:56:00'!
 syntaxEpsilon
 	"Empty string, terminate the recursion (do nothing)."! !
 
-!RxMatchOptimizer methodsFor: 'double dispatch' stamp: 'vb 4/11/09 21:56'!
+!RxMatchOptimizer methodsFor: 'double dispatch' stamp: 'vb 11/Apr/2009 21:56:00'!
 syntaxMessagePredicate: messagePredicateNode 
 	messagePredicateNode negated
 		ifTrue: [nonMethodPredicates add: messagePredicateNode selector]
 		ifFalse: [methodPredicates add: messagePredicateNode selector]! !
 
-!RxMatchOptimizer methodsFor: 'double dispatch' stamp: 'vb 4/11/09 21:56'!
+!RxMatchOptimizer methodsFor: 'double dispatch' stamp: 'vb 11/Apr/2009 21:56:00'!
 syntaxNonWordBoundary
 
 	conditions add: #notAtWordBoundary! !
 
-!RxMatchOptimizer methodsFor: 'double dispatch' stamp: 'vb 4/11/09 21:56'!
+!RxMatchOptimizer methodsFor: 'double dispatch' stamp: 'vb 11/Apr/2009 21:56:00'!
 syntaxPiece: pieceNode
 	"Pass on to the atom."
 
 	pieceNode atom dispatchTo: self! !
 
-!RxMatchOptimizer methodsFor: 'double dispatch' stamp: 'vb 4/11/09 21:56'!
+!RxMatchOptimizer methodsFor: 'double dispatch' stamp: 'vb 11/Apr/2009 21:56:00'!
 syntaxPredicate: predicateNode 
 
 	predicates add: predicateNode predicate! !
 
-!RxMatchOptimizer methodsFor: 'double dispatch' stamp: 'vb 4/11/09 21:56'!
+!RxMatchOptimizer methodsFor: 'double dispatch' stamp: 'vb 11/Apr/2009 21:56:00'!
 syntaxRegex: regexNode
 	"All prefixes of the regex's branches should be combined.
 	Therefore, just recurse."
@@ -2223,19 +877,19 @@ syntaxRegex: regexNode
 	regexNode regex notNil
 		ifTrue: [regexNode regex dispatchTo: self]! !
 
-!RxMatchOptimizer methodsFor: 'double dispatch' stamp: 'vb 4/11/09 21:56'!
+!RxMatchOptimizer methodsFor: 'double dispatch' stamp: 'vb 11/Apr/2009 21:56:00'!
 syntaxWordBoundary
 
 	conditions add: #atWordBoundary! !
 
-!RxMatcher methodsFor: 'private' stamp: 'vb 4/11/09 21:56'!
+!RxMatcher methodsFor: 'private' stamp: 'vb 11/Apr/2009 21:56:00'!
 allocateMarker
 	"Answer an integer to use as an index of the next marker."
 
 	markerCount := markerCount + 1.
 	^markerCount! !
 
-!RxMatcher methodsFor: 'private' stamp: 'vb 4/11/09 21:56'!
+!RxMatcher methodsFor: 'private' stamp: 'vb 11/Apr/2009 21:56:00'!
 hookBranchOf: regexNode onto: endMarker
 	"Private - Recurse down the chain of regexes starting at
 	regexNode, compiling their branches and hooking their tails 
@@ -2252,7 +906,7 @@ hookBranchOf: regexNode onto: endMarker
 		alternative: rest;
 		yourself! !
 
-!RxMatcher methodsFor: 'private' stamp: 'vb 4/11/09 21:56'!
+!RxMatcher methodsFor: 'private' stamp: 'vb 11/Apr/2009 21:56:00'!
 isWordChar: aCharacterOrNil
 	"Answer whether the argument is a word constituent character:
 	alphanumeric or _."
@@ -2260,7 +914,7 @@ isWordChar: aCharacterOrNil
 	^aCharacterOrNil ~~ nil
 		and: [aCharacterOrNil isAlphaNumeric]! !
 
-!RxMatcher methodsFor: 'private' stamp: 'vb 4/11/09 21:56'!
+!RxMatcher methodsFor: 'private' stamp: 'vb 11/Apr/2009 21:56:00'!
 makeOptional: aMatcher
 	"Private - Wrap this matcher so that the result would match 0 or 1
 	occurrences of the matcher."
@@ -2273,7 +927,7 @@ makeOptional: aMatcher
 	aMatcher pointTailTo: dummy.
 	^branch! !
 
-!RxMatcher methodsFor: 'private' stamp: 'vb 4/11/09 21:56'!
+!RxMatcher methodsFor: 'private' stamp: 'vb 11/Apr/2009 21:56:00'!
 makePlus: aMatcher
 	"Private - Wrap this matcher so that the result would match 1 and more
 	occurrences of the matcher."
@@ -2284,7 +938,7 @@ makePlus: aMatcher
 	aMatcher pointTailTo: loopback.
 	^aMatcher! !
 
-!RxMatcher methodsFor: 'private' stamp: 'vb 4/11/09 21:56'!
+!RxMatcher methodsFor: 'private' stamp: 'vb 11/Apr/2009 21:56:00'!
 makeStar: aMatcher
 	"Private - Wrap this matcher so that the result would match 0 and more
 	occurrences of the matcher."
@@ -2300,7 +954,7 @@ makeStar: aMatcher
 	aMatcher pointTailTo: loopback.
 	^detour! !
 
-!RxMatcher methodsFor: 'private' stamp: 'lr 1/15/2010 21:17'!
+!RxMatcher methodsFor: 'private' stamp: 'lr 15/Jan/2010 21:17:00'!
 proceedSearchingStream: aStream
 
 	| position |
@@ -2313,7 +967,7 @@ proceedSearchingStream: aStream
 	self tryMatch ifTrue: [^true]. 
 	^false! !
 
-!RxMatcher methodsFor: 'private' stamp: 'lr 1/15/2010 21:51'!
+!RxMatcher methodsFor: 'private' stamp: 'lr 15/Jan/2010 21:51:00'!
 tryMatch
 	"Match thyself against the current stream."
 
@@ -2336,59 +990,59 @@ tryMatch
 	"this is a duplicate"
 	^ lastResult := false! !
 
-!RxMatcher methodsFor: 'testing' stamp: 'lr 1/15/2010 21:12'!
+!RxMatcher methodsFor: 'testing' stamp: 'lr 15/Jan/2010 21:12:00'!
 atBeginningOfLine
 
 	^self position = 0 or: [self lastChar = Cr]! !
 
-!RxMatcher methodsFor: 'testing' stamp: 'lr 1/15/2010 21:12'!
+!RxMatcher methodsFor: 'testing' stamp: 'lr 15/Jan/2010 21:12:00'!
 atBeginningOfWord
 
 	^(self isWordChar: self lastChar) not
 		and: [self isWordChar: stream peek]! !
 
-!RxMatcher methodsFor: 'testing' stamp: 'vb 4/11/09 21:56'!
+!RxMatcher methodsFor: 'testing' stamp: 'vb 11/Apr/2009 21:56:00'!
 atEndOfLine
 
 	^self atEnd or: [stream peek = Cr]! !
 
-!RxMatcher methodsFor: 'testing' stamp: 'lr 1/15/2010 21:12'!
+!RxMatcher methodsFor: 'testing' stamp: 'lr 15/Jan/2010 21:12:00'!
 atEndOfWord
 
 	^(self isWordChar: self lastChar)
 		and: [(self isWordChar: stream peek) not]! !
 
-!RxMatcher methodsFor: 'testing' stamp: 'lr 1/15/2010 21:12'!
+!RxMatcher methodsFor: 'testing' stamp: 'lr 15/Jan/2010 21:12:00'!
 atWordBoundary
 
 	^(self isWordChar: self lastChar)
 		xor: (self isWordChar: stream peek)! !
 
-!RxMatcher methodsFor: 'testing' stamp: 'vb 4/11/09 21:56'!
+!RxMatcher methodsFor: 'testing' stamp: 'vb 11/Apr/2009 21:56:00'!
 notAtWordBoundary
 
 	^self atWordBoundary not! !
 
-!RxMatcher methodsFor: 'testing' stamp: 'vb 4/11/09 21:56'!
+!RxMatcher methodsFor: 'testing' stamp: 'vb 11/Apr/2009 21:56:00'!
 supportsSubexpressions
 
 	^true! !
 
-!RxMatcher methodsFor: 'streaming' stamp: 'vb 4/11/09 21:56'!
+!RxMatcher methodsFor: 'streaming' stamp: 'vb 11/Apr/2009 21:56:00'!
 atEnd
 
 	^stream atEnd! !
 
-!RxMatcher methodsFor: 'streaming' stamp: 'lr 1/15/2010 21:13'!
+!RxMatcher methodsFor: 'streaming' stamp: 'lr 15/Jan/2010 21:13:00'!
 next
 	^ stream next! !
 
-!RxMatcher methodsFor: 'streaming' stamp: 'vb 4/11/09 21:56'!
+!RxMatcher methodsFor: 'streaming' stamp: 'vb 11/Apr/2009 21:56:00'!
 position
 
 	^stream position! !
 
-!RxMatcher methodsFor: 'accessing' stamp: 'vb 4/11/09 21:56'!
+!RxMatcher methodsFor: 'accessing' stamp: 'vb 11/Apr/2009 21:56:00'!
 buildFrom: aSyntaxTreeRoot
 	"Private - Entry point of matcher build process."
 
@@ -2396,36 +1050,36 @@ buildFrom: aSyntaxTreeRoot
 	matcher := aSyntaxTreeRoot dispatchTo: self.
 	matcher terminateWith: RxmTerminator new! !
 
-!RxMatcher methodsFor: 'accessing' stamp: 'lr 1/15/2010 21:14'!
+!RxMatcher methodsFor: 'accessing' stamp: 'lr 15/Jan/2010 21:14:00'!
 lastChar
 	^ stream position = 0
 		ifFalse: [ stream skip: -1; next ]! !
 
-!RxMatcher methodsFor: 'accessing' stamp: 'vb 4/11/09 21:56'!
+!RxMatcher methodsFor: 'accessing' stamp: 'vb 11/Apr/2009 21:56:00'!
 lastResult
 
 	^lastResult! !
 
-!RxMatcher methodsFor: 'accessing' stamp: 'vb 4/11/09 21:56'!
+!RxMatcher methodsFor: 'accessing' stamp: 'vb 11/Apr/2009 21:56:00'!
 matches: aString
 	"Match against a string."
 
 	^self matchesStream: aString readStream! !
 
-!RxMatcher methodsFor: 'accessing' stamp: 'vb 4/11/09 21:56'!
+!RxMatcher methodsFor: 'accessing' stamp: 'vb 11/Apr/2009 21:56:00'!
 matchesPrefix: aString
 	"Match against a string."
 
 	^self matchesStreamPrefix: aString readStream! !
 
-!RxMatcher methodsFor: 'accessing' stamp: 'vb 4/11/09 21:56'!
+!RxMatcher methodsFor: 'accessing' stamp: 'vb 11/Apr/2009 21:56:00'!
 matchesStream: theStream
 	"Match thyself against a positionable stream."
 
 	^(self matchesStreamPrefix: theStream)
 		and: [stream atEnd]! !
 
-!RxMatcher methodsFor: 'accessing' stamp: 'lr 1/15/2010 21:45'!
+!RxMatcher methodsFor: 'accessing' stamp: 'lr 15/Jan/2010 21:45:00'!
 matchesStreamPrefix: theStream
 	"Match thyself against a positionable stream."
 
@@ -2433,14 +1087,14 @@ matchesStreamPrefix: theStream
 	markerPositions := nil.
 	^self tryMatch! !
 
-!RxMatcher methodsFor: 'accessing' stamp: 'vb 4/11/09 21:56'!
+!RxMatcher methodsFor: 'accessing' stamp: 'vb 11/Apr/2009 21:56:00'!
 search: aString
 	"Search the string for occurrence of something matching myself.
 	Answer a Boolean indicating success."
 
 	^self searchStream: aString readStream! !
 
-!RxMatcher methodsFor: 'accessing' stamp: 'lr 1/15/2010 21:45'!
+!RxMatcher methodsFor: 'accessing' stamp: 'lr 15/Jan/2010 21:45:00'!
 searchStream: aStream
 	"Search the stream for occurrence of something matching myself.
 	After the search has occurred, stop positioned after the end of the
@@ -2458,7 +1112,7 @@ searchStream: aStream
 	self tryMatch ifTrue: [^true]. 
 	^false! !
 
-!RxMatcher methodsFor: 'accessing' stamp: 'NM 8/2/2021 19:48:52'!
+!RxMatcher methodsFor: 'accessing' stamp: 'NM 2/Aug/2021 19:48:52'!
 split: aString
 	| result lastPosition |
 
@@ -2473,17 +1127,17 @@ split: aString
 	result add: (aString copyFrom: lastPosition+1 to: aString size).
 	^ result! !
 
-!RxMatcher methodsFor: 'accessing' stamp: 'vb 4/11/09 21:56'!
+!RxMatcher methodsFor: 'accessing' stamp: 'vb 11/Apr/2009 21:56:00'!
 subBeginning: subIndex
 
 	^markerPositions at: subIndex * 2 - 1! !
 
-!RxMatcher methodsFor: 'accessing' stamp: 'vb 4/11/09 21:56'!
+!RxMatcher methodsFor: 'accessing' stamp: 'vb 11/Apr/2009 21:56:00'!
 subEnd: subIndex
 
 	^markerPositions at: subIndex * 2! !
 
-!RxMatcher methodsFor: 'accessing' stamp: 'vb 4/11/09 21:56'!
+!RxMatcher methodsFor: 'accessing' stamp: 'vb 11/Apr/2009 21:56:00'!
 subexpression: subIndex
 	"Answer a string that matched the subexpression at the given index.
 	If there are multiple matches, answer the last one.
@@ -2494,12 +1148,12 @@ subexpression: subIndex
 	matches := self subexpressions: subIndex.
 	^matches isEmpty ifTrue: [nil] ifFalse: [matches last]! !
 
-!RxMatcher methodsFor: 'accessing' stamp: 'vb 4/11/09 21:56'!
+!RxMatcher methodsFor: 'accessing' stamp: 'vb 11/Apr/2009 21:56:00'!
 subexpressionCount
 
 	^markerCount // 2! !
 
-!RxMatcher methodsFor: 'accessing' stamp: 'vb 4/11/09 21:56'!
+!RxMatcher methodsFor: 'accessing' stamp: 'vb 11/Apr/2009 21:56:00'!
 subexpressions: subIndex
 	"Answer an array of all matches of the subexpression at the given index.
 	The answer is always an array; it is empty if there are no matches."
@@ -2517,7 +1171,7 @@ subexpressions: subIndex
 	stream position: originalPosition.
 	^reply asArray! !
 
-!RxMatcher methodsFor: 'match enumeration' stamp: 'vb 4/11/09 21:56'!
+!RxMatcher methodsFor: 'match enumeration' stamp: 'vb 11/Apr/2009 21:56:00'!
 copy: aString replacingMatchesWith: replacementString
 	"Copy <aString>, except for the matches. Replace each match with <aString>."
 
@@ -2529,7 +1183,7 @@ copy: aString replacingMatchesWith: replacementString
 		replacingMatchesWith: replacementString.
 	^answer contents! !
 
-!RxMatcher methodsFor: 'match enumeration' stamp: 'vb 4/11/09 21:56'!
+!RxMatcher methodsFor: 'match enumeration' stamp: 'vb 11/Apr/2009 21:56:00'!
 copy: aString translatingMatchesUsing: aBlock
 	"Copy <aString>, except for the matches. For each match, evaluate <aBlock> passing the matched substring as the argument.  Expect the block to answer a String, and replace the match with the answer."
 
@@ -2538,7 +1192,7 @@ copy: aString translatingMatchesUsing: aBlock
 	self copyStream: aString readStream to: answer translatingMatchesUsing: aBlock.
 	^answer contents! !
 
-!RxMatcher methodsFor: 'match enumeration' stamp: 'lr 1/15/2010 21:45'!
+!RxMatcher methodsFor: 'match enumeration' stamp: 'lr 15/Jan/2010 21:45:00'!
 copyStream: aStream to: writeStream replacingMatchesWith: aString
 	"Copy the contents of <aStream> on the <writeStream>, except for the matches. Replace each match with <aString>."
 
@@ -2563,7 +1217,7 @@ copyStream: aStream to: writeStream replacingMatchesWith: aString
 	aStream position: searchStart.
 	[aStream atEnd] whileFalse: [writeStream nextPut: aStream next]! !
 
-!RxMatcher methodsFor: 'match enumeration' stamp: 'lr 1/15/2010 21:45'!
+!RxMatcher methodsFor: 'match enumeration' stamp: 'lr 15/Jan/2010 21:45:00'!
 copyStream: aStream to: writeStream translatingMatchesUsing: aBlock
 	"Copy the contents of <aStream> on the <writeStream>, except for the matches. For each match, evaluate <aBlock> passing the matched substring as the argument.  Expect the block to answer a String, and write the answer to <writeStream> in place of the match."
 
@@ -2590,7 +1244,7 @@ copyStream: aStream to: writeStream translatingMatchesUsing: aBlock
 	aStream position: searchStart.
 	[aStream atEnd] whileFalse: [writeStream nextPut: aStream next]! !
 
-!RxMatcher methodsFor: 'match enumeration' stamp: 'vb 4/11/09 21:56'!
+!RxMatcher methodsFor: 'match enumeration' stamp: 'vb 11/Apr/2009 21:56:00'!
 matchesIn: aString
 	"Search aString repeatedly for the matches of the receiver.  Answer an OrderedCollection of all matches (substrings)."
 
@@ -2601,7 +1255,7 @@ matchesIn: aString
 		do: [:match | result add: match].
 	^result! !
 
-!RxMatcher methodsFor: 'match enumeration' stamp: 'vb 4/11/09 21:56'!
+!RxMatcher methodsFor: 'match enumeration' stamp: 'vb 11/Apr/2009 21:56:00'!
 matchesIn: aString collect: aBlock
 	"Search aString repeatedly for the matches of the receiver.  Evaluate aBlock for each match passing the matched substring as the argument, collect evaluation results in an OrderedCollection, and return in. The following example shows how to use this message to split a string into words."
 	"'\w+' asRegex matchesIn: 'Now is the Time' collect: [:each | each asLowercase]"
@@ -2613,7 +1267,7 @@ matchesIn: aString collect: aBlock
 		do: [:match | result add: (aBlock value: match)].
 	^result! !
 
-!RxMatcher methodsFor: 'match enumeration' stamp: 'vb 4/11/09 21:56'!
+!RxMatcher methodsFor: 'match enumeration' stamp: 'vb 11/Apr/2009 21:56:00'!
 matchesIn: aString do: aBlock
 	"Search aString repeatedly for the matches of the receiver.
 	Evaluate aBlock for each match passing the matched substring
@@ -2623,7 +1277,7 @@ matchesIn: aString do: aBlock
 		matchesOnStream: aString readStream
 		do: aBlock! !
 
-!RxMatcher methodsFor: 'match enumeration' stamp: 'vb 4/11/09 21:56'!
+!RxMatcher methodsFor: 'match enumeration' stamp: 'vb 11/Apr/2009 21:56:00'!
 matchesOnStream: aStream
 
 	| result |
@@ -2633,7 +1287,7 @@ matchesOnStream: aStream
 		do: [:match | result add: match].
 	^result! !
 
-!RxMatcher methodsFor: 'match enumeration' stamp: 'vb 4/11/09 21:56'!
+!RxMatcher methodsFor: 'match enumeration' stamp: 'vb 11/Apr/2009 21:56:00'!
 matchesOnStream: aStream collect: aBlock
 
 	| result |
@@ -2643,7 +1297,7 @@ matchesOnStream: aStream collect: aBlock
 		do: [:match | result add: (aBlock value: match)].
 	^result! !
 
-!RxMatcher methodsFor: 'match enumeration' stamp: 'vb 4/11/09 21:56'!
+!RxMatcher methodsFor: 'match enumeration' stamp: 'vb 11/Apr/2009 21:56:00'!
 matchesOnStream: aStream do: aBlock
 	"Be extra careful about successful matches which consume no input.
 	After those, make sure to advance or finish if already at end."
@@ -2657,7 +1311,7 @@ matchesOnStream: aStream do: aBlock
 				ifTrue: [^self]
 				ifFalse: [aStream next]]]! !
 
-!RxMatcher methodsFor: 'match enumeration' stamp: 'vb 4/11/09 21:56'!
+!RxMatcher methodsFor: 'match enumeration' stamp: 'vb 11/Apr/2009 21:56:00'!
 matchingRangesIn: aString
 	"Search aString repeatedly for the matches of the receiver.  Answer an OrderedCollection of ranges of each match (index of first character to: index of last character)."
 
@@ -2668,7 +1322,7 @@ matchingRangesIn: aString
 		do: [:match | result add: (self position - match size + 1 to: self position)].
 	^result! !
 
-!RxMatcher methodsFor: 'privileged' stamp: 'lr 1/15/2010 21:13'!
+!RxMatcher methodsFor: 'privileged' stamp: 'lr 15/Jan/2010 21:13:00'!
 currentState
 	"Answer an opaque object that can later be used to restore the
 	matcher's state (for backtracking)."
@@ -2677,18 +1331,18 @@ currentState
 	origPosition := stream position.
 	^	[stream position: origPosition]! !
 
-!RxMatcher methodsFor: 'privileged' stamp: 'vb 4/11/09 21:56'!
+!RxMatcher methodsFor: 'privileged' stamp: 'vb 11/Apr/2009 21:56:00'!
 markerPositionAt: anIndex add: position
 	"Remember position of another instance of the given marker."
 
 	(markerPositions at: anIndex) addFirst: position! !
 
-!RxMatcher methodsFor: 'privileged' stamp: 'vb 4/11/09 21:56'!
+!RxMatcher methodsFor: 'privileged' stamp: 'vb 11/Apr/2009 21:56:00'!
 restoreState: aBlock
 
 	aBlock value! !
 
-!RxMatcher methodsFor: 'initialize-release' stamp: 'vb 4/11/09 21:56'!
+!RxMatcher methodsFor: 'initialize-release' stamp: 'vb 11/Apr/2009 21:56:00'!
 initialize: syntaxTreeRoot ignoreCase: aBoolean
 	"Compile thyself for the regex with the specified syntax tree.
 	See comment and `building' protocol in this class and 
@@ -2700,7 +1354,7 @@ initialize: syntaxTreeRoot ignoreCase: aBoolean
 	self buildFrom: syntaxTreeRoot.
 	startOptimizer := RxMatchOptimizer new initialize: syntaxTreeRoot ignoreCase: aBoolean! !
 
-!RxMatcher methodsFor: 'double dispatch' stamp: 'vb 4/11/09 21:56'!
+!RxMatcher methodsFor: 'double dispatch' stamp: 'vb 11/Apr/2009 21:56:00'!
 syntaxAny
 	"Double dispatch from the syntax tree. 
 	Create a matcher for any non-null character."
@@ -2708,21 +1362,21 @@ syntaxAny
 	^RxmPredicate new
 		predicate: [:char | char asInteger ~= 0]! !
 
-!RxMatcher methodsFor: 'double dispatch' stamp: 'vb 4/11/09 21:56'!
+!RxMatcher methodsFor: 'double dispatch' stamp: 'vb 11/Apr/2009 21:56:00'!
 syntaxBeginningOfLine
 	"Double dispatch from the syntax tree. 
 	Create a matcher for beginning-of-line condition."
 
 	^RxmSpecial new beBeginningOfLine! !
 
-!RxMatcher methodsFor: 'double dispatch' stamp: 'vb 4/11/09 21:56'!
+!RxMatcher methodsFor: 'double dispatch' stamp: 'vb 11/Apr/2009 21:56:00'!
 syntaxBeginningOfWord
 	"Double dispatch from the syntax tree. 
 	Create a matcher for beginning-of-word condition."
 
 	^RxmSpecial new beBeginningOfWord! !
 
-!RxMatcher methodsFor: 'double dispatch' stamp: 'PeterHugossonMiller 9/3/2009 11:08'!
+!RxMatcher methodsFor: 'double dispatch' stamp: 'PeterHugossonMiller 3/Sep/2009 11:08:00'!
 syntaxBranch: branchNode
 	"Double dispatch from the syntax tree. 
 	Branch node is a link in a chain of concatenated pieces.
@@ -2748,7 +1402,7 @@ syntaxBranch: branchNode
 		pointTailTo: (branchNode branch dispatchTo: self);
 		yourself! !
 
-!RxMatcher methodsFor: 'double dispatch' stamp: 'vb 4/11/09 21:56'!
+!RxMatcher methodsFor: 'double dispatch' stamp: 'vb 11/Apr/2009 21:56:00'!
 syntaxCharSet: charSetNode
 	"Double dispatch from the syntax tree. 
 	A character set is a few characters, and we either match any of them,
@@ -2756,7 +1410,7 @@ syntaxCharSet: charSetNode
 
 	^RxmPredicate with: (charSetNode predicateIgnoringCase: ignoreCase)! !
 
-!RxMatcher methodsFor: 'double dispatch' stamp: 'vb 4/11/09 21:56'!
+!RxMatcher methodsFor: 'double dispatch' stamp: 'vb 11/Apr/2009 21:56:00'!
 syntaxCharacter: charNode
 	"Double dispatch from the syntax tree. 
 	We get here when no merging characters into strings was possible."
@@ -2768,21 +1422,21 @@ syntaxCharacter: charNode
 			ifTrue: [[:char | char sameAs: wanted]]
 			ifFalse: [[:char | char = wanted]])! !
 
-!RxMatcher methodsFor: 'double dispatch' stamp: 'vb 4/11/09 21:56'!
+!RxMatcher methodsFor: 'double dispatch' stamp: 'vb 11/Apr/2009 21:56:00'!
 syntaxEndOfLine
 	"Double dispatch from the syntax tree. 
 	Create a matcher for end-of-line condition."
 
 	^RxmSpecial new beEndOfLine! !
 
-!RxMatcher methodsFor: 'double dispatch' stamp: 'vb 4/11/09 21:56'!
+!RxMatcher methodsFor: 'double dispatch' stamp: 'vb 11/Apr/2009 21:56:00'!
 syntaxEndOfWord
 	"Double dispatch from the syntax tree. 
 	Create a matcher for end-of-word condition."
 
 	^RxmSpecial new beEndOfWord! !
 
-!RxMatcher methodsFor: 'double dispatch' stamp: 'vb 4/11/09 21:56'!
+!RxMatcher methodsFor: 'double dispatch' stamp: 'vb 11/Apr/2009 21:56:00'!
 syntaxEpsilon
 	"Double dispatch from the syntax tree. Match empty string. This is unlikely
 	to happen in sane expressions, so we'll live without special epsilon-nodes."
@@ -2791,7 +1445,7 @@ syntaxEpsilon
 		substring: String new
 		ignoreCase: ignoreCase! !
 
-!RxMatcher methodsFor: 'double dispatch' stamp: 'vb 4/11/09 21:56'!
+!RxMatcher methodsFor: 'double dispatch' stamp: 'vb 11/Apr/2009 21:56:00'!
 syntaxMessagePredicate: messagePredicateNode
 	"Double dispatch from the syntax tree. 
 	Special link can handle predicates."
@@ -2800,14 +1454,14 @@ syntaxMessagePredicate: messagePredicateNode
 		ifTrue: [RxmPredicate new bePerformNot: messagePredicateNode selector]
 		ifFalse: [RxmPredicate new bePerform: messagePredicateNode selector]! !
 
-!RxMatcher methodsFor: 'double dispatch' stamp: 'vb 4/11/09 21:56'!
+!RxMatcher methodsFor: 'double dispatch' stamp: 'vb 11/Apr/2009 21:56:00'!
 syntaxNonWordBoundary
 	"Double dispatch from the syntax tree. 
 	Create a matcher for the word boundary condition."
 
 	^RxmSpecial new beNotWordBoundary! !
 
-!RxMatcher methodsFor: 'double dispatch' stamp: 'vb 4/11/09 21:56'!
+!RxMatcher methodsFor: 'double dispatch' stamp: 'vb 11/Apr/2009 21:56:00'!
 syntaxPiece: pieceNode
 	"Double dispatch from the syntax tree. 
 	Piece is an atom repeated a few times. Take care of a special
@@ -2826,7 +1480,7 @@ syntaxPiece: pieceNode
 					ifFalse: [RxParser signalCompilationException: 
 						'repetitions are not supported by RxMatcher']]]]! !
 
-!RxMatcher methodsFor: 'double dispatch' stamp: 'vb 4/11/09 21:56'!
+!RxMatcher methodsFor: 'double dispatch' stamp: 'vb 11/Apr/2009 21:56:00'!
 syntaxPredicate: predicateNode
 	"Double dispatch from the syntax tree. 
 	A character set is a few characters, and we either match any of them,
@@ -2834,7 +1488,7 @@ syntaxPredicate: predicateNode
 
 	^RxmPredicate with: predicateNode predicate! !
 
-!RxMatcher methodsFor: 'double dispatch' stamp: 'vb 4/11/09 21:56'!
+!RxMatcher methodsFor: 'double dispatch' stamp: 'vb 11/Apr/2009 21:56:00'!
 syntaxRegex: regexNode
 	"Double dispatch from the syntax tree. 
 	Regex node is a chain of branches to be tried. Should compile this 
@@ -2849,21 +1503,21 @@ syntaxRegex: regexNode
 		pointTailTo: alternatives;
 		yourself! !
 
-!RxMatcher methodsFor: 'double dispatch' stamp: 'vb 4/11/09 21:56'!
+!RxMatcher methodsFor: 'double dispatch' stamp: 'vb 11/Apr/2009 21:56:00'!
 syntaxWordBoundary
 	"Double dispatch from the syntax tree. 
 	Create a matcher for the word boundary condition."
 
 	^RxmSpecial new beWordBoundary! !
 
-!RxMatcher class methodsFor: 'instance creation' stamp: 'vb 4/11/09 21:56'!
+!RxMatcher class methodsFor: 'instance creation' stamp: 'vb 11/Apr/2009 21:56:00'!
 for: aRegex
 	"Create and answer a matcher that will match a regular expression
 	specified by the syntax tree of which `aRegex' is a root."
 
 	^self for: aRegex ignoreCase: false! !
 
-!RxMatcher class methodsFor: 'instance creation' stamp: 'vb 4/11/09 21:56'!
+!RxMatcher class methodsFor: 'instance creation' stamp: 'vb 11/Apr/2009 21:56:00'!
 for: aRegex ignoreCase: aBoolean
 	"Create and answer a matcher that will match a regular expression
 	specified by the syntax tree of which `aRegex' is a root."
@@ -2872,27 +1526,27 @@ for: aRegex ignoreCase: aBoolean
 		initialize: aRegex
 		ignoreCase: aBoolean! !
 
-!RxMatcher class methodsFor: 'instance creation' stamp: 'vb 4/11/09 21:56'!
+!RxMatcher class methodsFor: 'instance creation' stamp: 'vb 11/Apr/2009 21:56:00'!
 forString: aString
 	"Create and answer a matcher that will match the regular expression
 	`aString'."
 
 	^self for: (RxParser new parse: aString)! !
 
-!RxMatcher class methodsFor: 'instance creation' stamp: 'vb 4/11/09 21:56'!
+!RxMatcher class methodsFor: 'instance creation' stamp: 'vb 11/Apr/2009 21:56:00'!
 forString: aString ignoreCase: aBoolean
 	"Create and answer a matcher that will match the regular expression
 	`aString'."
 
 	^self for: (RxParser new parse: aString) ignoreCase: aBoolean! !
 
-!RxMatcher class methodsFor: 'class initialization' stamp: 'avi 11/30/2003 13:30'!
+!RxMatcher class methodsFor: 'class initialization' stamp: 'avi 30/Nov/2003 13:30:00'!
 initialize
 	"RxMatcher initialize"
 	Cr := Character cr.
 	Lf := Character lf.! !
 
-!RxParser methodsFor: 'recursive descent' stamp: 'vb 4/11/09 21:56'!
+!RxParser methodsFor: 'recursive descent' stamp: 'vb 11/Apr/2009 21:56:00'!
 atom
 	"An atom is one of a lot of possibilities, see below."
 
@@ -2954,7 +1608,7 @@ atom
 	self next.
 	^atom! !
 
-!RxParser methodsFor: 'recursive descent' stamp: 'vb 4/11/09 21:56'!
+!RxParser methodsFor: 'recursive descent' stamp: 'vb 11/Apr/2009 21:56:00'!
 branch
 	"<branch> ::= e | <piece> <branch>"
 
@@ -2967,7 +1621,7 @@ branch
 		initializePiece: piece 
 		branch: branch! !
 
-!RxParser methodsFor: 'recursive descent' stamp: 'vb 4/11/09 21:56'!
+!RxParser methodsFor: 'recursive descent' stamp: 'vb 11/Apr/2009 21:56:00'!
 characterSet
 	"Match a range of characters: something between `[' and `]'.
 	Opening bracked has already been seen, and closing should
@@ -2982,7 +1636,7 @@ characterSet
 		spec := spec, ']', (self inputUpTo: $] nestedOn: $[ errorMessage: errorMessage)].
 	^self characterSetFrom: spec! !
 
-!RxParser methodsFor: 'recursive descent' stamp: 'vb 4/11/09 21:56'!
+!RxParser methodsFor: 'recursive descent' stamp: 'vb 11/Apr/2009 21:56:00'!
 messagePredicate
 	"Match a message predicate specification: a selector (presumably
 	understood by a Character) enclosed in :'s ."
@@ -2997,7 +1651,7 @@ messagePredicate
 		initializeSelector: spec asSymbol
 		negated: negated! !
 
-!RxParser methodsFor: 'recursive descent' stamp: 'vb 4/11/09 21:56'!
+!RxParser methodsFor: 'recursive descent' stamp: 'vb 11/Apr/2009 21:56:00'!
 piece
 	"<piece> ::= <atom> | <atom>* | <atom>+ | <atom>?"
 
@@ -3018,7 +1672,7 @@ piece
 		^RxsPiece new initializeOptionalAtom: atom].
 	^RxsPiece new initializeAtom: atom! !
 
-!RxParser methodsFor: 'recursive descent' stamp: 'vb 4/11/09 21:56'!
+!RxParser methodsFor: 'recursive descent' stamp: 'vb 11/Apr/2009 21:56:00'!
 regex
 	"<regex> ::= e | <branch> `|' <regex>"
 
@@ -3031,7 +1685,7 @@ regex
 			regex := self regex].
 	^RxsRegex new initializeBranch: branch regex: regex! !
 
-!RxParser methodsFor: 'private' stamp: 'vb 4/11/09 21:56'!
+!RxParser methodsFor: 'private' stamp: 'vb 11/Apr/2009 21:56:00'!
 characterSetFrom: setSpec
 	"<setSpec> is what goes between the brackets in a charset regex
 	(a String). Make a string containing all characters the spec specifies.
@@ -3047,7 +1701,7 @@ characterSetFrom: setSpec
 		initializeElements: (RxCharSetParser on: spec) parse
 		negated: negated! !
 
-!RxParser methodsFor: 'private' stamp: 'vb 4/11/09 21:56'!
+!RxParser methodsFor: 'private' stamp: 'vb 11/Apr/2009 21:56:00'!
 ifSpecial: aCharacter then: aBlock
 	"If the character is such that it defines a special node when follows a $\,
 	then create that node and evaluate aBlock with the node as the parameter.
@@ -3057,7 +1711,7 @@ ifSpecial: aCharacter then: aBlock
 	classAndSelector := BackslashSpecials at: aCharacter ifAbsent: [^self].
 	^aBlock value: (classAndSelector key new perform: classAndSelector value)! !
 
-!RxParser methodsFor: 'private' stamp: 'vb 4/11/09 21:56'!
+!RxParser methodsFor: 'private' stamp: 'vb 11/Apr/2009 21:56:00'!
 inputUpTo: aCharacter errorMessage: aString
 	"Accumulate input stream until <aCharacter> is encountered
 	and answer the accumulated chars as String, not including
@@ -3073,7 +1727,7 @@ inputUpTo: aCharacter errorMessage: aString
 	lookahead = #epsilon ifTrue: [self signalParseError: aString].
 	^accumulator contents! !
 
-!RxParser methodsFor: 'private' stamp: 'vb 4/11/09 21:56'!
+!RxParser methodsFor: 'private' stamp: 'vb 11/Apr/2009 21:56:00'!
 inputUpTo: aCharacter nestedOn: anotherCharacter errorMessage: aString 
 	"Accumulate input stream until <aCharacter> is encountered
 	and answer the accumulated chars as String, not including
@@ -3091,7 +1745,7 @@ inputUpTo: aCharacter nestedOn: anotherCharacter errorMessage: aString
 			self next].
 	^accumulator contents! !
 
-!RxParser methodsFor: 'private' stamp: 'vb 4/11/09 21:56'!
+!RxParser methodsFor: 'private' stamp: 'vb 11/Apr/2009 21:56:00'!
 match: aCharacter
 	"<aCharacter> MUST match the current lookeahead.
 	If this is the case, advance the input. Otherwise, blow up."
@@ -3100,7 +1754,7 @@ match: aCharacter
 		ifTrue: [^self signalParseError].	"does not return"
 	self next! !
 
-!RxParser methodsFor: 'private' stamp: 'vb 4/11/09 21:56'!
+!RxParser methodsFor: 'private' stamp: 'vb 11/Apr/2009 21:56:00'!
 next
 	"Advance the input storing the just read character
 	as the lookahead."
@@ -3109,17 +1763,17 @@ next
 		ifTrue: [lookahead := #epsilon]
 		ifFalse: [lookahead := input next]! !
 
-!RxParser methodsFor: 'private' stamp: 'vb 4/11/09 21:56'!
+!RxParser methodsFor: 'private' stamp: 'vb 11/Apr/2009 21:56:00'!
 signalParseError
 
 	self class signalSyntaxException: 'Regex syntax error'! !
 
-!RxParser methodsFor: 'private' stamp: 'vb 4/11/09 21:56'!
+!RxParser methodsFor: 'private' stamp: 'vb 11/Apr/2009 21:56:00'!
 signalParseError: aString
 
 	self class signalSyntaxException: aString! !
 
-!RxParser methodsFor: 'accessing' stamp: 'vb 4/11/09 21:56'!
+!RxParser methodsFor: 'accessing' stamp: 'vb 11/Apr/2009 21:56:00'!
 parse: aString
 	"Parse input from a string <aString>.
 	On success, answers an RxsRegex -- parse tree root.
@@ -3128,7 +1782,7 @@ parse: aString
 
 	^self parseStream: (ReadStream on: aString)! !
 
-!RxParser methodsFor: 'accessing' stamp: 'vb 4/11/09 21:56'!
+!RxParser methodsFor: 'accessing' stamp: 'vb 11/Apr/2009 21:56:00'!
 parseStream: aStream
 	"Parse an input from a character stream <aStream>.
 	On success, answers an RxsRegex -- parse tree root.
@@ -3143,7 +1797,7 @@ parseStream: aStream
 	self match: #epsilon.
 	^tree! !
 
-!RxParser class methodsFor: 'DOCUMENTATION' stamp: 'vb 4/11/09 21:56'!
+!RxParser class methodsFor: 'DOCUMENTATION' stamp: 'vb 11/Apr/2009 21:56:00'!
 a: x introduction: xx 
 " 
 A regular expression is a template specifying a class of strings. A
@@ -3185,7 +1839,7 @@ April 4, 1999
 
 	self error: 'comment only'! !
 
-!RxParser class methodsFor: 'DOCUMENTATION' stamp: 'lr 1/7/2010 20:10'!
+!RxParser class methodsFor: 'DOCUMENTATION' stamp: 'lr 7/Jan/2010 20:10:00'!
 b: x whatsNewInThisRelease: xx
 "
 VERSION 1.3.1 (September 2008)
@@ -3351,7 +2005,7 @@ October 3, 1999
 
 	self error: 'comment only'! !
 
-!RxParser class methodsFor: 'DOCUMENTATION' stamp: 'lr 1/7/2010 20:10'!
+!RxParser class methodsFor: 'DOCUMENTATION' stamp: 'lr 7/Jan/2010 20:10:00'!
 c: x syntax: xx
 " 
 
@@ -3611,7 +2265,7 @@ general number format: anything like 999, or 999.999, or -999.999e+21.
 
 	self error: 'comment only'! !
 
-!RxParser class methodsFor: 'DOCUMENTATION' stamp: 'vb 4/11/09 21:56'!
+!RxParser class methodsFor: 'DOCUMENTATION' stamp: 'vb 11/Apr/2009 21:56:00'!
 d: x usage: xx
 " 
 The preceding section covered the syntax of regular expressions. It
@@ -3900,7 +2554,7 @@ VisualAge:
 
 	self error: 'comment only'! !
 
-!RxParser class methodsFor: 'DOCUMENTATION' stamp: 'vb 4/11/09 21:56'!
+!RxParser class methodsFor: 'DOCUMENTATION' stamp: 'vb 11/Apr/2009 21:56:00'!
 e: x implementationNotes: xx
 "	
 	Version:		1.1
@@ -3966,7 +2620,7 @@ comp.lang.smalltalk or comp.lang.lisp.
 
 	self error: 'comment only'! !
 
-!RxParser class methodsFor: 'DOCUMENTATION' stamp: 'vb 4/11/09 21:56'!
+!RxParser class methodsFor: 'DOCUMENTATION' stamp: 'vb 11/Apr/2009 21:56:00'!
 f: x boringStuff: xx
 "
 The Regular Expression Matcher (``The Software'') 
@@ -4005,7 +2659,7 @@ It is provided to the Smalltalk community in hope it will be useful.
 
 	self error: 'comment only'! !
 
-!RxParser class methodsFor: 'exception signaling' stamp: 'lr 11/4/2009 22:37'!
+!RxParser class methodsFor: 'exception signaling' stamp: 'lr 4/Nov/2009 22:37:00'!
 doHandlingMessageNotUnderstood: aBlock
 	"MNU should be trapped and resignaled as a match error in a few places in the matcher.
 	This method factors out this dialect-dependent code to make porting easier."
@@ -4013,26 +2667,26 @@ doHandlingMessageNotUnderstood: aBlock
 		on: MessageNotUnderstood
 		do: [:ex | RxParser signalMatchException: 'invalid predicate selector']! !
 
-!RxParser class methodsFor: 'exception signaling' stamp: 'avi 11/30/2003 13:25'!
+!RxParser class methodsFor: 'exception signaling' stamp: 'avi 30/Nov/2003 13:25:00'!
 signalCompilationException: errorString
 	RegexCompilationError new signal: errorString! !
 
-!RxParser class methodsFor: 'exception signaling' stamp: 'avi 11/30/2003 13:25'!
+!RxParser class methodsFor: 'exception signaling' stamp: 'avi 30/Nov/2003 13:25:00'!
 signalMatchException: errorString
 	RegexMatchingError new signal: errorString! !
 
-!RxParser class methodsFor: 'exception signaling' stamp: 'avi 11/30/2003 13:25'!
+!RxParser class methodsFor: 'exception signaling' stamp: 'avi 30/Nov/2003 13:25:00'!
 signalSyntaxException: errorString
 	RegexSyntaxError new signal: errorString! !
 
-!RxParser class methodsFor: 'class initialization' stamp: 'avi 11/30/2003 13:26'!
+!RxParser class methodsFor: 'class initialization' stamp: 'avi 30/Nov/2003 13:26:00'!
 initialize
 	"self initialize"
 	self
 		initializeBackslashConstants;
 		initializeBackslashSpecials! !
 
-!RxParser class methodsFor: 'class initialization' stamp: 'lr 11/4/2009 22:14'!
+!RxParser class methodsFor: 'class initialization' stamp: 'lr 4/Nov/2009 22:14:00'!
 initializeBackslashConstants
 	"self initializeBackslashConstants"
 
@@ -4043,7 +2697,7 @@ initializeBackslashConstants
 		at: $f put: Character newPage;
 		at: $t put: Character tab! !
 
-!RxParser class methodsFor: 'class initialization' stamp: 'vb 4/11/09 21:56'!
+!RxParser class methodsFor: 'class initialization' stamp: 'vb 11/Apr/2009 21:56:00'!
 initializeBackslashSpecials
 	"Keys are characters that normally follow a \, the values are
 	associations of classes and initialization selectors on the instance side
@@ -4062,21 +2716,21 @@ initializeBackslashSpecials
 		at: $< put: (Association key: RxsContextCondition value: #beBeginningOfWord);
 		at: $> put: (Association key: RxsContextCondition value: #beEndOfWord)! !
 
-!RxParser class methodsFor: 'utilities' stamp: 'vb 4/11/09 21:56'!
+!RxParser class methodsFor: 'utilities' stamp: 'vb 11/Apr/2009 21:56:00'!
 parse: aString
 	"Parse the argument and return the result (the parse tree).
 	In case of a syntax error, the corresponding exception is signaled."
 
 	^self new parse: aString! !
 
-!RxParser class methodsFor: 'utilities' stamp: 'avi 11/30/2003 13:23'!
+!RxParser class methodsFor: 'utilities' stamp: 'avi 30/Nov/2003 13:23:00'!
 safelyParse: aString
 	"Parse the argument and return the result (the parse tree).
 	In case of a syntax error, return nil.
 	Exception handling here is dialect-dependent."
 	^ [self new parse: aString] on: RegexSyntaxError do: [:ex | nil]! !
 
-!RxParser class methodsFor: 'preferences' stamp: 'vb 4/11/09 21:56'!
+!RxParser class methodsFor: 'preferences' stamp: 'vb 11/Apr/2009 21:56:00'!
 preferredMatcherClass
 	"The matcher to use. For now just one is available, but in
 	principle this determines the matchers built implicitly,
@@ -4086,25 +2740,25 @@ preferredMatcherClass
 
 	^RxMatcher! !
 
-!RxmLink methodsFor: 'matching' stamp: 'vb 4/11/09 21:56'!
+!RxmLink methodsFor: 'matching' stamp: 'vb 11/Apr/2009 21:56:00'!
 matchAgainst: aMatcher
 	"If a link does not match the contents of the matcher's stream,
 	answer false. Otherwise, let the next matcher in the chain match."
 
 	^next matchAgainst: aMatcher! !
 
-!RxmLink methodsFor: 'matching' stamp: 'vb 4/11/09 21:56'!
+!RxmLink methodsFor: 'matching' stamp: 'vb 11/Apr/2009 21:56:00'!
 next
 	
 	^next! !
 
-!RxmLink methodsFor: 'initialize-release' stamp: 'vb 4/11/09 21:56'!
+!RxmLink methodsFor: 'initialize-release' stamp: 'vb 11/Apr/2009 21:56:00'!
 next: aLink
 	"Set the next link, either an RxmLink or an RxmTerminator."
 
 	next := aLink! !
 
-!RxmLink methodsFor: 'building' stamp: 'vb 4/11/09 21:56'!
+!RxmLink methodsFor: 'building' stamp: 'vb 11/Apr/2009 21:56:00'!
 pointTailTo: anRxmLink
 	"Propagate this message along the chain of links.
 	Point `next' reference of the last link to <anRxmLink>.
@@ -4114,7 +2768,7 @@ pointTailTo: anRxmLink
 		ifTrue: [next := anRxmLink]
 		ifFalse: [next pointTailTo: anRxmLink]! !
 
-!RxmLink methodsFor: 'building' stamp: 'vb 4/11/09 21:56'!
+!RxmLink methodsFor: 'building' stamp: 'vb 11/Apr/2009 21:56:00'!
 terminateWith: aTerminator
 	"Propagate this message along the chain of links, and
 	make aTerminator the `next' link of the last link in the chain.
@@ -4125,26 +2779,26 @@ terminateWith: aTerminator
 		ifTrue: [next := aTerminator]
 		ifFalse: [next terminateWith: aTerminator]! !
 
-!RxmBranch methodsFor: 'initialize-release' stamp: 'vb 4/11/09 21:56'!
+!RxmBranch methodsFor: 'initialize-release' stamp: 'vb 11/Apr/2009 21:56:00'!
 alternative: aBranch
 	"See class comment for instance variable description."
 
 	alternative := aBranch! !
 
-!RxmBranch methodsFor: 'initialize-release' stamp: 'vb 4/11/09 21:56'!
+!RxmBranch methodsFor: 'initialize-release' stamp: 'vb 11/Apr/2009 21:56:00'!
 beLoopback
 	"See class comment for instance variable description."
 
 	loopback := true! !
 
-!RxmBranch methodsFor: 'initialize-release' stamp: 'lr 11/4/2009 22:38'!
+!RxmBranch methodsFor: 'initialize-release' stamp: 'lr 4/Nov/2009 22:38:00'!
 initialize
 	"See class comment for instance variable description."
 
 	super initialize.
 	loopback := false! !
 
-!RxmBranch methodsFor: 'matching' stamp: 'vb 4/11/09 21:56'!
+!RxmBranch methodsFor: 'matching' stamp: 'vb 11/Apr/2009 21:56:00'!
 matchAgainst: aMatcher
 	"Match either `next' or `alternative'. Fail if the alternative is nil."
 
@@ -4152,7 +2806,7 @@ matchAgainst: aMatcher
 		or: [alternative notNil
 			and: [alternative matchAgainst: aMatcher]]! !
 
-!RxmBranch methodsFor: 'building' stamp: 'vb 4/11/09 21:56'!
+!RxmBranch methodsFor: 'building' stamp: 'vb 11/Apr/2009 21:56:00'!
 pointTailTo: aNode
 	"See superclass for explanations."
 
@@ -4162,7 +2816,7 @@ pointTailTo: aNode
 			ifFalse: [alternative pointTailTo: aNode]]
 		ifFalse: [super pointTailTo: aNode]! !
 
-!RxmBranch methodsFor: 'building' stamp: 'vb 4/11/09 21:56'!
+!RxmBranch methodsFor: 'building' stamp: 'vb 11/Apr/2009 21:56:00'!
 terminateWith: aNode
 	"See superclass for explanations."
 
@@ -4172,7 +2826,7 @@ terminateWith: aNode
 			ifFalse: [alternative terminateWith: aNode]]
 		ifFalse: [super terminateWith: aNode]! !
 
-!RxmMarker methodsFor: 'initialize-release' stamp: 'vb 4/11/09 21:56'!
+!RxmMarker methodsFor: 'initialize-release' stamp: 'vb 11/Apr/2009 21:56:00'!
 index: anIndex
 	"An index is a key that makes sense for the matcher.
 	This key can be passed to marker position getters and
@@ -4181,7 +2835,7 @@ index: anIndex
 
 	index := anIndex! !
 
-!RxmMarker methodsFor: 'matching' stamp: 'vb 4/11/09 21:56'!
+!RxmMarker methodsFor: 'matching' stamp: 'vb 11/Apr/2009 21:56:00'!
 matchAgainst: aMatcher
 	"If the rest of the link chain matches successfully, report the
 	position of the stream *before* the match started to the matcher."
@@ -4194,7 +2848,7 @@ matchAgainst: aMatcher
 			^true].
 	^false! !
 
-!RxmPredicate methodsFor: 'initialize-release' stamp: 'vb 4/11/09 21:56'!
+!RxmPredicate methodsFor: 'initialize-release' stamp: 'vb 11/Apr/2009 21:56:00'!
 bePerform: aSelector
 	"Match any single character that answers true  to this message."
 
@@ -4202,7 +2856,7 @@ bePerform: aSelector
 		[:char | 
 		RxParser doHandlingMessageNotUnderstood: [char perform: aSelector]]! !
 
-!RxmPredicate methodsFor: 'initialize-release' stamp: 'vb 4/11/09 21:56'!
+!RxmPredicate methodsFor: 'initialize-release' stamp: 'vb 11/Apr/2009 21:56:00'!
 bePerformNot: aSelector
 	"Match any single character that answers false to this message."
 
@@ -4210,7 +2864,7 @@ bePerformNot: aSelector
 		[:char | 
 		RxParser doHandlingMessageNotUnderstood: [(char perform: aSelector) not]]! !
 
-!RxmPredicate methodsFor: 'initialize-release' stamp: 'vb 4/11/09 21:56'!
+!RxmPredicate methodsFor: 'initialize-release' stamp: 'vb 11/Apr/2009 21:56:00'!
 predicate: aBlock
 	"This link will match any single character for which <aBlock>
 	evaluates to true."
@@ -4219,7 +2873,7 @@ predicate: aBlock
 	predicate := aBlock.
 	^self! !
 
-!RxmPredicate methodsFor: 'matching' stamp: 'vb 4/11/09 21:56'!
+!RxmPredicate methodsFor: 'matching' stamp: 'vb 11/Apr/2009 21:56:00'!
 matchAgainst: aMatcher
 	"Match if the predicate block evaluates to true when given the
 	current stream character as the argument."
@@ -4234,42 +2888,42 @@ matchAgainst: aMatcher
 			[aMatcher restoreState: original.
 			^false]! !
 
-!RxmPredicate class methodsFor: 'instance creation' stamp: 'vb 4/11/09 21:56'!
+!RxmPredicate class methodsFor: 'instance creation' stamp: 'vb 11/Apr/2009 21:56:00'!
 with: unaryBlock
 
 	^self new predicate: unaryBlock! !
 
-!RxmSpecial methodsFor: 'initialize-release' stamp: 'vb 4/11/09 21:56'!
+!RxmSpecial methodsFor: 'initialize-release' stamp: 'vb 11/Apr/2009 21:56:00'!
 beBeginningOfLine
 
 	matchSelector := #atBeginningOfLine! !
 
-!RxmSpecial methodsFor: 'initialize-release' stamp: 'vb 4/11/09 21:56'!
+!RxmSpecial methodsFor: 'initialize-release' stamp: 'vb 11/Apr/2009 21:56:00'!
 beBeginningOfWord
 
 	matchSelector := #atBeginningOfWord! !
 
-!RxmSpecial methodsFor: 'initialize-release' stamp: 'vb 4/11/09 21:56'!
+!RxmSpecial methodsFor: 'initialize-release' stamp: 'vb 11/Apr/2009 21:56:00'!
 beEndOfLine
 
 	matchSelector := #atEndOfLine! !
 
-!RxmSpecial methodsFor: 'initialize-release' stamp: 'vb 4/11/09 21:56'!
+!RxmSpecial methodsFor: 'initialize-release' stamp: 'vb 11/Apr/2009 21:56:00'!
 beEndOfWord
 
 	matchSelector := #atEndOfWord! !
 
-!RxmSpecial methodsFor: 'initialize-release' stamp: 'vb 4/11/09 21:56'!
+!RxmSpecial methodsFor: 'initialize-release' stamp: 'vb 11/Apr/2009 21:56:00'!
 beNotWordBoundary
 
 	matchSelector := #notAtWordBoundary! !
 
-!RxmSpecial methodsFor: 'initialize-release' stamp: 'vb 4/11/09 21:56'!
+!RxmSpecial methodsFor: 'initialize-release' stamp: 'vb 11/Apr/2009 21:56:00'!
 beWordBoundary
 
 	matchSelector := #atWordBoundary! !
 
-!RxmSpecial methodsFor: 'matching' stamp: 'vb 4/11/09 21:56'!
+!RxmSpecial methodsFor: 'matching' stamp: 'vb 11/Apr/2009 21:56:00'!
 matchAgainst: aMatcher
 	"Match without consuming any input, if the matcher is
 	in appropriate state."
@@ -4277,36 +2931,36 @@ matchAgainst: aMatcher
 	^(aMatcher perform: matchSelector)
 		and: [next matchAgainst: aMatcher]! !
 
-!RxmSubstring methodsFor: 'initialize-release' stamp: 'vb 4/11/09 21:56'!
+!RxmSubstring methodsFor: 'initialize-release' stamp: 'vb 11/Apr/2009 21:56:00'!
 beCaseInsensitive
 
 	compare := [:char1 :char2 | char1 sameAs: char2]! !
 
-!RxmSubstring methodsFor: 'initialize-release' stamp: 'vb 4/11/09 21:56'!
+!RxmSubstring methodsFor: 'initialize-release' stamp: 'vb 11/Apr/2009 21:56:00'!
 beCaseSensitive
 
 	compare := [:char1 :char2 | char1 = char2]! !
 
-!RxmSubstring methodsFor: 'initialize-release' stamp: 'vb 4/11/09 21:56'!
+!RxmSubstring methodsFor: 'initialize-release' stamp: 'vb 11/Apr/2009 21:56:00'!
 character: aCharacter ignoreCase: aBoolean
 	"Match exactly this character."
 
 	sample := String with: aCharacter.
 	aBoolean ifTrue: [self beCaseInsensitive]! !
 
-!RxmSubstring methodsFor: 'initialize-release' stamp: 'lr 11/4/2009 22:38'!
+!RxmSubstring methodsFor: 'initialize-release' stamp: 'lr 4/Nov/2009 22:38:00'!
 initialize
 	super initialize.
 	self beCaseSensitive! !
 
-!RxmSubstring methodsFor: 'initialize-release' stamp: 'vb 4/11/09 21:56'!
+!RxmSubstring methodsFor: 'initialize-release' stamp: 'vb 11/Apr/2009 21:56:00'!
 substring: aString ignoreCase: aBoolean
 	"Match exactly this string."
 
 	sample := aString.
 	aBoolean ifTrue: [self beCaseInsensitive]! !
 
-!RxmSubstring methodsFor: 'matching' stamp: 'vb 4/11/09 21:56'!
+!RxmSubstring methodsFor: 'matching' stamp: 'vb 11/Apr/2009 21:56:00'!
 matchAgainst: aMatcher
 	"Match if my sample stream is exactly the current prefix
 	of the matcher stream's contents."
@@ -4324,18 +2978,18 @@ matchAgainst: aMatcher
 			[aMatcher restoreState: originalState.
 			^false]! !
 
-!RxmSubstring methodsFor: 'private' stamp: 'vb 4/11/09 21:56'!
+!RxmSubstring methodsFor: 'private' stamp: 'vb 11/Apr/2009 21:56:00'!
 sampleStream
 
 	^sample readStream! !
 
-!RxmTerminator methodsFor: 'matching' stamp: 'vb 4/11/09 21:56'!
+!RxmTerminator methodsFor: 'matching' stamp: 'vb 11/Apr/2009 21:56:00'!
 matchAgainst: aStream
 	"If got here, the match is successful."
 
 	^true! !
 
-!RxmTerminator methodsFor: 'building' stamp: 'vb 4/11/09 21:56'!
+!RxmTerminator methodsFor: 'building' stamp: 'vb 11/Apr/2009 21:56:00'!
 pointTailTo: anRxmLink
 	"Branch tails are never redirected by the build algorithm.
 	Healthy terminators should never receive this."
@@ -4343,7 +2997,7 @@ pointTailTo: anRxmLink
 	RxParser signalCompilationException:
 		'internal matcher build error - redirecting terminator tail'! !
 
-!RxmTerminator methodsFor: 'building' stamp: 'vb 4/11/09 21:56'!
+!RxmTerminator methodsFor: 'building' stamp: 'vb 11/Apr/2009 21:56:00'!
 terminateWith: aTerminator
 	"Branch terminators are never supposed to change.
 	Make sure this is the case."
@@ -4352,7 +3006,7 @@ terminateWith: aTerminator
 		ifTrue: [RxParser signalCompilationException:
 				'internal matcher build error - wrong terminator']! !
 
-!RxsNode methodsFor: 'constants' stamp: 'vb 4/11/09 21:56'!
+!RxsNode methodsFor: 'constants' stamp: 'vb 11/Apr/2009 21:56:00'!
 indentCharacter
 	"Normally, #printOn:withIndent: method in subclasses
 	print several characters returned by this method to indicate
@@ -4360,7 +3014,7 @@ indentCharacter
 
 	^$+! !
 
-!RxsNode methodsFor: 'testing' stamp: 'vb 4/11/09 21:56'!
+!RxsNode methodsFor: 'testing' stamp: 'vb 11/Apr/2009 21:56:00'!
 isAtomic
 	"Answer whether the node is atomic, i.e. matches exactly one 
 	constant predefined normal character.  A matcher may decide to 
@@ -4369,42 +3023,42 @@ isAtomic
 
 	^false "tentatively"! !
 
-!RxsNode methodsFor: 'testing' stamp: 'vb 4/11/09 21:56'!
+!RxsNode methodsFor: 'testing' stamp: 'vb 11/Apr/2009 21:56:00'!
 isNullable
 	"True if the node can match an empty sequence of characters."
 
 	^false "for most nodes"! !
 
-!RxsBranch methodsFor: 'accessing' stamp: 'vb 4/11/09 21:56'!
+!RxsBranch methodsFor: 'accessing' stamp: 'vb 11/Apr/2009 21:56:00'!
 branch
 
 	^branch! !
 
-!RxsBranch methodsFor: 'accessing' stamp: 'vb 4/11/09 21:56'!
+!RxsBranch methodsFor: 'accessing' stamp: 'vb 11/Apr/2009 21:56:00'!
 dispatchTo: aMatcher
 	"Inform the matcher of the kind of the node, and it
 	will do whatever it has to."
 
 	^aMatcher syntaxBranch: self! !
 
-!RxsBranch methodsFor: 'accessing' stamp: 'vb 4/11/09 21:56'!
+!RxsBranch methodsFor: 'accessing' stamp: 'vb 11/Apr/2009 21:56:00'!
 piece
 
 	^piece! !
 
-!RxsBranch methodsFor: 'initialize-release' stamp: 'vb 4/11/09 21:56'!
+!RxsBranch methodsFor: 'initialize-release' stamp: 'vb 11/Apr/2009 21:56:00'!
 initializePiece: aPiece branch: aBranch
 	"See class comment for instance variables description."
 
 	piece := aPiece.
 	branch := aBranch! !
 
-!RxsBranch methodsFor: 'testing' stamp: 'vb 4/11/09 21:56'!
+!RxsBranch methodsFor: 'testing' stamp: 'vb 11/Apr/2009 21:56:00'!
 isNullable
 
 	^piece isNullable and: [branch isNil or: [branch isNullable]]! !
 
-!RxsBranch methodsFor: 'optimization' stamp: 'vb 4/11/09 21:56'!
+!RxsBranch methodsFor: 'optimization' stamp: 'vb 11/Apr/2009 21:56:00'!
 tryMergingInto: aStream
 	"Concatenation of a few simple characters can be optimized
 	to be a plain substring match. Answer the node to resume
@@ -4418,19 +3072,19 @@ tryMergingInto: aStream
 		ifTrue: [branch]
 		ifFalse: [branch tryMergingInto: aStream]! !
 
-!RxsCharSet methodsFor: 'accessing' stamp: 'vb 4/11/09 21:56'!
+!RxsCharSet methodsFor: 'accessing' stamp: 'vb 11/Apr/2009 21:56:00'!
 dispatchTo: aMatcher
 	"Inform the matcher of the kind of the node, and it
 	will do whatever it has to."
 
 	^aMatcher syntaxCharSet: self! !
 
-!RxsCharSet methodsFor: 'accessing' stamp: 'vb 4/11/09 21:56'!
+!RxsCharSet methodsFor: 'accessing' stamp: 'vb 11/Apr/2009 21:56:00'!
 hasPredicates
 
 	^elements contains: [:some | some isEnumerable not]! !
 
-!RxsCharSet methodsFor: 'accessing' stamp: 'vb 4/11/09 21:56'!
+!RxsCharSet methodsFor: 'accessing' stamp: 'vb 11/Apr/2009 21:56:00'!
 predicateIgnoringCase: aBoolean
 
 	| predicate enumerable |
@@ -4443,13 +3097,13 @@ predicateIgnoringCase: aBoolean
 				ifTrue: [[:char | (enumerable value: char) and: [predicate value: char]]]
 				ifFalse: [[:char | (enumerable value: char) or: [predicate value: char]]]]! !
 
-!RxsCharSet methodsFor: 'accessing' stamp: 'vb 4/11/09 21:56'!
+!RxsCharSet methodsFor: 'accessing' stamp: 'vb 11/Apr/2009 21:56:00'!
 predicates
 
 	^(elements reject: [:some | some isEnumerable])
 		collect: [:each | each predicate]! !
 
-!RxsCharSet methodsFor: 'privileged' stamp: 'vb 4/11/09 21:56'!
+!RxsCharSet methodsFor: 'privileged' stamp: 'vb 11/Apr/2009 21:56:00'!
 enumerablePartPredicateIgnoringCase: aBoolean
 
 	| enumeration |
@@ -4458,7 +3112,7 @@ enumerablePartPredicateIgnoringCase: aBoolean
 		ifTrue: [[:char | (enumeration includes: char) not]]
 		ifFalse: [[:char | enumeration includes: char]]! !
 
-!RxsCharSet methodsFor: 'privileged' stamp: 'vb 4/11/09 21:56'!
+!RxsCharSet methodsFor: 'privileged' stamp: 'vb 11/Apr/2009 21:56:00'!
 enumerableSetIgnoringCase: aBoolean
 	"Answer a collection of characters that make up the portion of me
 	that can be enumerated."
@@ -4471,7 +3125,7 @@ enumerableSetIgnoringCase: aBoolean
 			[each enumerateTo: set ignoringCase: aBoolean]].
 	^set! !
 
-!RxsCharSet methodsFor: 'privileged' stamp: 'lr 11/4/2009 22:27'!
+!RxsCharSet methodsFor: 'privileged' stamp: 'lr 4/Nov/2009 22:27:00'!
 optimalSetIgnoringCase: aBoolean
 	"Assuming the client with search the `set' using #includes:,
 	answer a collection with the contents of `set', of the class
@@ -4484,7 +3138,7 @@ optimalSetIgnoringCase: aBoolean
 		ifTrue: [set asArray]
 		ifFalse: [set]! !
 
-!RxsCharSet methodsFor: 'privileged' stamp: 'vb 4/11/09 21:56'!
+!RxsCharSet methodsFor: 'privileged' stamp: 'vb 11/Apr/2009 21:56:00'!
 predicatePartPredicate
 	"Answer a predicate that tests all of my elements that cannot be
 	enumerated."
@@ -4504,37 +3158,37 @@ predicatePartPredicate
 		ifTrue:
 			[[:char | (predicates contains: [:some | some value: char]) not]]! !
 
-!RxsCharSet methodsFor: 'initialize-release' stamp: 'vb 4/11/09 21:56'!
+!RxsCharSet methodsFor: 'initialize-release' stamp: 'vb 11/Apr/2009 21:56:00'!
 initializeElements: aCollection negated: aBoolean
 	"See class comment for instance variables description."
 
 	elements := aCollection.
 	negated := aBoolean! !
 
-!RxsCharSet methodsFor: 'testing' stamp: 'vb 4/11/09 21:56'!
+!RxsCharSet methodsFor: 'testing' stamp: 'vb 11/Apr/2009 21:56:00'!
 isEnumerable
 
 	elements detect: [:some | some isEnumerable not] ifNone: [^true].
 	^false! !
 
-!RxsCharSet methodsFor: 'testing' stamp: 'vb 4/11/09 21:56'!
+!RxsCharSet methodsFor: 'testing' stamp: 'vb 11/Apr/2009 21:56:00'!
 isNegated
 
 	^negated! !
 
-!RxsCharacter methodsFor: 'accessing' stamp: 'vb 4/11/09 21:56'!
+!RxsCharacter methodsFor: 'accessing' stamp: 'vb 11/Apr/2009 21:56:00'!
 character
 
 	^character! !
 
-!RxsCharacter methodsFor: 'accessing' stamp: 'vb 4/11/09 21:56'!
+!RxsCharacter methodsFor: 'accessing' stamp: 'vb 11/Apr/2009 21:56:00'!
 dispatchTo: aMatcher
 	"Inform the matcher of the kind of the node, and it
 	will do whatever it has to."
 
 	^aMatcher syntaxCharacter: self! !
 
-!RxsCharacter methodsFor: 'accessing' stamp: 'vb 4/11/09 21:56'!
+!RxsCharacter methodsFor: 'accessing' stamp: 'vb 11/Apr/2009 21:56:00'!
 enumerateTo: aSet ignoringCase: aBoolean
 
 	aBoolean
@@ -4544,134 +3198,134 @@ enumerateTo: aSet ignoringCase: aBoolean
 				add: character asLowercase]
 		ifFalse: [aSet add: character]! !
 
-!RxsCharacter methodsFor: 'initialize-release' stamp: 'vb 4/11/09 21:56'!
+!RxsCharacter methodsFor: 'initialize-release' stamp: 'vb 11/Apr/2009 21:56:00'!
 initializeCharacter: aCharacter
 	"See class comment for instance variable description."
 
 	character := aCharacter! !
 
-!RxsCharacter methodsFor: 'testing' stamp: 'vb 4/11/09 21:56'!
+!RxsCharacter methodsFor: 'testing' stamp: 'vb 11/Apr/2009 21:56:00'!
 isAtomic
 	"A character is always atomic."
 
 	^true! !
 
-!RxsCharacter methodsFor: 'testing' stamp: 'vb 4/11/09 21:56'!
+!RxsCharacter methodsFor: 'testing' stamp: 'vb 11/Apr/2009 21:56:00'!
 isEnumerable
 
 	^true! !
 
-!RxsCharacter methodsFor: 'testing' stamp: 'vb 4/11/09 21:56'!
+!RxsCharacter methodsFor: 'testing' stamp: 'vb 11/Apr/2009 21:56:00'!
 isNullable
 
 	^false! !
 
-!RxsCharacter class methodsFor: 'instance creation' stamp: 'vb 4/11/09 21:56'!
+!RxsCharacter class methodsFor: 'instance creation' stamp: 'vb 11/Apr/2009 21:56:00'!
 with: aCharacter
 
 	^self new initializeCharacter: aCharacter! !
 
-!RxsContextCondition methodsFor: 'initialize-release' stamp: 'vb 4/11/09 21:56'!
+!RxsContextCondition methodsFor: 'initialize-release' stamp: 'vb 11/Apr/2009 21:56:00'!
 beAny
 	"Matches anything but a newline."
 
 	kind := #syntaxAny! !
 
-!RxsContextCondition methodsFor: 'initialize-release' stamp: 'vb 4/11/09 21:56'!
+!RxsContextCondition methodsFor: 'initialize-release' stamp: 'vb 11/Apr/2009 21:56:00'!
 beBeginningOfLine
 	"Matches empty string at the beginning of a line."
 
 	kind := #syntaxBeginningOfLine! !
 
-!RxsContextCondition methodsFor: 'initialize-release' stamp: 'vb 4/11/09 21:56'!
+!RxsContextCondition methodsFor: 'initialize-release' stamp: 'vb 11/Apr/2009 21:56:00'!
 beBeginningOfWord
 	"Matches empty string at the beginning of a word."
 
 	kind := #syntaxBeginningOfWord! !
 
-!RxsContextCondition methodsFor: 'initialize-release' stamp: 'vb 4/11/09 21:56'!
+!RxsContextCondition methodsFor: 'initialize-release' stamp: 'vb 11/Apr/2009 21:56:00'!
 beEndOfLine
 	"Matches empty string at the end of a line."
 
 	kind := #syntaxEndOfLine! !
 
-!RxsContextCondition methodsFor: 'initialize-release' stamp: 'vb 4/11/09 21:56'!
+!RxsContextCondition methodsFor: 'initialize-release' stamp: 'vb 11/Apr/2009 21:56:00'!
 beEndOfWord
 	"Matches empty string at the end of a word."
 
 	kind := #syntaxEndOfWord! !
 
-!RxsContextCondition methodsFor: 'initialize-release' stamp: 'vb 4/11/09 21:56'!
+!RxsContextCondition methodsFor: 'initialize-release' stamp: 'vb 11/Apr/2009 21:56:00'!
 beNonWordBoundary
 	"Analog of \B."
 
 	kind := #syntaxNonWordBoundary! !
 
-!RxsContextCondition methodsFor: 'initialize-release' stamp: 'vb 4/11/09 21:56'!
+!RxsContextCondition methodsFor: 'initialize-release' stamp: 'vb 11/Apr/2009 21:56:00'!
 beWordBoundary
 	"Analog of \w (alphanumeric plus _)."
 
 	kind := #syntaxWordBoundary! !
 
-!RxsContextCondition methodsFor: 'accessing' stamp: 'vb 4/11/09 21:56'!
+!RxsContextCondition methodsFor: 'accessing' stamp: 'vb 11/Apr/2009 21:56:00'!
 dispatchTo: aBuilder
 
 	^aBuilder perform: kind! !
 
-!RxsContextCondition methodsFor: 'testing' stamp: 'vb 4/11/09 21:56'!
+!RxsContextCondition methodsFor: 'testing' stamp: 'vb 11/Apr/2009 21:56:00'!
 isNullable
 
 	^#syntaxAny ~~ kind! !
 
-!RxsEpsilon methodsFor: 'building' stamp: 'vb 4/11/09 21:56'!
+!RxsEpsilon methodsFor: 'building' stamp: 'vb 11/Apr/2009 21:56:00'!
 dispatchTo: aBuilder
 	"Inform the matcher of the kind of the node, and it
 	will do whatever it has to."
 
 	^aBuilder syntaxEpsilon! !
 
-!RxsEpsilon methodsFor: 'testing' stamp: 'vb 4/11/09 21:56'!
+!RxsEpsilon methodsFor: 'testing' stamp: 'vb 11/Apr/2009 21:56:00'!
 isNullable
 	"See comment in the superclass."
 
 	^true! !
 
-!RxsMessagePredicate methodsFor: 'accessing' stamp: 'vb 4/11/09 21:56'!
+!RxsMessagePredicate methodsFor: 'accessing' stamp: 'vb 11/Apr/2009 21:56:00'!
 dispatchTo: aBuilder
 	"Inform the matcher of the kind of the node, and it
 	will do whatever it has to."
 
 	^aBuilder syntaxMessagePredicate: self! !
 
-!RxsMessagePredicate methodsFor: 'accessing' stamp: 'vb 4/11/09 21:56'!
+!RxsMessagePredicate methodsFor: 'accessing' stamp: 'vb 11/Apr/2009 21:56:00'!
 negated
 
 	^negated! !
 
-!RxsMessagePredicate methodsFor: 'accessing' stamp: 'vb 4/11/09 21:56'!
+!RxsMessagePredicate methodsFor: 'accessing' stamp: 'vb 11/Apr/2009 21:56:00'!
 selector
 
 	^selector! !
 
-!RxsMessagePredicate methodsFor: 'initialize-release' stamp: 'vb 4/11/09 21:56'!
+!RxsMessagePredicate methodsFor: 'initialize-release' stamp: 'vb 11/Apr/2009 21:56:00'!
 initializeSelector: aSelector
 	"The selector must be a one-argument message understood by Character."
 
 	selector := aSelector! !
 
-!RxsMessagePredicate methodsFor: 'initialize-release' stamp: 'vb 4/11/09 21:56'!
+!RxsMessagePredicate methodsFor: 'initialize-release' stamp: 'vb 11/Apr/2009 21:56:00'!
 initializeSelector: aSelector negated: aBoolean
 	"The selector must be a one-argument message understood by Character."
 
 	selector := aSelector.
 	negated := aBoolean! !
 
-!RxsPiece methodsFor: 'accessing' stamp: 'vb 4/11/09 21:56'!
+!RxsPiece methodsFor: 'accessing' stamp: 'vb 11/Apr/2009 21:56:00'!
 atom
 
 	^atom! !
 
-!RxsPiece methodsFor: 'accessing' stamp: 'vb 4/11/09 21:56'!
+!RxsPiece methodsFor: 'accessing' stamp: 'vb 11/Apr/2009 21:56:00'!
 character
 	"If this node is atomic, answer the character it
 	represents. It is the caller's responsibility to make sure this
@@ -4679,31 +3333,31 @@ character
 
 	^atom character! !
 
-!RxsPiece methodsFor: 'accessing' stamp: 'vb 4/11/09 21:56'!
+!RxsPiece methodsFor: 'accessing' stamp: 'vb 11/Apr/2009 21:56:00'!
 dispatchTo: aMatcher
 	"Inform the matcher of the kind of the node, and it
 	will do whatever it has to."
 
 	^aMatcher syntaxPiece: self! !
 
-!RxsPiece methodsFor: 'accessing' stamp: 'vb 4/11/09 21:56'!
+!RxsPiece methodsFor: 'accessing' stamp: 'vb 11/Apr/2009 21:56:00'!
 max
 	"The value answered may be nil, indicating infinity."
 
 	^max! !
 
-!RxsPiece methodsFor: 'accessing' stamp: 'vb 4/11/09 21:56'!
+!RxsPiece methodsFor: 'accessing' stamp: 'vb 11/Apr/2009 21:56:00'!
 min
 
 	^min! !
 
-!RxsPiece methodsFor: 'initialize-release' stamp: 'vb 4/11/09 21:56'!
+!RxsPiece methodsFor: 'initialize-release' stamp: 'vb 11/Apr/2009 21:56:00'!
 initializeAtom: anAtom
 	"This piece is exactly one occurrence of the specified RxsAtom."
 
 	self initializeAtom: anAtom min: 1 max: 1! !
 
-!RxsPiece methodsFor: 'initialize-release' stamp: 'vb 4/11/09 21:56'!
+!RxsPiece methodsFor: 'initialize-release' stamp: 'vb 11/Apr/2009 21:56:00'!
 initializeAtom: anAtom min: minOccurrences max: maxOccurrences
 	"This piece is from <minOccurrences> to <maxOccurrences> 
 	occurrences of the specified RxsAtom."
@@ -4712,98 +3366,98 @@ initializeAtom: anAtom min: minOccurrences max: maxOccurrences
 	min := minOccurrences.
 	max := maxOccurrences! !
 
-!RxsPiece methodsFor: 'initialize-release' stamp: 'vb 4/11/09 21:56'!
+!RxsPiece methodsFor: 'initialize-release' stamp: 'vb 11/Apr/2009 21:56:00'!
 initializeOptionalAtom: anAtom
 	"This piece is 0 or 1 occurrences of the specified RxsAtom."
 
 	self initializeAtom: anAtom min: 0 max: 1! !
 
-!RxsPiece methodsFor: 'initialize-release' stamp: 'vb 4/11/09 21:56'!
+!RxsPiece methodsFor: 'initialize-release' stamp: 'vb 11/Apr/2009 21:56:00'!
 initializePlusAtom: anAtom
 	"This piece is one or more occurrences of the specified RxsAtom."
 
 	self initializeAtom: anAtom min: 1 max: nil! !
 
-!RxsPiece methodsFor: 'initialize-release' stamp: 'vb 4/11/09 21:56'!
+!RxsPiece methodsFor: 'initialize-release' stamp: 'vb 11/Apr/2009 21:56:00'!
 initializeStarAtom: anAtom
 	"This piece is any number of occurrences of the atom."
 
 	self initializeAtom: anAtom min: 0 max: nil! !
 
-!RxsPiece methodsFor: 'testing' stamp: 'vb 4/11/09 21:56'!
+!RxsPiece methodsFor: 'testing' stamp: 'vb 11/Apr/2009 21:56:00'!
 isAtomic
 	"A piece is atomic if only it contains exactly one atom
 	which is atomic (sic)."
 
 	^self isSingular and: [atom isAtomic]! !
 
-!RxsPiece methodsFor: 'testing' stamp: 'vb 4/11/09 21:56'!
+!RxsPiece methodsFor: 'testing' stamp: 'vb 11/Apr/2009 21:56:00'!
 isNullable
 	"A piece is nullable if it allows 0 matches. 
 	This is often handy to know for optimization."
 
 	^min = 0 or: [atom isNullable]! !
 
-!RxsPiece methodsFor: 'testing' stamp: 'vb 4/11/09 21:56'!
+!RxsPiece methodsFor: 'testing' stamp: 'vb 11/Apr/2009 21:56:00'!
 isOptional
 
 	^min = 0 and: [max = 1]! !
 
-!RxsPiece methodsFor: 'testing' stamp: 'vb 4/11/09 21:56'!
+!RxsPiece methodsFor: 'testing' stamp: 'vb 11/Apr/2009 21:56:00'!
 isPlus
 
 	^min = 1 and: [max == nil]! !
 
-!RxsPiece methodsFor: 'testing' stamp: 'vb 4/11/09 21:56'!
+!RxsPiece methodsFor: 'testing' stamp: 'vb 11/Apr/2009 21:56:00'!
 isSingular
 	"A piece with a range is 1 to 1 needs can be compiled
 	as a simple match."
 
 	^min = 1 and: [max = 1]! !
 
-!RxsPiece methodsFor: 'testing' stamp: 'vb 4/11/09 21:56'!
+!RxsPiece methodsFor: 'testing' stamp: 'vb 11/Apr/2009 21:56:00'!
 isStar
 
 	^min = 0 and: [max == nil]! !
 
-!RxsPredicate methodsFor: 'initialize-release' stamp: 'vb 4/11/09 21:56'!
+!RxsPredicate methodsFor: 'initialize-release' stamp: 'vb 11/Apr/2009 21:56:00'!
 beAlphaNumeric
 
 	predicate := [:char | char isAlphaNumeric].
 	negation := [:char | char isAlphaNumeric not]! !
 
-!RxsPredicate methodsFor: 'initialize-release' stamp: 'lr 11/4/2009 22:29'!
+!RxsPredicate methodsFor: 'initialize-release' stamp: 'lr 4/Nov/2009 22:29:00'!
 beAlphabetic
 
 	predicate := [:char | char isLetter].
 	negation := [:char | char isLetter not]! !
 
-!RxsPredicate methodsFor: 'initialize-release' stamp: 'vb 4/11/09 21:56'!
+!RxsPredicate methodsFor: 'initialize-release' stamp: 'vb 11/Apr/2009 21:56:00'!
 beBackslash
 
 	predicate := [:char | char == $\].
 	negation := [:char | char ~~ $\]! !
 
-!RxsPredicate methodsFor: 'initialize-release' stamp: 'vb 4/11/09 21:56'!
+!RxsPredicate methodsFor: 'initialize-release' stamp: 'vb 11/Apr/2009 21:56:00'!
 beControl
 
 	predicate := [:char | char asInteger < 32].
 	negation := [:char | char asInteger >= 32]! !
 
-!RxsPredicate methodsFor: 'initialize-release' stamp: 'vb 4/11/09 21:56'!
+!RxsPredicate methodsFor: 'initialize-release' stamp: 'vb 11/Apr/2009 21:56:00'!
 beDigit
 
 	predicate := [:char | char isDigit].
 	negation := [:char | char isDigit not]! !
 
-!RxsPredicate methodsFor: 'initialize-release' stamp: 'vb 4/11/09 21:56'!
+!RxsPredicate methodsFor: 'initialize-release' stamp: 'vb 11/Apr/2009 21:56:00'!
 beGraphics
 
 	self
 		beControl;
 		negate! !
 
-!RxsPredicate methodsFor: 'initialize-release' stamp: 'vb 4/11/09 21:56'!
+!RxsPredicate methodsFor: 'initialize-release' stamp: 'vb 11/Apr/2009 21:56:00'!
 beHexDigit
 
 	| hexLetters |
@@ -4811,41 +3465,41 @@ beHexDigit
 	predicate := [:char | char isDigit or: [hexLetters includes: char]].
 	negation := [:char | char isDigit not and: [(hexLetters includes: char) not]]! !
 
-!RxsPredicate methodsFor: 'initialize-release' stamp: 'vb 4/11/09 21:56'!
+!RxsPredicate methodsFor: 'initialize-release' stamp: 'vb 11/Apr/2009 21:56:00'!
 beLowercase
 
 	predicate := [:char | char isLowercase].
 	negation := [:char | char isLowercase not]! !
 
-!RxsPredicate methodsFor: 'initialize-release' stamp: 'vb 4/11/09 21:56'!
+!RxsPredicate methodsFor: 'initialize-release' stamp: 'vb 11/Apr/2009 21:56:00'!
 beNotDigit
 
 	self
 		beDigit;
 		negate! !
 
-!RxsPredicate methodsFor: 'initialize-release' stamp: 'vb 4/11/09 21:56'!
+!RxsPredicate methodsFor: 'initialize-release' stamp: 'vb 11/Apr/2009 21:56:00'!
 beNotSpace
 
 	self
 		beSpace;
 		negate! !
 
-!RxsPredicate methodsFor: 'initialize-release' stamp: 'vb 4/11/09 21:56'!
+!RxsPredicate methodsFor: 'initialize-release' stamp: 'vb 11/Apr/2009 21:56:00'!
 beNotWordConstituent
 
 	self
 		beWordConstituent;
 		negate! !
 
-!RxsPredicate methodsFor: 'initialize-release' stamp: 'vb 4/11/09 21:56'!
+!RxsPredicate methodsFor: 'initialize-release' stamp: 'vb 11/Apr/2009 21:56:00'!
 bePrintable
 
 	self
 		beControl;
 		negate! !
 
-!RxsPredicate methodsFor: 'initialize-release' stamp: 'vb 4/11/09 21:56'!
+!RxsPredicate methodsFor: 'initialize-release' stamp: 'vb 11/Apr/2009 21:56:00'!
 bePunctuation
 
 	| punctuationChars |
@@ -4853,61 +3507,61 @@ bePunctuation
 	predicate := [:char | punctuationChars includes: char].
 	negation := [:char | (punctuationChars includes: char) not]! !
 
-!RxsPredicate methodsFor: 'initialize-release' stamp: 'vb 4/11/09 21:56'!
+!RxsPredicate methodsFor: 'initialize-release' stamp: 'vb 11/Apr/2009 21:56:00'!
 beSpace
 
 	predicate := [:char | char isSeparator].
 	negation := [:char | char isSeparator not]! !
 
-!RxsPredicate methodsFor: 'initialize-release' stamp: 'vb 4/11/09 21:56'!
+!RxsPredicate methodsFor: 'initialize-release' stamp: 'vb 11/Apr/2009 21:56:00'!
 beUppercase
 
 	predicate := [:char | char isUppercase].
 	negation := [:char | char isUppercase not]! !
 
-!RxsPredicate methodsFor: 'initialize-release' stamp: 'lr 1/7/2010 20:06'!
+!RxsPredicate methodsFor: 'initialize-release' stamp: 'lr 7/Jan/2010 20:06:00'!
 beWordConstituent
 
 	predicate := [:char | char isAlphaNumeric or: [char == $_]].
 	negation := [:char | char isAlphaNumeric not and: [char ~~ $_]]! !
 
-!RxsPredicate methodsFor: 'accessing' stamp: 'vb 4/11/09 21:56'!
+!RxsPredicate methodsFor: 'accessing' stamp: 'vb 11/Apr/2009 21:56:00'!
 dispatchTo: anObject
 
 	^anObject syntaxPredicate: self! !
 
-!RxsPredicate methodsFor: 'accessing' stamp: 'vb 4/11/09 21:56'!
+!RxsPredicate methodsFor: 'accessing' stamp: 'vb 11/Apr/2009 21:56:00'!
 negated
 
 	^self copy negate! !
 
-!RxsPredicate methodsFor: 'accessing' stamp: 'vb 4/11/09 21:56'!
+!RxsPredicate methodsFor: 'accessing' stamp: 'vb 11/Apr/2009 21:56:00'!
 predicate
 
 	^predicate! !
 
-!RxsPredicate methodsFor: 'accessing' stamp: 'vb 4/11/09 21:56'!
+!RxsPredicate methodsFor: 'accessing' stamp: 'vb 11/Apr/2009 21:56:00'!
 predicateNegation
 
 	^negation! !
 
-!RxsPredicate methodsFor: 'accessing' stamp: 'vb 4/11/09 21:56'!
+!RxsPredicate methodsFor: 'accessing' stamp: 'vb 11/Apr/2009 21:56:00'!
 value: aCharacter
 
 	^predicate value: aCharacter! !
 
-!RxsPredicate methodsFor: 'testing' stamp: 'vb 4/11/09 21:56'!
+!RxsPredicate methodsFor: 'testing' stamp: 'vb 11/Apr/2009 21:56:00'!
 isAtomic
 	"A predicate is a single character but the character is not known in advance."
 
 	^false! !
 
-!RxsPredicate methodsFor: 'testing' stamp: 'vb 4/11/09 21:56'!
+!RxsPredicate methodsFor: 'testing' stamp: 'vb 11/Apr/2009 21:56:00'!
 isEnumerable
 
 	^false! !
 
-!RxsPredicate methodsFor: 'private' stamp: 'vb 4/11/09 21:56'!
+!RxsPredicate methodsFor: 'private' stamp: 'vb 11/Apr/2009 21:56:00'!
 negate
 
 	| tmp |
@@ -4915,7 +3569,7 @@ negate
 	predicate := negation.
 	negation := tmp! !
 
-!RxsPredicate class methodsFor: 'instance creation' stamp: 'vb 4/11/09 21:56'!
+!RxsPredicate class methodsFor: 'instance creation' stamp: 'vb 11/Apr/2009 21:56:00'!
 forEscapedLetter: aCharacter
 
 	^self new perform:
@@ -4923,7 +3577,7 @@ forEscapedLetter: aCharacter
 			at: aCharacter
 			ifAbsent: [RxParser signalSyntaxException: 'bad backslash escape'])! !
 
-!RxsPredicate class methodsFor: 'instance creation' stamp: 'vb 4/11/09 21:56'!
+!RxsPredicate class methodsFor: 'instance creation' stamp: 'vb 11/Apr/2009 21:56:00'!
 forNamedClass: aString
 
 	^self new perform:
@@ -4931,7 +3585,7 @@ forNamedClass: aString
 			at: aString
 			ifAbsent: [RxParser signalSyntaxException: 'bad character class name'])! !
 
-!RxsPredicate class methodsFor: 'class initialization' stamp: 'vb 4/11/09 21:56'!
+!RxsPredicate class methodsFor: 'class initialization' stamp: 'vb 11/Apr/2009 21:56:00'!
 initialize
 	"self initialize"
 
@@ -4939,7 +3593,7 @@ initialize
 		initializeNamedClassSelectors;
 		initializeEscapedLetterSelectors! !
 
-!RxsPredicate class methodsFor: 'class initialization' stamp: 'vb 4/11/09 21:56'!
+!RxsPredicate class methodsFor: 'class initialization' stamp: 'vb 11/Apr/2009 21:56:00'!
 initializeEscapedLetterSelectors
 	"self initializeEscapedLetterSelectors"
 
@@ -4952,7 +3606,7 @@ initializeEscapedLetterSelectors
 		at: $S put: #beNotSpace;
 		at: $\ put: #beBackslash! !
 
-!RxsPredicate class methodsFor: 'class initialization' stamp: 'vb 4/11/09 21:56'!
+!RxsPredicate class methodsFor: 'class initialization' stamp: 'vb 11/Apr/2009 21:56:00'!
 initializeNamedClassSelectors
 	"self initializeNamedClassSelectors"
 
@@ -4969,7 +3623,7 @@ initializeNamedClassSelectors
 		at: 'upper' put: #beUppercase;
 		at: 'xdigit' put: #beHexDigit! !
 
-!RxsRange methodsFor: 'accessing' stamp: 'vb 4/11/09 21:56'!
+!RxsRange methodsFor: 'accessing' stamp: 'vb 11/Apr/2009 21:56:00'!
 enumerateTo: aSet ignoringCase: aBoolean
 	"Add all of the elements I represent to the collection."
 
@@ -4983,51 +3637,51 @@ enumerateTo: aSet ignoringCase: aBoolean
 				add: character asLowercase]
 		ifFalse: [aSet add: character]]! !
 
-!RxsRange methodsFor: 'initialize-release' stamp: 'vb 4/11/09 21:56'!
+!RxsRange methodsFor: 'initialize-release' stamp: 'vb 11/Apr/2009 21:56:00'!
 initializeFirst: aCharacter last: anotherCharacter
 
 	first := aCharacter.
 	last := anotherCharacter! !
 
-!RxsRange methodsFor: 'testing' stamp: 'vb 4/11/09 21:56'!
+!RxsRange methodsFor: 'testing' stamp: 'vb 11/Apr/2009 21:56:00'!
 isEnumerable
 
 	^true! !
 
-!RxsRange class methodsFor: 'instance creation' stamp: 'vb 4/11/09 21:56'!
+!RxsRange class methodsFor: 'instance creation' stamp: 'vb 11/Apr/2009 21:56:00'!
 from: aCharacter to: anotherCharacter
 
 	^self new initializeFirst: aCharacter last: anotherCharacter! !
 
-!RxsRegex methodsFor: 'accessing' stamp: 'vb 4/11/09 21:56'!
+!RxsRegex methodsFor: 'accessing' stamp: 'vb 11/Apr/2009 21:56:00'!
 branch
 
 	^branch! !
 
-!RxsRegex methodsFor: 'accessing' stamp: 'vb 4/11/09 21:56'!
+!RxsRegex methodsFor: 'accessing' stamp: 'vb 11/Apr/2009 21:56:00'!
 dispatchTo: aMatcher
 	"Inform the matcher of the kind of the node, and it
 	will do whatever it has to."
 
 	^aMatcher syntaxRegex: self! !
 
-!RxsRegex methodsFor: 'accessing' stamp: 'vb 4/11/09 21:56'!
+!RxsRegex methodsFor: 'accessing' stamp: 'vb 11/Apr/2009 21:56:00'!
 regex
 	^regex! !
 
-!RxsRegex methodsFor: 'initialize-release' stamp: 'vb 4/11/09 21:56'!
+!RxsRegex methodsFor: 'initialize-release' stamp: 'vb 11/Apr/2009 21:56:00'!
 initializeBranch: aBranch regex: aRegex
 	"See class comment for instance variable description."
 
 	branch := aBranch.
 	regex := aRegex! !
 
-!RxsRegex methodsFor: 'testing' stamp: 'vb 4/11/09 21:56'!
+!RxsRegex methodsFor: 'testing' stamp: 'vb 11/Apr/2009 21:56:00'!
 isNullable
 
 	^branch isNullable or: [regex notNil and: [regex isNullable]]! !
 
-!RxTerseGuide methodsFor: 'as yet unclassified' stamp: 'NM 8/3/2021 19:25:42'!
+!RxTerseGuide methodsFor: 'as yet unclassified' stamp: 'NM 3/Aug/2021 19:25:42'!
 examples
 	^ {
 	 {#code -> '''hello123'' matchesRegex: ''he''  ' . #category -> ''.  
@@ -5042,7 +3696,7 @@ examples
 
         }! !
 
-!RxTerseGuide methodsFor: 'as yet unclassified' stamp: 'NM 8/5/2021 11:20:06'!
+!RxTerseGuide methodsFor: 'as yet unclassified' stamp: 'NM 5/Aug/2021 11:20:06'!
 script
 	^ ' " 
 A detailed description of the package by its original author ''Vassili Bykov'' can be found in RxParser class category DOCUMENTATION. The following notes were written by ''Dr. Nicola Mingotti'' in a cookbook style to help you get started. 
@@ -5106,43 +3760,1374 @@ Dr. Nicola Mingotti - Aug 2021.
 
 	! !
 
-!RxTerseGuide methodsFor: 'as yet unclassified' stamp: 'NM 8/3/2021 18:34:40'!
+!RxTerseGuide methodsFor: 'as yet unclassified' stamp: 'NM 3/Aug/2021 18:34:40'!
 title
 	^ 'Regex'
 	! !
 
-!Character methodsFor: '*Regex-Core' stamp: 'NM 8/2/2021 18:34:24'!
-asInteger
-	"From Squeak"
-	"Answer the receiver's character code."
-	<primitive: 171>
-	^self primitiveFailed! !
+!RxMatcherTest methodsFor: 'accessing' stamp: 'gsa 22/Dec/2012 12:25:00'!
+matcherClass
+	^ RxMatcher! !
 
-!Character methodsFor: '*Regex-Core' stamp: 'NM 8/2/2021 18:32:35'!
-sameAs: aCharacter
-	"From Squeak Answer whether the receiver is equal to aCharacter, ignoring case"
-	self == aCharacter ifTrue: [ ^true ].
-	^self asLowercase == aCharacter asLowercase
+!RxMatcherTest methodsFor: 'accessing' stamp: 'lr 15/Jan/2010 19:39:00'!
+parserClass
+	^ RxParser! !
+
+!RxMatcherTest methodsFor: 'utilties' stamp: 'TestRunner 15/Jan/2010 19:38:00'!
+compileRegex: aString
+	"Compile the regex and answer the matcher, or answer nil if compilation fails."
+
+	| syntaxTree |
+	syntaxTree := self parserClass safelyParse: aString.
+	^ syntaxTree isNil ifFalse: [ self matcherClass for: syntaxTree ]! !
+
+!RxMatcherTest methodsFor: 'utilties' stamp: 'gsa 22/Dec/2012 12:26:00'!
+runMatcher: aMatcher with: aString expect: aBoolean withSubexpressions: anArray
+	| copy got |
+	copy := aMatcher
+		copy: aString
+		translatingMatchesUsing: [ :each | each ].
+	self 
+		assert: copy = aString
+		description: 'Copying: expected ' , aString printString , ', but got ' , copy printString.
+	got := aMatcher search: aString.
+	self
+		assert: got = aBoolean 
+		description: 'Searching: expected ' , aBoolean printString , ', but got ' , got printString.
+	(anArray isNil or: [ aMatcher supportsSubexpressions not ])
+		ifTrue: [ ^ self ].
+	1 to: anArray size by: 2 do: [ :index |
+		| sub subExpect subGot |
+		sub := anArray at: index.
+		subExpect := anArray at: index + 1.
+		subGot := aMatcher subexpression: sub.
+		self
+			assert: subExpect = subGot
+			description: 'Subexpression ' , sub printString , ': expected ' , subExpect printString , ', but got ' , subGot printString ]! !
+
+!RxMatcherTest methodsFor: 'utilties' stamp: 'lr 15/Jan/2010 19:31:00'!
+runRegex: anArray
+	"Run a clause anArray against a set of tests. Each clause is an array with a regex source string followed by sequence of 3-tuples. Each three-element group is one test to try against the regex, and includes: 1) test string; 2) expected result; 3) expected subexpression as an array of (index, substring), or nil."
+
+	| source matcher |
+	source := anArray first.
+	matcher := self compileRegex: source.
+	matcher isNil
+		ifTrue: [
+			(anArray at: 2) isNil
+				ifFalse: [ self signalFailure: 'Compilation failed, should have succeeded: ' , source printString ] ]
+		ifFalse: [
+			(anArray at: 2) isNil
+				ifTrue: [ self signalFailure: 'Compilation succeeded, should have failed: ' , source printString ]
+				ifFalse: [
+					2 to: anArray size by: 3 do: [ :index | 
+						self 
+							runMatcher: matcher
+							with: (anArray at: index)
+							expect: (anArray at: index + 1)
+							withSubexpressions: (anArray at: index + 2) ] ] ]! !
+
+!RxMatcherTest methodsFor: 'testing-henry' stamp: 'lr 15/Jan/2010 19:46:00'!
+henryReadme
+	self error: 'The tests in this category are based on the ones in Henry Spencer''s regexp.c package.'! !
+
+!RxMatcherTest methodsFor: 'testing-henry' stamp: 'lr 15/Jan/2010 19:46:00'!
+testHenry001
+	self runRegex: #('abc'
+		'abc' true (1 'abc')
+		'xbc' false nil
+		'axc' false nil
+		'abx' false nil
+		'xabcy' true (1 'abc')
+		'ababc' true (1 'abc'))! !
+
+!RxMatcherTest methodsFor: 'testing-henry' stamp: 'lr 15/Jan/2010 19:46:00'!
+testHenry002
+	self runRegex: #('ab*c'
+		'abc' true (1 'abc'))! !
+
+!RxMatcherTest methodsFor: 'testing-henry' stamp: 'lr 15/Jan/2010 19:46:00'!
+testHenry003
+	self runRegex: #('ab*bc'
+		'abc' true (1 'abc')
+		'abbc' true (1 'abbc')
+		'abbbbc' true (1 'abbbbc'))! !
+
+!RxMatcherTest methodsFor: 'testing-henry' stamp: 'lr 15/Jan/2010 19:46:00'!
+testHenry004
+	self runRegex: #('ab+bc'	
+		'abbc' true (1 'abbc')
+		'abc' false nil
+		'abq' false nil
+		'abbbbc' true (1 'abbbbc'))! !
+
+!RxMatcherTest methodsFor: 'testing-henry' stamp: 'lr 15/Jan/2010 19:46:00'!
+testHenry005
+	self runRegex: #('ab?bc'
+		'abbc' true (1 'abbc')
+		'abc' true (1 'abc')
+		'abbbbc' false nil
+		'abc' true (1 'abc'))! !
+
+!RxMatcherTest methodsFor: 'testing-henry' stamp: 'lr 15/Jan/2010 19:46:00'!
+testHenry006
+	self runRegex: #('^abc$'
+		'abc' true (1 'abc')
+		'abcc' false nil
+		'aabc' false nil)! !
+
+!RxMatcherTest methodsFor: 'testing-henry' stamp: 'lr 15/Jan/2010 19:46:00'!
+testHenry007
+	self runRegex: #('^abc'
+		'abcc' true (1 'abc'))! !
+
+!RxMatcherTest methodsFor: 'testing-henry' stamp: 'lr 15/Jan/2010 19:46:00'!
+testHenry008
+	self runRegex: #('abc$'
+		'aabc' true (1 'abc'))! !
+
+!RxMatcherTest methodsFor: 'testing-henry' stamp: 'lr 15/Jan/2010 19:46:00'!
+testHenry009
+	self runRegex: #('^'
+		'abc' true nil)! !
+
+!RxMatcherTest methodsFor: 'testing-henry' stamp: 'lr 15/Jan/2010 19:46:00'!
+testHenry010
+	self runRegex: #('$'
+		'abc' true nil)! !
+
+!RxMatcherTest methodsFor: 'testing-henry' stamp: 'lr 15/Jan/2010 19:46:00'!
+testHenry011
+	self runRegex: #('a.c'
+		'abc' true (1 'abc')
+		'axc' true (1 'axc'))! !
+
+!RxMatcherTest methodsFor: 'testing-henry' stamp: 'lr 15/Jan/2010 19:46:00'!
+testHenry012
+	"Need to get creative to include the null character..."
+	self runRegex: #('a.*c'	
+		'axyzc' true (1 'axyzc')
+		'axy zc' true (1 'axy zc') "testing that a dot matches a space"
+		), (Array with: 'axy', (String with: 0 asCharacter), 'zc'), #(false nil "testing that a dot does not match a null"
+		'axyzd' false nil)! !
+
+!RxMatcherTest methodsFor: 'testing-henry' stamp: 'lr 15/Jan/2010 19:46:00'!
+testHenry013
+	self runRegex: #('.a.*'
+		'1234abc' true (1 '4abc')
+		'abcd' false nil)! !
+
+!RxMatcherTest methodsFor: 'testing-henry' stamp: 'lr 15/Jan/2010 19:46:00'!
+testHenry014
+	self runRegex: #('a\w+c'
+		' abbbbc ' true (1 'abbbbc')
+		'abb bc' false nil)! !
+
+!RxMatcherTest methodsFor: 'testing-henry' stamp: 'lr 15/Jan/2010 19:46:00'!
+testHenry015
+	self runRegex: #('\w+'
+		'  	foobar	quux' true (1 'foobar')
+		' 	~!!@#$%^&*()-+=\|/?.>,<' false nil)! !
+
+!RxMatcherTest methodsFor: 'testing-henry' stamp: 'lr 15/Jan/2010 19:46:00'!
+testHenry016
+	self runRegex: #('a\W+c'
+		'a   c' true (1 'a   c')
+		'a bc' false nil)! !
+
+!RxMatcherTest methodsFor: 'testing-henry' stamp: 'lr 15/Jan/2010 19:46:00'!
+testHenry017
+	self runRegex: #('\W+'
+		'foo!!@#$bar' true (1 '!!@#$')
+		'foobar' false nil)! !
+
+!RxMatcherTest methodsFor: 'testing-henry' stamp: 'lr 15/Jan/2010 19:46:00'!
+testHenry018
+	self runRegex: #('a\s*c'
+		'a   c' true (1 'a   c')
+		'a bc' false nil)! !
+
+!RxMatcherTest methodsFor: 'testing-henry' stamp: 'lr 15/Jan/2010 19:46:00'!
+testHenry019
+	self runRegex: #('\s+'
+		'abc3457 sd' true (1 ' ')
+		'1234$^*^&asdfb' false nil)! !
+
+!RxMatcherTest methodsFor: 'testing-henry' stamp: 'lr 15/Jan/2010 19:46:00'!
+testHenry020
+	self runRegex: #('a\S*c'
+		'aqwertyc' true (1 'aqwertyc')
+		'ab c' false nil)! !
+
+!RxMatcherTest methodsFor: 'testing-henry' stamp: 'lr 15/Jan/2010 19:46:00'!
+testHenry021
+	self runRegex: #('\S+'
+		'     	asdf		' true (1 'asdf')
+		' 	
+			' false nil)! !
+
+!RxMatcherTest methodsFor: 'testing-henry' stamp: 'lr 15/Jan/2010 19:46:00'!
+testHenry022
+	self runRegex: #('a\d+c'
+		'a0123456789c' true (1 'a0123456789c')
+		'a12b34c' false nil)! !
+
+!RxMatcherTest methodsFor: 'testing-henry' stamp: 'lr 15/Jan/2010 19:46:00'!
+testHenry023
+	self runRegex: #('\d+'
+		'foo@#$%123ASD #$$%^&' true (1 '123')
+		'foo!!@#$asdfl;' false nil)! !
+
+!RxMatcherTest methodsFor: 'testing-henry' stamp: 'lr 15/Jan/2010 19:46:00'!
+testHenry024
+	self runRegex: #('a\D+c'
+		'aqwertyc' true (1 'aqwertyc')
+		'aqw6ertc' false nil)! !
+
+!RxMatcherTest methodsFor: 'testing-henry' stamp: 'lr 15/Jan/2010 19:46:00'!
+testHenry025
+	self runRegex: #('\D+'
+		'1234 abc 456' true (1 ' abc ')
+		'1234567890' false nil)! !
+
+!RxMatcherTest methodsFor: 'testing-henry' stamp: 'lr 15/Jan/2010 19:46:00'!
+testHenry026
+	self runRegex: #('(f|o)+\b'
+		'foo' true (1 'foo')
+		' foo ' true (1 'foo'))! !
+
+!RxMatcherTest methodsFor: 'testing-henry' stamp: 'lr 15/Jan/2010 19:46:00'!
+testHenry027
+	self runRegex: #('\ba\w+' "a word beginning with an A"
+		'land ancient' true (1 'ancient')
+		'antique vase' true (1 'antique')
+		'goofy foobar' false nil)! !
+
+!RxMatcherTest methodsFor: 'testing-henry' stamp: 'lr 15/Jan/2010 19:46:00'!
+testHenry028
+	self runRegex: #('(f|o)+\B'
+		'quuxfoobar' true (1 'foo')
+		'quuxfoo ' true (1 'fo'))! !
+
+!RxMatcherTest methodsFor: 'testing-henry' stamp: 'lr 15/Jan/2010 19:46:00'!
+testHenry029
+	self runRegex: #('\Ba\w+' "a word with an A in the middle, match at A and further"
+		'land ancient' true (1 'and')
+		'antique vase' true (1 'ase')
+		'smalltalk shall overcome' true (1 'alltalk')
+		'foonix is better' false nil)! !
+
+!RxMatcherTest methodsFor: 'testing-henry' stamp: 'lr 15/Jan/2010 19:46:00'!
+testHenry030
+	self runRegex: #('fooa\>.*'
+		'fooa ' true nil
+		'fooa123' false nil
+		'fooa bar' true nil
+		'fooa' true nil
+		'fooargh' false nil)! !
+
+!RxMatcherTest methodsFor: 'testing-henry' stamp: 'lr 15/Jan/2010 19:46:00'!
+testHenry031
+	self runRegex: #('\>.+abc'
+		' abcde fg' false nil
+		'foo abcde' true (1 ' abc')
+		'abcde' false nil)! !
+
+!RxMatcherTest methodsFor: 'testing-henry' stamp: 'lr 15/Jan/2010 19:46:00'!
+testHenry032
+	self runRegex: #('\<foo.*'
+		'foo' true nil
+		'foobar' true nil
+		'qfoobarq foonix' true (1 'foonix')
+		' foo' true nil
+		' 12foo' false nil
+		'barfoo' false nil)! !
+
+!RxMatcherTest methodsFor: 'testing-henry' stamp: 'lr 15/Jan/2010 19:46:00'!
+testHenry033
+	self runRegex: #('.+\<foo'
+		'foo' false nil
+		'ab foo' true (1 'ab foo')
+		'abfoo' false nil)! !
+
+!RxMatcherTest methodsFor: 'testing-henry' stamp: 'lr 15/Jan/2010 19:46:00'!
+testHenry034
+	self runRegex: #('a[bc]d'
+		'abc' false nil
+		'abd' true (1 'abd'))! !
+
+!RxMatcherTest methodsFor: 'testing-henry' stamp: 'lr 15/Jan/2010 19:46:00'!
+testHenry035
+	self runRegex: #('a[b-d]e'
+		'abd' false nil
+		'ace' true (1 'ace'))! !
+
+!RxMatcherTest methodsFor: 'testing-henry' stamp: 'lr 15/Jan/2010 19:46:00'!
+testHenry036
+	self runRegex: #('a[b-d]'
+		'aac' true (1 'ac'))! !
+
+!RxMatcherTest methodsFor: 'testing-henry' stamp: 'lr 15/Jan/2010 19:46:00'!
+testHenry037
+	self runRegex: #('a[-b]'
+		'a-' true (1 'a-'))! !
+
+!RxMatcherTest methodsFor: 'testing-henry' stamp: 'lr 15/Jan/2010 19:46:00'!
+testHenry038
+	self runRegex: #('a[b-]'
+		'a-' true (1 'a-'))! !
+
+!RxMatcherTest methodsFor: 'testing-henry' stamp: 'lr 15/Jan/2010 19:46:00'!
+testHenry039
+	self runRegex: #('a[a-b-c]' nil)! !
+
+!RxMatcherTest methodsFor: 'testing-henry' stamp: 'lr 15/Jan/2010 19:46:00'!
+testHenry040
+	self runRegex: #('[k]'
+		'ab' false nil)! !
+
+!RxMatcherTest methodsFor: 'testing-henry' stamp: 'lr 15/Jan/2010 19:46:00'!
+testHenry041
+	self runRegex: #('a[b-a]' nil)! !
+
+!RxMatcherTest methodsFor: 'testing-henry' stamp: 'lr 15/Jan/2010 19:46:00'!
+testHenry042
+	self runRegex: #('a[]b' nil)! !
+
+!RxMatcherTest methodsFor: 'testing-henry' stamp: 'lr 15/Jan/2010 19:46:00'!
+testHenry043
+	self runRegex: #('a[' nil)! !
+
+!RxMatcherTest methodsFor: 'testing-henry' stamp: 'lr 15/Jan/2010 19:46:00'!
+testHenry044
+	self runRegex: #('a]' 
+		'a]' true (1 'a]'))! !
+
+!RxMatcherTest methodsFor: 'testing-henry' stamp: 'lr 15/Jan/2010 19:46:00'!
+testHenry045
+	self runRegex: #('a[]]b'
+		'a]b' true (1 'a]b'))! !
+
+!RxMatcherTest methodsFor: 'testing-henry' stamp: 'lr 15/Jan/2010 19:46:00'!
+testHenry046
+	self runRegex: #('a[^bc]d'
+		'aed' true (1 'aed')
+		'abd' false nil)! !
+
+!RxMatcherTest methodsFor: 'testing-henry' stamp: 'lr 15/Jan/2010 19:46:00'!
+testHenry047
+	self runRegex: #('a[^-b]c'
+		'adc' true (1 'adc')
+		'a-c' false nil)! !
+
+!RxMatcherTest methodsFor: 'testing-henry' stamp: 'lr 15/Jan/2010 19:46:00'!
+testHenry048
+	self runRegex: #('a[^]b]c'
+		'a]c' false nil
+		'adc' true (1 'adc'))! !
+
+!RxMatcherTest methodsFor: 'testing-henry' stamp: 'lr 15/Jan/2010 19:46:00'!
+testHenry049
+	self runRegex: #('[\de]+'
+		'01234' true (1 '01234')
+		'0123e456' true (1 '0123e456')
+		'0123e45g78' true (1 '0123e45'))! !
+
+!RxMatcherTest methodsFor: 'testing-henry' stamp: 'lr 15/Jan/2010 19:46:00'!
+testHenry050
+	self runRegex: #('[e\d]+' "reversal of the above, should be the same"
+		'01234' true (1 '01234')
+		'0123e456' true (1 '0123e456')
+		'0123e45g78' true (1 '0123e45'))! !
+
+!RxMatcherTest methodsFor: 'testing-henry' stamp: 'lr 15/Jan/2010 19:46:00'!
+testHenry051
+	self runRegex: #('[\D]+'
+		'123abc45def78' true (1 'abc'))! !
+
+!RxMatcherTest methodsFor: 'testing-henry' stamp: 'lr 15/Jan/2010 19:46:00'!
+testHenry052
+	self runRegex: #('[[:digit:]e]+'
+		'01234' true (1 '01234')
+		'0123e456' true (1 '0123e456')
+		'0123e45g78' true (1 '0123e45'))! !
+
+!RxMatcherTest methodsFor: 'testing-henry' stamp: 'lr 15/Jan/2010 19:46:00'!
+testHenry053
+	self runRegex: #('[\s]+'
+		'2  spaces' true (1 '  '))! !
+
+!RxMatcherTest methodsFor: 'testing-henry' stamp: 'lr 15/Jan/2010 19:46:00'!
+testHenry054
+	self runRegex: #('[\S]+'
+		'  word12!!@#$  ' true (1 'word12!!@#$'))! !
+
+!RxMatcherTest methodsFor: 'testing-henry' stamp: 'lr 15/Jan/2010 19:46:00'!
+testHenry055
+	self runRegex: #('[\w]+'
+		' 	foo123bar	45' true (1 'foo123bar'))! !
+
+!RxMatcherTest methodsFor: 'testing-henry' stamp: 'lr 15/Jan/2010 19:46:00'!
+testHenry056
+	self runRegex: #('[\W]+'
+		'fii234!!@#$34f' true (1 '!!@#$'))! !
+
+!RxMatcherTest methodsFor: 'testing-henry' stamp: 'lr 15/Jan/2010 19:46:00'!
+testHenry057
+	self runRegex: #('[^[:alnum:]]+'
+		'fii234!!@#$34f' true (1 '!!@#$'))! !
+
+!RxMatcherTest methodsFor: 'testing-henry' stamp: 'lr 15/Jan/2010 19:46:00'!
+testHenry058
+	self runRegex: #('[%&[:alnum:]]+'
+		'foo%3' true (1 'foo%3')
+		'foo34&rt4$57a' true (1 'foo34&rt4')
+		'!!@#$' false nil)! !
+
+!RxMatcherTest methodsFor: 'testing-henry' stamp: 'lr 15/Jan/2010 19:46:00'!
+testHenry059
+	self runRegex: #('[[:alpha:]]+'
+		' 123foo3 ' true (1 'foo')
+		'123foo' true (1 'foo')
+		'foo1b' true (1 'foo'))! !
+
+!RxMatcherTest methodsFor: 'testing-henry' stamp: 'lr 15/Jan/2010 19:46:00'!
+testHenry060
+	self runRegex: #('[[:cntrl:]]+'
+		' a 1234asdf' false nil)! !
+
+!RxMatcherTest methodsFor: 'testing-henry' stamp: 'lr 15/Jan/2010 19:46:00'!
+testHenry061
+	self runRegex: #('[[:lower:]]+'
+		'UPPERlower1234' true (1 'lower')
+		'lowerUPPER' true (1 'lower'))! !
+
+!RxMatcherTest methodsFor: 'testing-henry' stamp: 'lr 15/Jan/2010 19:46:00'!
+testHenry062
+	self runRegex: #('[[:upper:]]+'
+		'UPPERlower1234' true (1 'UPPER')
+		'lowerUPPER ' true (1 'UPPER'))! !
+
+!RxMatcherTest methodsFor: 'testing-henry' stamp: 'lr 15/Jan/2010 19:46:00'!
+testHenry063
+	self runRegex: #('[[:space:]]+'
+		'2  spaces' true (1 '  '))! !
+
+!RxMatcherTest methodsFor: 'testing-henry' stamp: 'lr 15/Jan/2010 19:46:00'!
+testHenry064
+	self runRegex: #('[^[:space:]]+'
+		'  word12!!@#$  ' true (1 'word12!!@#$'))! !
+
+!RxMatcherTest methodsFor: 'testing-henry' stamp: 'lr 15/Jan/2010 19:46:00'!
+testHenry065
+	self runRegex: #('[[:graph:]]+'
+		'abc' true (1 'abc'))! !
+
+!RxMatcherTest methodsFor: 'testing-henry' stamp: 'lr 15/Jan/2010 19:46:00'!
+testHenry066
+	self runRegex: #('[[:print:]]+'
+		'abc' true (1 'abc'))! !
+
+!RxMatcherTest methodsFor: 'testing-henry' stamp: 'lr 15/Jan/2010 19:46:00'!
+testHenry067
+	self runRegex: #('[^[:punct:]]+'
+		'!!hello,world!!' true (1 'hello'))! !
+
+!RxMatcherTest methodsFor: 'testing-henry' stamp: 'lr 15/Jan/2010 19:46:00'!
+testHenry068
+	self runRegex: #('[[:xdigit:]]+'
+		'  x10FCD  ' true (1 '10FCD')
+		' hgfedcba0123456789ABCDEFGH '
+			true (1 'fedcba0123456789ABCDEF'))! !
+
+!RxMatcherTest methodsFor: 'testing-henry' stamp: 'lr 15/Jan/2010 19:46:00'!
+testHenry069
+	self runRegex: #('ab|cd'
+		'abc' true (1 'ab')
+		'abcd' true (1 'ab'))! !
+
+!RxMatcherTest methodsFor: 'testing-henry' stamp: 'lr 15/Jan/2010 19:46:00'!
+testHenry070
+	self runRegex: #('()ef'
+		'def' true (1 'ef' 2 ''))! !
+
+!RxMatcherTest methodsFor: 'testing-henry' stamp: 'lr 15/Jan/2010 19:46:00'!
+testHenry071
+	self runRegex: #('()*' nil)! !
+
+!RxMatcherTest methodsFor: 'testing-henry' stamp: 'lr 15/Jan/2010 19:46:00'!
+testHenry072
+	self runRegex: #('*a' nil)! !
+
+!RxMatcherTest methodsFor: 'testing-henry' stamp: 'lr 15/Jan/2010 19:46:00'!
+testHenry073
+	self runRegex: #('^*' nil)! !
+
+!RxMatcherTest methodsFor: 'testing-henry' stamp: 'lr 15/Jan/2010 19:46:00'!
+testHenry074
+	self runRegex: #('$*' nil)! !
+
+!RxMatcherTest methodsFor: 'testing-henry' stamp: 'lr 15/Jan/2010 19:46:00'!
+testHenry075
+	self runRegex: #('(*)b' nil)! !
+
+!RxMatcherTest methodsFor: 'testing-henry' stamp: 'lr 15/Jan/2010 19:46:00'!
+testHenry076
+	self runRegex: #('$b'	'b' false nil)! !
+
+!RxMatcherTest methodsFor: 'testing-henry' stamp: 'lr 15/Jan/2010 19:46:00'!
+testHenry077
+	self runRegex: #('a\' nil)! !
+
+!RxMatcherTest methodsFor: 'testing-henry' stamp: 'lr 15/Jan/2010 19:46:00'!
+testHenry078
+	self runRegex: #('a\(b'
+		'a(b' true (1 'a(b'))! !
+
+!RxMatcherTest methodsFor: 'testing-henry' stamp: 'lr 15/Jan/2010 19:46:00'!
+testHenry079
+	self runRegex: #('a\(*b'
+		'ab' true (1 'ab')
+		'a((b' true (1 'a((b'))! !
+
+!RxMatcherTest methodsFor: 'testing-henry' stamp: 'lr 15/Jan/2010 19:46:00'!
+testHenry080
+	self runRegex: #('a\\b'
+		'a\b' true (1 'a\b'))! !
+
+!RxMatcherTest methodsFor: 'testing-henry' stamp: 'lr 15/Jan/2010 19:46:00'!
+testHenry081
+	self runRegex: #('abc)' nil)! !
+
+!RxMatcherTest methodsFor: 'testing-henry' stamp: 'lr 15/Jan/2010 19:46:00'!
+testHenry082
+	self runRegex: #('(abc' nil)! !
+
+!RxMatcherTest methodsFor: 'testing-henry' stamp: 'lr 15/Jan/2010 19:46:00'!
+testHenry083
+	self runRegex: #('((a))'
+		'abc' true (1 'a' 2 'a' 3 'a'))! !
+
+!RxMatcherTest methodsFor: 'testing-henry' stamp: 'lr 15/Jan/2010 19:46:00'!
+testHenry084
+	self runRegex: #('(a)b(c)'
+		'abc' true (1 'abc' 2 'a' 3 'c'))! !
+
+!RxMatcherTest methodsFor: 'testing-henry' stamp: 'lr 15/Jan/2010 19:46:00'!
+testHenry085
+	self runRegex: #('a+b+c'
+		'aabbabc' true (1 'abc'))! !
+
+!RxMatcherTest methodsFor: 'testing-henry' stamp: 'lr 15/Jan/2010 19:46:00'!
+testHenry086
+	self runRegex: #('a**' nil)! !
+
+!RxMatcherTest methodsFor: 'testing-henry' stamp: 'lr 15/Jan/2010 19:46:00'!
+testHenry087
+	self runRegex: #('a*?' nil)! !
+
+!RxMatcherTest methodsFor: 'testing-henry' stamp: 'lr 15/Jan/2010 19:46:00'!
+testHenry088
+	self runRegex: #('(a*)*' nil)! !
+
+!RxMatcherTest methodsFor: 'testing-henry' stamp: 'lr 15/Jan/2010 19:46:00'!
+testHenry089
+	self runRegex: #('(a*)+' nil)! !
+
+!RxMatcherTest methodsFor: 'testing-henry' stamp: 'lr 15/Jan/2010 19:46:00'!
+testHenry090
+	self runRegex: #('(a|)*' nil)! !
+
+!RxMatcherTest methodsFor: 'testing-henry' stamp: 'lr 15/Jan/2010 19:46:00'!
+testHenry091
+	self runRegex: #('(a*|b)*' nil)! !
+
+!RxMatcherTest methodsFor: 'testing-henry' stamp: 'lr 15/Jan/2010 19:46:00'!
+testHenry092
+	self runRegex: #('(a+|b)*'
+		'ab' true (1 'ab' 2 'b'))! !
+
+!RxMatcherTest methodsFor: 'testing-henry' stamp: 'lr 15/Jan/2010 19:46:00'!
+testHenry093
+	self runRegex: #('(a+|b)+'
+		'ab' true (1 'ab' 2 'b'))! !
+
+!RxMatcherTest methodsFor: 'testing-henry' stamp: 'lr 15/Jan/2010 19:46:00'!
+testHenry094
+	self runRegex: #('(a+|b)?'
+		'ab' true (1 'a' 2 'a'))! !
+
+!RxMatcherTest methodsFor: 'testing-henry' stamp: 'lr 15/Jan/2010 19:46:00'!
+testHenry095
+	self runRegex: #('[^ab]*'
+		'cde' true (1 'cde'))! !
+
+!RxMatcherTest methodsFor: 'testing-henry' stamp: 'lr 15/Jan/2010 19:46:00'!
+testHenry096
+	self runRegex: #('(^)*' nil)! !
+
+!RxMatcherTest methodsFor: 'testing-henry' stamp: 'lr 15/Jan/2010 19:46:00'!
+testHenry097
+	self runRegex: #('(ab|)*' nil)! !
+
+!RxMatcherTest methodsFor: 'testing-henry' stamp: 'lr 15/Jan/2010 19:46:00'!
+testHenry098
+	self runRegex: #(')(' nil)! !
+
+!RxMatcherTest methodsFor: 'testing-henry' stamp: 'lr 15/Jan/2010 19:46:00'!
+testHenry099
+	self runRegex: #('' 'abc' true (1 ''))! !
+
+!RxMatcherTest methodsFor: 'testing-henry' stamp: 'lr 15/Jan/2010 19:46:00'!
+testHenry100
+	self runRegex: #('abc' '' false nil)! !
+
+!RxMatcherTest methodsFor: 'testing-henry' stamp: 'lr 15/Jan/2010 19:46:00'!
+testHenry101
+	self runRegex: #('a*'
+		'' true '')! !
+
+!RxMatcherTest methodsFor: 'testing-henry' stamp: 'lr 15/Jan/2010 19:46:00'!
+testHenry102
+	self runRegex: #('abcd'
+		'abcd' true (1 'abcd'))! !
+
+!RxMatcherTest methodsFor: 'testing-henry' stamp: 'lr 15/Jan/2010 19:46:00'!
+testHenry103
+	self runRegex: #('a(bc)d'
+		'abcd' true (1 'abcd' 2 'bc'))! !
+
+!RxMatcherTest methodsFor: 'testing-henry' stamp: 'lr 15/Jan/2010 19:46:00'!
+testHenry104
+	self runRegex: #('([abc])*d'
+		'abbbcd' true (1 'abbbcd' 2 'c'))! !
+
+!RxMatcherTest methodsFor: 'testing-henry' stamp: 'lr 15/Jan/2010 19:46:00'!
+testHenry105
+	self runRegex: #('([abc])*bcd'
+		'abcd' true (1 'abcd' 2 'a'))! !
+
+!RxMatcherTest methodsFor: 'testing-henry' stamp: 'lr 15/Jan/2010 19:46:00'!
+testHenry106
+	self runRegex: #('a|b|c|d|e' 'e' true (1 'e'))! !
+
+!RxMatcherTest methodsFor: 'testing-henry' stamp: 'lr 15/Jan/2010 19:46:00'!
+testHenry107
+	self runRegex: #('(a|b|c|d|e)f'
+		'ef' true (1 'ef' 2 'e'))
+	"	((a*|b))*	-	c	-	-"! !
+
+!RxMatcherTest methodsFor: 'testing-henry' stamp: 'lr 15/Jan/2010 19:46:00'!
+testHenry108
+	self runRegex: #('abcd*efg' 
+		'abcdefg' true (1 'abcdefg'))! !
+
+!RxMatcherTest methodsFor: 'testing-henry' stamp: 'lr 15/Jan/2010 19:46:00'!
+testHenry109
+	self runRegex: #('ab*' 
+		'xabyabbbz' true (1 'ab')
+		'xayabbbz' true (1 'a'))! !
+
+!RxMatcherTest methodsFor: 'testing-henry' stamp: 'lr 15/Jan/2010 19:46:00'!
+testHenry110
+	self runRegex: #('(ab|cd)e' 'abcde' true (1 'cde' 2 'cd'))! !
+
+!RxMatcherTest methodsFor: 'testing-henry' stamp: 'lr 15/Jan/2010 19:46:00'!
+testHenry111
+	self runRegex: #('[abhgefdc]ij' 'hij' true (1 'hij'))! !
+
+!RxMatcherTest methodsFor: 'testing-henry' stamp: 'lr 15/Jan/2010 19:46:00'!
+testHenry112
+	self runRegex: #('^(ab|cd)e' 'abcde' false nil)
+	! !
+
+!RxMatcherTest methodsFor: 'testing-henry' stamp: 'lr 15/Jan/2010 19:46:00'!
+testHenry113
+	self runRegex: #('(abc|)def' 'abcdef' true nil)
+	! !
+
+!RxMatcherTest methodsFor: 'testing-henry' stamp: 'lr 15/Jan/2010 19:46:00'!
+testHenry114
+	self runRegex: #('(a|b)c*d' 'abcd' true (1 'bcd' 2 'b'))
+	! !
+
+!RxMatcherTest methodsFor: 'testing-henry' stamp: 'lr 15/Jan/2010 19:46:00'!
+testHenry115
+	self runRegex: #('(ab|ab*)bc' 'abc' true (1 'abc' 2 'a'))
+	! !
+
+!RxMatcherTest methodsFor: 'testing-henry' stamp: 'lr 15/Jan/2010 19:46:00'!
+testHenry116
+	self runRegex: #('a([bc]*)c*' 'abc' true (1 'abc' 2 'bc'))
+	! !
+
+!RxMatcherTest methodsFor: 'testing-henry' stamp: 'lr 15/Jan/2010 19:46:00'!
+testHenry117
+	self runRegex: #('a([bc]*)(c*d)' 'abcd' true (1 'abcd' 2 'bc' 3 'd'))
+	! !
+
+!RxMatcherTest methodsFor: 'testing-henry' stamp: 'lr 15/Jan/2010 19:46:00'!
+testHenry118
+	self runRegex: #('a([bc]+)(c*d)' 'abcd' true (1 'abcd' 2 'bc' 3 'd'))
+	! !
+
+!RxMatcherTest methodsFor: 'testing-henry' stamp: 'lr 15/Jan/2010 19:46:00'!
+testHenry119
+	self runRegex: #('a([bc]*)(c+d)' 'abcd' true (1 'abcd' 2 'b' 3 'cd'))
+	! !
+
+!RxMatcherTest methodsFor: 'testing-henry' stamp: 'lr 15/Jan/2010 19:46:00'!
+testHenry120
+	self runRegex: #('a[bcd]*dcdcde' 'adcdcde' true (1 'adcdcde'))
+	! !
+
+!RxMatcherTest methodsFor: 'testing-henry' stamp: 'lr 15/Jan/2010 19:46:00'!
+testHenry121
+	self runRegex: #('a[bcd]+dcdcde' 'adcdcde' false nil)
+	! !
+
+!RxMatcherTest methodsFor: 'testing-henry' stamp: 'lr 15/Jan/2010 19:46:00'!
+testHenry122
+	self runRegex: #('(ab|a)b*c' 'abc' true (1 'abc'))
+	! !
+
+!RxMatcherTest methodsFor: 'testing-henry' stamp: 'lr 15/Jan/2010 19:46:00'!
+testHenry123
+	self runRegex: #('((a)(b)c)(d)' 'abcd' true (1 'abcd' 3 'a' 4 'b' 5 'd'))
+	! !
+
+!RxMatcherTest methodsFor: 'testing-henry' stamp: 'lr 15/Jan/2010 19:46:00'!
+testHenry124
+	self runRegex: #('[ -~]*' 'abc' true (1 'abc'))
+	! !
+
+!RxMatcherTest methodsFor: 'testing-henry' stamp: 'lr 15/Jan/2010 19:46:00'!
+testHenry125
+	self runRegex: #('[ -~ -~]*' 'abc' true (1 'abc'))
+	! !
+
+!RxMatcherTest methodsFor: 'testing-henry' stamp: 'lr 15/Jan/2010 19:46:00'!
+testHenry126
+	self runRegex: #('[ -~ -~ -~]*' 'abc' true (1 'abc'))
+	! !
+
+!RxMatcherTest methodsFor: 'testing-henry' stamp: 'lr 15/Jan/2010 19:46:00'!
+testHenry127
+	self runRegex: #('[ -~ -~ -~ -~]*' 'abc' true (1 'abc'))
+	! !
+
+!RxMatcherTest methodsFor: 'testing-henry' stamp: 'lr 15/Jan/2010 19:46:00'!
+testHenry128
+	self runRegex: #('[ -~ -~ -~ -~ -~]*' 'abc' true (1 'abc'))
+	! !
+
+!RxMatcherTest methodsFor: 'testing-henry' stamp: 'lr 15/Jan/2010 19:46:00'!
+testHenry129
+	self runRegex: #('[ -~ -~ -~ -~ -~ -~]*' 'abc' true (1 'abc'))
+	! !
+
+!RxMatcherTest methodsFor: 'testing-henry' stamp: 'lr 15/Jan/2010 19:46:00'!
+testHenry130
+	self runRegex: #('[ -~ -~ -~ -~ -~ -~ -~]*' 'abc' true (1 'abc'))
+	! !
+
+!RxMatcherTest methodsFor: 'testing-henry' stamp: 'lr 15/Jan/2010 19:46:00'!
+testHenry131
+	self runRegex: #('[a-zA-Z_][a-zA-Z0-9_]*' 'alpha' true (1 'alpha'))
+	! !
+
+!RxMatcherTest methodsFor: 'testing-henry' stamp: 'lr 15/Jan/2010 19:46:00'!
+testHenry132
+	self runRegex: #('^a(bc+|b[eh])g|.h$' 'abh' true (1 'bh' 2 nil))
+	! !
+
+!RxMatcherTest methodsFor: 'testing-henry' stamp: 'lr 15/Jan/2010 19:46:00'!
+testHenry133
+	self runRegex: #('(bc+d$|ef*g.|h?i(j|k))' 
+		'effgz' true (1 'effgz' 2 'effgz' 3 nil)
+		'ij' true (1 'ij' 2 'ij' 3 'j')
+		'effg' false nil
+		'bcdd' false nil
+		'reffgz' true (1 'effgz' 2 'effgz' 3 nil))! !
+
+!RxMatcherTest methodsFor: 'testing-henry' stamp: 'lr 15/Jan/2010 19:46:00'!
+testHenry134
+	self runRegex: #('(((((((((a)))))))))' 'a' true (1 'a'))! !
+
+!RxMatcherTest methodsFor: 'testing-henry' stamp: 'lr 15/Jan/2010 19:46:00'!
+testHenry135
+	self runRegex: #('multiple words of text' 
+		'uh-uh' false nil
+		'multiple words of text, yeah' true (1 'multiple words of text'))! !
+
+!RxMatcherTest methodsFor: 'testing-henry' stamp: 'lr 15/Jan/2010 19:46:00'!
+testHenry136
+	self runRegex: #('(.*)c(.*)' 'abcde' true (1 'abcde' 2 'ab' 3 'de'))! !
+
+!RxMatcherTest methodsFor: 'testing-henry' stamp: 'lr 15/Jan/2010 19:46:00'!
+testHenry137
+	self runRegex: #('\((.*), (.*)\)' '(a, b)' true (2 'a' 3 'b'))! !
+
+!RxMatcherTest methodsFor: 'testing-protocol' stamp: 'lr 15/Jan/2010 20:28:00'!
+testCaseInsensitive
+	| matcher |
+	matcher := self matcherClass forString: 'the quick brown fox' ignoreCase: true.
+	self assert: (matcher search: 'the quick brown fox').
+	self assert: (matcher search: 'The quick brown FOX').
+	self assert: (matcher search: 'What do you know about the quick brown fox?').
+	self assert: (matcher search: 'What do you know about THE QUICK BROWN FOX?')! !
+
+!RxMatcherTest methodsFor: 'testing-protocol' stamp: 'lr 15/Jan/2010 20:28:00'!
+testCaseSensitive
+	| matcher |
+	matcher := self matcherClass forString: 'the quick brown fox' ignoreCase: false.
+	self assert: (matcher search: 'the quick brown fox').
+	self deny: (matcher search: 'The quick brown FOX').
+	self assert: (matcher search: 'What do you know about the quick brown fox?').
+	self deny: (matcher search: 'What do you know about THE QUICK BROWN FOX?')! !
+
+!RxMatcherTest methodsFor: 'testing-protocol' stamp: 'lr 15/Jan/2010 20:38:00'!
+testCopyReplacingMatches
+	"See that the match context is preserved while copying stuff between matches:"
 	
+	| matcher |
+	matcher := self matcherClass forString: '\<\d\D+'.
+	self assert: (matcher copy: '9aaa1bbb 8ccc' replacingMatchesWith: 'foo')
+		= 'foo1bbb foo'! !
+
+!RxMatcherTest methodsFor: 'testing-protocol' stamp: 'hfm 2/Apr/2010 13:52:00'!
+testCopyTranslatingMatches
+	| matcher |
+	matcher := self matcherClass forString: '\w+'.
+	self assert: (matcher copy: 'now is  the   time    ' translatingMatchesUsing: [ :each | each reversed ])
+		= 'won si  eht   emit    '! !
+
+!RxMatcherTest methodsFor: 'testing-protocol' stamp: 'lr 15/Jan/2010 20:45:00'!
+testMatches
+	| matcher |
+	matcher := self matcherClass forString: '\w+'.
+	self assert: (matcher matches: 'now').
+	self deny: (matcher matches: 'now is')! !
+
+!RxMatcherTest methodsFor: 'testing-protocol' stamp: 'lr 15/Jan/2010 20:38:00'!
+testMatchesIn
+	| matcher |
+	matcher := self matcherClass forString: '\w+'.
+	self assert: (matcher matchesIn: 'now is the time') asArray 
+		= #('now' 'is' 'the' 'time')! !
+
+!RxMatcherTest methodsFor: 'testing-protocol' stamp: 'hfm 2/Apr/2010 13:52:00'!
+testMatchesInCollect
+	| matcher |
+	matcher := self matcherClass forString: '\w+'.
+	self assert: (matcher
+		matchesIn: 'now is the time'
+		collect: [ :each | each reversed ]) asArray
+			= #('won' 'si' 'eht' 'emit')! !
+
+!RxMatcherTest methodsFor: 'testing-protocol' stamp: 'lr 15/Jan/2010 20:44:00'!
+testMatchesInDo
+	| matcher expected |
+	matcher := self matcherClass forString: '\w+'.
+	expected := #('now' 'is' 'the' 'time') asOrderedCollection.
+	matcher 
+		matchesIn: 'now is the time'
+		do: [ :each | self assert: each = expected removeFirst ].
+	self assert: expected isEmpty! !
+
+!RxMatcherTest methodsFor: 'testing-protocol' stamp: 'lr 15/Jan/2010 20:39:00'!
+testMatchesOnStream
+	| matcher |
+	matcher := self matcherClass forString: '\w+'.
+	self assert: (matcher matchesOnStream: 'now is the time' readStream) asArray 
+		= #('now' 'is' 'the' 'time')! !
+
+!RxMatcherTest methodsFor: 'testing-protocol' stamp: 'hfm 2/Apr/2010 13:52:00'!
+testMatchesOnStreamCollect
+	| matcher |
+	matcher := self matcherClass forString: '\w+'.
+	self assert: (matcher 
+		matchesOnStream: 'now is the time' readStream 
+		collect: [ :each | each reversed ]) asArray
+			= #('won' 'si' 'eht' 'emit')! !
+
+!RxMatcherTest methodsFor: 'testing-protocol' stamp: 'lr 15/Jan/2010 20:44:00'!
+testMatchesOnStreamDo
+	| matcher expected |
+	matcher := self matcherClass forString: '\w+'.
+	expected := #('now' 'is' 'the' 'time') asOrderedCollection.
+	matcher 
+		matchesOnStream: 'now is the time' readStream
+		do: [ :each | self assert: each = expected removeFirst ].
+	self assert: expected isEmpty! !
+
+!RxMatcherTest methodsFor: 'testing-protocol' stamp: 'lr 15/Jan/2010 20:45:00'!
+testMatchesStream
+	| matcher |
+	matcher := self matcherClass forString: '\w+'.
+	self assert: (matcher matchesStream: 'now' readStream).
+	self deny: (matcher matchesStream: 'now is' readStream)! !
+
+!RxMatcherTest methodsFor: 'testing-protocol' stamp: 'TestRunner 15/Jan/2010 20:51:00'!
+testMatchingRangesIn
+	| matcher expected |
+	matcher := self matcherClass forString: '\w+'.
+	expected := #(1 3 5 6 8 10 12 15) asOrderedCollection.
+	(matcher matchingRangesIn: 'now is the time') do: [ :range |
+		self assert: range first = expected removeFirst.
+		self assert: range last = expected removeFirst ].
+	self assert: expected isEmpty! !
+
+!RxMatcherTest methodsFor: 'testing-protocol' stamp: 'lr 15/Jan/2010 20:55:00'!
+testSubexpressionCount
+	| matcher |
+	#(('a' 1) ('a(b)' 2) ('a(b(c))' 3) ('(a)(b)' 3) ('(a(b))*' 3)) do: [ :pair |
+		matcher := self matcherClass forString: pair first.
+		matcher supportsSubexpressions 
+			ifTrue: [ self assert: matcher subexpressionCount = pair last ] ]! !
+
+!RxMatcherTest methodsFor: 'testing-empty' stamp: 'gsa 20/Dec/2012 20:02:00'!
+testEmptyStringAtBeginningOfLine
+	| matcher |
+	matcher := self matcherClass forString: '^'.
+	self
+		assert: (matcher copy: 'foo1 bar1' , String crString , 'foo2 bar2' replacingMatchesWith: '*')
+			= ('*foo1 bar1' , String crString , '*foo2 bar2')
+		description: 'An empty string at the beginning of a line'! !
+
+!RxMatcherTest methodsFor: 'testing-empty' stamp: 'gsa 22/Dec/2012 12:34:00'!
+testEmptyStringAtBeginningOfWord
+	| matcher |
+	matcher := self matcherClass forString: '\<'.
+	self
+		assert: (matcher copy: 'foo bar' replacingMatchesWith: '*')
+			= '*foo *bar'
+		description: 'An empty string at the beginning of a word'! !
+
+!RxMatcherTest methodsFor: 'testing-empty' stamp: 'gsa 20/Dec/2012 20:02:00'!
+testEmptyStringAtEndOfLine
+	| matcher |
+	matcher := self matcherClass forString: '$'.
+	self
+		assert: (matcher copy: 'foo1 bar1' , String crString , 'foo2 bar2' replacingMatchesWith: '*')
+			= ('foo1 bar1*', String crString , 'foo2 bar2*')
+		description: 'An empty string at the end of a line'! !
+
+!RxMatcherTest methodsFor: 'testing-empty' stamp: 'gsa 22/Dec/2012 12:34:00'!
+testEmptyStringAtEndOfWord
+	| matcher |
+	matcher := self matcherClass forString: '\>'.
+	self
+		assert: (matcher copy: 'foo bar' replacingMatchesWith: '*')
+			= 'foo* bar*'
+		description: 'An empty string at the end of a word'! !
+
+!RxMatcherTest methodsFor: 'testing-empty' stamp: 'gsa 22/Dec/2012 12:34:00'!
+testEmptyStringAtWordBoundary
+	| matcher |
+	matcher := self matcherClass forString: '\b'.
+	self
+		assert: (matcher copy: 'foo bar' replacingMatchesWith: '*')
+			= '*foo* *bar*'
+		description: 'An empty string at a word boundary'! !
+
+!RxMatcherTest methodsFor: 'testing-empty' stamp: 'gsa 22/Dec/2012 12:35:00'!
+testEmptyStringNotAtWordBoundary
+	| matcher |
+	matcher := self matcherClass forString: '\B'.
+	self
+		assert: (matcher copy: 'foo bar' replacingMatchesWith: '*')
+			= 'f*o*o b*a*r'
+		description: 'An empty string not at a word boundary'! !
+
+!RxMatcherTest methodsFor: 'testing' stamp: 'lr 15/Jan/2010 19:47:00'!
+testRegex001
+	self runRegex: #('^.*$' 
+		'' true (1 '')
+		'a' true (1 'a')
+		'abc' true (1 'abc'))! !
+
+!RxMatcherTest methodsFor: 'testing' stamp: 'lr 15/Jan/2010 19:47:00'!
+testRegex002
+	self runRegex: #('a\w+c'
+		' abb_bbc ' true (1 'abb_bbc')
+		'abb-bc' false nil)! !
+
+!RxMatcherTest methodsFor: 'testing' stamp: 'lr 15/Jan/2010 19:47:00'!
+testRegex003
+	self runRegex: #('a\W+c'
+		' abb_bbc ' false nil
+		'abb-bc' false nil
+		'a.,:;-&!!"#%/()={[]}+?\~*''c' true (1 'a.,:;-&!!"#%/()={[]}+?\~*''c'))! !
+
+!RxMatcherTest methodsFor: 'testing' stamp: 'lr 23/Apr/2010 09:01:00'!
+testRegex004
+	self runRegex: #(':isVowel:'
+		'aei' true nil
+		'xyz' false nil)! !
+
+!RxMatcherTest methodsFor: 'testing-extensions' stamp: 'gsa 22/Dec/2012 12:26:00'!
+testStringAllRangesOfRegexMatches
+	| result |
+	result := 'aabbcc' allRangesOfRegexMatches: 'b+'.
+	self assert: result size = 1.
+	self assert: result first first = 3.
+	self assert: result first last = 4
+	! !
+
+!RxMatcherTest methodsFor: 'testing-extensions' stamp: 'lr 23/Apr/2010 08:50:00'!
+testStringAllRegexMatches
+	| result |
+	result := 'aabbcc' allRegexMatches: 'b+'.
+	self assert: result size = 1.
+	self assert: result first = 'bb'! !
+
+!RxMatcherTest methodsFor: 'testing-extensions' stamp: 'lr 23/Apr/2010 08:51:00'!
+testStringAsRegex
+	self assert: 'b+' asRegex class = RxParser preferredMatcherClass! !
+
+!RxMatcherTest methodsFor: 'testing-extensions' stamp: 'lr 23/Apr/2010 08:52:00'!
+testStringAsRegexIgnoringCase
+	self assert: 'b+' asRegexIgnoringCase class = RxParser preferredMatcherClass! !
+
+!RxMatcherTest methodsFor: 'testing-extensions' stamp: 'lr 23/Apr/2010 08:53:00'!
+testStringCopyWithRegexMatchesReplacedWith
+	self assert: ('aabbcc' copyWithRegex: 'b+' matchesReplacedWith: 'X') = 'aaXcc'! !
+
+!RxMatcherTest methodsFor: 'testing-extensions' stamp: 'lr 23/Apr/2010 08:53:00'!
+testStringCopyWithRegexMatchesTranslatedUsing
+	self assert: ('aabbcc' 
+		copyWithRegex: 'b+' 
+		matchesTranslatedUsing: [ :each | 
+			self assert: each = 'bb'.
+			'X' ]) = 'aaXcc'! !
+
+!RxMatcherTest methodsFor: 'testing-extensions' stamp: 'lr 23/Apr/2010 08:55:00'!
+testStringMatchesRegex
+	self deny: ('aabbcc' matchesRegex: 'a+').
+	self deny: ('aabbcc' matchesRegex: 'b+c+').
+	self assert: ('aabbcc' matchesRegex: 'a+b+c+')! !
+
+!RxMatcherTest methodsFor: 'testing-extensions' stamp: 'lr 23/Apr/2010 08:55:00'!
+testStringMatchesRegexIgnoringCase
+	self deny: ('AABBCC' matchesRegexIgnoringCase: 'a+').
+	self deny: ('AABBCC' matchesRegexIgnoringCase: 'b+c+').
+	self assert: ('AABBCC' matchesRegexIgnoringCase: 'a+b+c+')! !
+
+!RxMatcherTest methodsFor: 'testing-extensions' stamp: 'lr 23/Apr/2010 08:56:00'!
+testStringPrefixMatchesRegex
+	self assert: ('aabbcc' prefixMatchesRegex: 'a+').
+	self deny: ('aabbcc' prefixMatchesRegex: 'b+')! !
+
+!RxMatcherTest methodsFor: 'testing-extensions' stamp: 'lr 23/Apr/2010 08:56:00'!
+testStringPrefixMatchesRegexIgnoringCase
+	self assert: ('AABBCC' prefixMatchesRegexIgnoringCase: 'a+').
+	self deny: ('AABBCC' prefixMatchesRegexIgnoringCase: 'b+')! !
+
+!RxMatcherTest methodsFor: 'testing-extensions' stamp: 'lr 23/Apr/2010 08:57:00'!
+testStringRegexMatchesCollect
+	| result |
+	result := 'aabbcc' regex: 'b+' matchesCollect: [ :each | each asUppercase ].
+	self assert: result size = 1.
+	self assert: result first = 'BB'! !
+
+!RxMatcherTest methodsFor: 'testing-extensions' stamp: 'lr 23/Apr/2010 08:58:00'!
+testStringRegexMatchesDo
+	| result |
+	result := OrderedCollection new.
+	'aabbcc' regex: 'b+' matchesDo: [ :each | result add: each ].
+	self assert: result size = 1.
+	self assert: result first = 'bb'! !
+
+!RxMatcherTest class methodsFor: 'accessing' stamp: 'lr 15/Jan/2010 19:48:00'!
+packageNamesUnderTest
+	^ #('VB-Regex')! !
+
+!RxParserTest methodsFor: 'tests' stamp: 'sd 5/Sep/2006 00:11:00'!
+DoesNotWorktestBackQuotesEscape
+	"self debug: #testBackQuotesEscape"
+	
+	"Regular expressions can also include the following backquote escapes
+to refer to popular classes of characters:
+	\w	any word constituent character (same as [a-zA-Z0-9:=])
+	\W	any character but a word constituent
+	\d	a digit (same as [0-9])
+	\D	anything but a digit
+	\s 	a whitespace character
+	\S	anything but a whitespace character
+These escapes are also allowed in character classes: '[\w+-]' means
+'any character that is either a word constituent, or a plus, or a
+minus'."
+	
+	self assert: ('one word' matchesRegex: '\w').	
+		
+	self assert: ('one' matchesRegex: '\w').		  	
+	! !
+
+!RxParserTest methodsFor: 'tests' stamp: 'StephaneDucasse 11/Dec/2010 15:00:00'!
+test
+	"self debug: #test"
+	
+
+	self assert: ('\<t\w+' asRegexIgnoringCase
+		copy: 'now is the Time'
+		translatingMatchesUsing: [:match | match asUppercase]) = 'now is THE TIME'.
+
+	"the regular expression matches words beginning with either an uppercase or a lowercase T"! !
+
+!RxParserTest methodsFor: 'tests' stamp: 'sd 4/Sep/2006 16:24:00'!
+testCadrMatching
+	"self debug: #testCadrMatching"
+
+	"A bit more complex example is the following expression, matching the
+name of any of the Lisp-style `car', `cdr', `caar', `cadr',
+... functions:"
+
+	self assert: ( 'car' matchesRegex: 'c(a|d)+r').
+	self assert: ( 'cdr' matchesRegex: 'c(a|d)+r').
+	self assert: ( 'caar' matchesRegex: 'c(a|d)+r').
+	self assert: ( 'cadr' matchesRegex: 'c(a|d)+r').
+	self assert: ( 'caddar' matchesRegex: 'c(a|d)+r').! !
+
+!RxParserTest methodsFor: 'tests' stamp: 'sd 4/Sep/2006 16:49:00'!
+testCharacterSet
+	"self debug: #testCharacterSet"
+	
+	"So far, we have used only characters as the 'smallest' components of
+regular expressions. There are other, more `interesting', components.
+A character set is a string of characters enclosed in square
+brackets. It matches any single character if it appears between the
+brackets. For example, `[01]' matches either `0' or `1':"
+
+	self assert: ('0' matchesRegex: '[01]').	 	
+	self deny: ('3' matchesRegex: '[01]'). 	 
+	self deny: ('11' matchesRegex: '[01]').	"-- false: a set matches only one character"
+	self deny: ('01' matchesRegex: '[01]').
 ! !
 
-!Collection methodsFor: '*Regex-Core' stamp: 'NM 8/2/2021 18:47:18'!
+!RxParserTest methodsFor: 'tests' stamp: 'sd 4/Sep/2006 17:39:00'!
+testCharacterSetBinaryNumber
+	"self debug: #testCharacterSetBinaryNumber"
+	
+	"Using plus operator, we can build the following binary number
+recognizer:"
+	self assert: ('10010100' matchesRegex: '[01]+').	 	
+	self deny: ('10001210' matchesRegex: '[01]+')	 ! !
+
+!RxParserTest methodsFor: 'tests' stamp: 'sd 5/Sep/2006 00:01:00'!
+testCharacterSetInversion
+	"self debug: #testCharacterSetInversion"
+	
+	"If the first character after the opening bracket is `^', the set is
+inverted: it matches any single character *not* appearing between the
+brackets:"
+	
+	self deny: ('0' matchesRegex: '[^01]').		  	
+	"0 appears in 01 so there is no match"
+	
+	self assert: ('3' matchesRegex: '[^01]').
+	"3 is not in 01 so it matches"
+	
+	
+	self deny: ('30' matchesRegex: '[^01]').		
+	self deny: ('33333333333333333333333330' matchesRegex: '[^01]').	
+	"there is one zero so it does not match"! !
+
+!RxParserTest methodsFor: 'tests' stamp: 'sd 4/Sep/2006 23:20:00'!
+testCharacterSetRange
+	"self debug: #testCharacterSetRange"
+	
+	"For convenience, a set may include ranges: pairs of characters
+separated with `-'. This is equivalent to listing all characters
+between them: `[0-9]' is the same as `[0123456789]'. "	
+
+	self assert: ('0' matchesRegex: '[0-9]').	
+	self assert: ('9' matchesRegex: '[0-9]').	
+	self deny: ('a' matchesRegex: '[0-9]').
+	self deny: ('01' matchesRegex: '[0-9]').	
+	self assert: ('01442128629839374565' matchesRegex: '[0-9]+').	
+	! !
+
+!RxParserTest methodsFor: 'tests' stamp: 'marcus.denker 22/Oct/2008 10:47:00'!
+testMatchesInwW
+	"self debug: #testMatchesInwW"
+	
+	"1. Backslash escapes similar to those in Perl are allowed in patterns:
+	\w	any word constituent character (equivalent to [a-zA-Z0-9:=])
+	\W	any character but a word constituent (equivalent to [^a-xA-Z0-9:=]"
+
+	self assert: ('\w+' asRegex matchesIn: 'now is the time') asArray = #('now' 'is' 'the' 'time').
+	self assert: ('\W+' asRegex matchesIn: 'now is the time') asArray = #(' ' ' ' ' ').
+	
+	"why do we get that"
+	self assert: ('\w' asRegex matchesIn: 'now') asArray = #('n' 'o' 'w').! !
+
+!RxParserTest methodsFor: 'tests' stamp: 'sd 4/Sep/2006 16:38:00'!
+testOrOperator
+	"self debug: #testOrOperator"
+	
+	"The last operator is `|' meaning `or'. It is placed between two
+regular expressions, and the resulting expression matches if one of
+the expressions matches. It has the lowest possible precedence (lower
+than sequencing). For example, `ab*|ba*' means `a followed by any
+number of b's, or b followed by any number of a's':"
+
+	self assert: ('abb' matchesRegex: 'ab*|ba*').  	
+	self assert: ('baa' matchesRegex: 'ab*|ba*').	 	
+	self deny: ('baab' matchesRegex: 'ab*|ba*').
+	
+
+	"It is possible to write an expression matching an empty string, for
+example: `a|'.  However, it is an error to apply `*', `+', or `?' to
+such expression: `(a|)*' is an invalid expression."
+
+	self should: ['(a|)*' asRegex] raise: Error.
+! !
+
+!RxParserTest methodsFor: 'tests' stamp: 'sd 4/Sep/2006 16:17:00'!
+testQuotingOperators
+	"self debug: #testQuotingOperators"
+	
+	"As we have seen, characters `*', `+', `?', `(', and `)' have special
+meaning in regular expressions. If one of them is to be used
+literally, it should be quoted: preceded with a backslash. (Thus,
+backslash is also special character, and needs to be quoted for a
+literal match--as well as any other special character described
+further)."
+
+	self deny: ('ab*' matchesRegex: 'ab*'). "	-- false: star in the right string is special"
+	self assert: ('ab*' matchesRegex: 'ab\*').	 		
+	self assert: ('a\c' matchesRegex: 'a\\c').		 	! !
+
+!RxParserTest methodsFor: 'tests' stamp: 'sd 3/Sep/2006 19:50:00'!
+testSimpleMatchesRegex
+	"self debug: #testSimpleMatchesRegex"
+	
+	"The simplest regular expression is a single character.  It matches
+exactly that character. A sequence of characters matches a string with
+exactly the same sequence of characters:"
+
+	self assert: ('a' matchesRegex: 'a').
+	self assert: ('foobar' matchesRegex: 'foobar')	.
+	self deny: ('blorple' matchesRegex: 'foobar')! !
+
+!RxParserTest methodsFor: 'tests' stamp: 'sd 3/Sep/2006 21:41:00'!
+testSimpleMatchesRegexWithStar
+	"self debug: #testSimpleMatchesRegexWithStar"
+	
+	"The above paragraph in testSimpleMatchesRegex introduced a primitive regular expression (a
+character), and an operator (sequencing). Operators are applied to
+regular expressions to produce more complex regular expressions.
+Sequencing (placing expressions one after another) as an operator is,
+in a certain sense, `invisible'--yet it is arguably the most common.
+A more `visible' operator is Kleene closure, more often simply
+referred to as `a star'.  A regular expression followed by an asterisk
+matches any number (including 0) of matches of the original
+expression. For example:"
+
+	self assert: ('ab' matchesRegex: 'a*b').		 		
+	self assert: ('aaaaab' matchesRegex: 'a*b').	
+	self assert: ('b' matchesRegex: 'a*b').	 	
+	self deny: ('aac' matchesRegex: 'a*b').	 		! !
+
+!RxParserTest methodsFor: 'tests' stamp: 'sd 4/Sep/2006 23:38:00'!
+testSpecialCharacterInSetRange
+	"self debug: #testSpecialCharacterInSetRange"
+	
+	"Special characters within a set are `^', `-', and `]' that closes the
+set. Below are the examples of how to literally use them in a set:
+	[01^]		-- put the caret anywhere except the beginning
+	[01-]		-- put the dash as the last character
+	[]01]		-- put the closing bracket as the first character 
+	[^]01]			(thus, empty and universal sets cannot be specified)"
+
+	self assert: ('0' matchesRegex: '[01^]').
+	self assert: ('1' matchesRegex: '[01^]').
+	self assert: ('^' matchesRegex: '[01^]').
+	
+	self deny: ('0' matchesRegex: '[^01]').
+	self deny: ('1' matchesRegex: '[^01]').
+	
+	"[^abc] means that everything except abc is matche"
+	self assert: ('^' matchesRegex: '[^01]').
+	! !
+
+!RxParserTest methodsFor: 'tests' stamp: 'sd 4/Sep/2006 16:26:00'!
+testStarPlusQuestionMark
+	"self debug: #testStarPlusQuestionMark"
+	
+	"Two other operators similar to `*' are `+' and `?'. `+' (positive
+closure, or simply `plus') matches one or more occurrences of the
+original expression. `?' (`optional') matches zero or one, but never
+more, occurrences."
+
+	self assert: ('ac' matchesRegex: 'ab*c').  		
+	self deny: ('ac' matchesRegex: 'ab+c'). 		"-- false: need at least one b"
+	self assert: ('abbc' matchesRegex: 'ab+c').	
+	self assert: ('abbbbbbc' matchesRegex: 'ab+c').	
+	self deny: ('abbc' matchesRegex: 'ab?c')	 	"-- false: too many b's"! !
+
+!RxParserTest methodsFor: 'tests' stamp: 'sd 3/Sep/2006 22:57:00'!
+testStarPrecedence
+	"self debug: #testStarPrecedence"
+	
+	"A star's precedence is higher than that of sequencing. A star applies
+to the shortest possible subexpression that precedes it. For example,
+'ab*' means `a followed by zero or more occurrences of b', not `zero
+or more occurrences of ab':"
+
+	self assert: ('abbb' matchesRegex: 'ab*'). 
+	self deny: ('abab' matchesRegex: 'ab*').	 	
+		
+	"To actually make a regex matching `zero or more occurrences of ab',
+`ab' is enclosed in parentheses:"
+	self assert: ('abab' matchesRegex: '(ab)*'). 
+	self deny: ('abcab' matchesRegex: '(ab)*')! !
+
+!RxParserTest methodsFor: 'tests' stamp: 'StephaneDucasse 11/Dec/2010 15:00:00'!
+testTranslatingMatchesUsing
+	"self debug: #testTranslatingMatchesUsing"
+	
+
+	self assert: ('\<t\w+' asRegexIgnoringCase
+		copy: 'now is the Time'
+		translatingMatchesUsing: [:match | match asUppercase]) = 'now is THE TIME'.
+
+	"the regular expression matches words beginning with either an uppercase or a lowercase T"! !
+
+!RxParserTest methodsFor: 'tests' stamp: 'sd 4/Sep/2006 23:29:00'!
+toDotestSpecialCharacterInSetRange
+	"self debug: #testSpecialCharacterInSetRange"
+	
+	"Special characters within a set are `^', `-', and `]' that closes the
+set. Below are the examples of how to literally use them in a set:
+	[01^]		-- put the caret anywhere except the beginning
+	[01-]		-- put the dash as the last character
+	[]01]		-- put the closing bracket as the first character 
+	[^]01]			(thus, empty and universal sets cannot be specified)"
+
+	self assert: ('0' matchesRegex: '[01^]').
+	
+	self assert: ('0' matchesRegex: '[0-9]').	
+	! !
+
+!Collection methodsFor: '*Regex-Core' stamp: 'NM 2/Aug/2021 18:47:18'!
 contains: aBlock
        "From Squeak. "
 	"VW compatibility"
 	^self anySatisfy: aBlock! !
 
-!String methodsFor: '*Regex-Core' stamp: 'gsa 12/20/2012 10:31'!
+!String methodsFor: '*Regex-Core' stamp: 'gsa 20/Dec/2012 10:31:00'!
 allRangesOfRegexMatches: rxString
 
 	^rxString asRegex matchingRangesIn: self! !
 
-!String methodsFor: '*Regex-Core' stamp: 'gsa 12/20/2012 10:32'!
+!String methodsFor: '*Regex-Core' stamp: 'gsa 20/Dec/2012 10:32:00'!
 allRegexMatches: rxString
 
 	^rxString asRegex matchesIn: self! !
 
-!String methodsFor: '*Regex-Core' stamp: 'gsa 12/20/2012 10:32'!
+!String methodsFor: '*Regex-Core' stamp: 'gsa 20/Dec/2012 10:32:00'!
 asRegex
 	"Compile the receiver as a regex matcher. May raise RxParser>>syntaxErrorSignal
 	or RxParser>>compilationErrorSignal.
@@ -5151,7 +5136,7 @@ asRegex
 
 	^RxParser preferredMatcherClass for: (RxParser new parse: self)! !
 
-!String methodsFor: '*Regex-Core' stamp: 'gsa 12/20/2012 10:33'!
+!String methodsFor: '*Regex-Core' stamp: 'gsa 20/Dec/2012 10:33:00'!
 asRegexIgnoringCase
 	"Compile the receiver as a regex matcher. May raise RxParser>>syntaxErrorSignal
 	or RxParser>>compilationErrorSignal.
@@ -5162,19 +5147,19 @@ asRegexIgnoringCase
 		for: (RxParser new parse: self)
 		ignoreCase: true! !
 
-!String methodsFor: '*Regex-Core' stamp: 'gsa 12/20/2012 10:33'!
+!String methodsFor: '*Regex-Core' stamp: 'gsa 20/Dec/2012 10:33:00'!
 copyWithRegex: rxString matchesReplacedWith: aString
 
 	^rxString asRegex
 		copy: self replacingMatchesWith: aString! !
 
-!String methodsFor: '*Regex-Core' stamp: 'gsa 12/20/2012 10:33'!
+!String methodsFor: '*Regex-Core' stamp: 'gsa 20/Dec/2012 10:33:00'!
 copyWithRegex: rxString matchesTranslatedUsing: aBlock
 
 	^rxString asRegex
 		copy: self translatingMatchesUsing: aBlock! !
 
-!String methodsFor: '*Regex-Core' stamp: 'gsa 12/20/2012 10:34'!
+!String methodsFor: '*Regex-Core' stamp: 'gsa 20/Dec/2012 10:34:00'!
 matchesRegex: regexString
 	"Test if the receiver matches a regex.  May raise RxParser>>regexErrorSignal or
 	child signals.
@@ -5183,7 +5168,7 @@ matchesRegex: regexString
 
 	^regexString asRegex matches: self! !
 
-!String methodsFor: '*Regex-Core' stamp: 'gsa 12/20/2012 10:34'!
+!String methodsFor: '*Regex-Core' stamp: 'gsa 20/Dec/2012 10:34:00'!
 matchesRegexIgnoringCase: regexString
 	"Test if the receiver matches a regex.  May raise RxParser>>regexErrorSignal or
 	child signals.
@@ -5192,7 +5177,7 @@ matchesRegexIgnoringCase: regexString
 
 	^regexString asRegexIgnoringCase matches: self! !
 
-!String methodsFor: '*Regex-Core' stamp: 'gsa 12/20/2012 10:34'!
+!String methodsFor: '*Regex-Core' stamp: 'gsa 20/Dec/2012 10:34:00'!
 prefixMatchesRegex: regexString
 	"Test if the receiver's prefix matches a regex.	
 	May raise RxParser class>>regexErrorSignal or child signals.
@@ -5201,7 +5186,7 @@ prefixMatchesRegex: regexString
 
 	^regexString asRegex matchesPrefix: self! !
 
-!String methodsFor: '*Regex-Core' stamp: 'gsa 12/20/2012 10:35'!
+!String methodsFor: '*Regex-Core' stamp: 'gsa 20/Dec/2012 10:35:00'!
 prefixMatchesRegexIgnoringCase: regexString
 	"Test if the receiver's prefix matches a regex.	
 	May raise RxParser class>>regexErrorSignal or child signals.
@@ -5210,20 +5195,35 @@ prefixMatchesRegexIgnoringCase: regexString
 
 	^regexString asRegexIgnoringCase matchesPrefix: self! !
 
-!String methodsFor: '*Regex-Core' stamp: 'gsa 12/20/2012 10:35'!
+!String methodsFor: '*Regex-Core' stamp: 'gsa 20/Dec/2012 10:35:00'!
 regex: rxString matchesCollect: aBlock
 
 	^rxString asRegex matchesIn: self collect: aBlock! !
 
-!String methodsFor: '*Regex-Core' stamp: 'gsa 12/20/2012 10:35'!
+!String methodsFor: '*Regex-Core' stamp: 'gsa 20/Dec/2012 10:35:00'!
 regex: rxString matchesDo: aBlock
 
 	^rxString asRegex matchesIn: self do: aBlock! !
 
-!String methodsFor: '*Regex-Core' stamp: 'gsa 12/20/2012 10:36'!
+!String methodsFor: '*Regex-Core' stamp: 'gsa 20/Dec/2012 10:36:00'!
 search: aString
 	"compatibility method to make regexp and strings work polymorphicly"
 	^ aString includesSubString: self! !
+
+!Character methodsFor: '*Regex-Core' stamp: 'NM 2/Aug/2021 18:34:24'!
+asInteger
+	"From Squeak"
+	"Answer the receiver's character code."
+	<primitive: 171>
+	^self primitiveFailed! !
+
+!Character methodsFor: '*Regex-Core' stamp: 'NM 2/Aug/2021 18:32:35'!
+sameAs: aCharacter
+	"From Squeak Answer whether the receiver is equal to aCharacter, ignoring case"
+	self == aCharacter ifTrue: [ ^true ].
+	^self asLowercase == aCharacter asLowercase
+	
+! !
 RxMatcher initialize!
 RxParser initialize!
 RxsPredicate initialize!
